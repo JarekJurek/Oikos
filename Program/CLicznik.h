@@ -1,0 +1,26 @@
+//
+// Created by grzeg on 23.05.2022.
+//
+
+#ifndef PROGRAM_CLICZNIK_H
+#define PROGRAM_CLICZNIK_H
+
+#include <iostream>
+
+using namespace std;
+
+class CLicznik {
+public:
+    string nazwa;
+    long long numerLicznika;
+    string data;
+    float stanLicznika;
+
+    virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
+    void wprowadzDaneLicznika();
+    void wyswietlDaneLicznika();
+
+};
+
+
+#endif //PROGRAM_CLICZNIK_H
