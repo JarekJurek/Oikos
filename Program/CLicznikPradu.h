@@ -7,10 +7,8 @@
 
 #include "CLicznik.h"
 
-class CLicznikPradu :public CLicznik {
+class CLicznikPradu : public CLicznik {
 public:
-    CLicznikPradu(string = "unsigned", long long = -1,
-                  string = "99.99.1999", float = -1.0);
     void podajStanLicznika() override;
 };
 

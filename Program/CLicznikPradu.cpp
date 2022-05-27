@@ -4,16 +4,14 @@
 
 #include "CLicznikPradu.h"
 
-CLicznikPradu::CLicznikPradu(string s , long long x, string d, float y) {
-    nazwa = s;
-    numerLicznika = x;
-//    data = d;
-//    stanLicznika = y;
-}
-
 void CLicznikPradu::podajStanLicznika() {
-    cout << "Podaj stan licznika prądu nr: "
-         << numerLicznika << endl;
-//    cin >> stanLicznika;
-    cout << "Zapisano" << endl;
+    string s;
+    float x;
+    cout << "Podaj stan licznika pradu '" << outNazwa() <<
+         "', nr. " << outNumerLicznika() << ". :";
+    cin >> x;
+    cout << "Podaj date:";
+    cin >> s;
+    odczyt.podajOdczyt(x, s);
+    cout << "Zapisano" << endl << endl;
 }

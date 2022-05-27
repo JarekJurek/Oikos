@@ -4,7 +4,12 @@
 
 #include "CLicznik.h"
 
-void CLicznik::wyswietlDaneLicznika(){
+CLicznik::CLicznik(string s, string x) {
+    nazwa = s;
+    numerLicznika = x;
+}
+
+void CLicznik::wyswietlDaneLicznika() {
     cout << "Nazwa: " << nazwa << endl;
     cout << "Numer licznika: " << numerLicznika << endl;
     cout << "Data ostatniego odczytu: " << odczyt.outData() << endl;
@@ -18,3 +23,13 @@ void CLicznik::wprowadzDaneLicznika() {
     cin >> numerLicznika;
     cout << endl;
 }
+
+string CLicznik::outNazwa() {
+    return nazwa;
+}
+
+string CLicznik::outNumerLicznika() {
+    return numerLicznika;
+}
+
+

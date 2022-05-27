@@ -3,9 +3,8 @@
 //
 
 #include "CLicznikGazu.h"
-CLicznikGazu::CLicznikGazu(string n, long long nr, float x) {
-    nazwa = n;
-    numerLicznika = nr;
+
+CLicznikGazu::CLicznikGazu(float x) {
     przelicznik = x;
 }
 
@@ -17,11 +16,12 @@ float CLicznikGazu::przeliczJednostki(float x) {
 void CLicznikGazu::podajStanLicznika() {
     string s;
     float stanMetry;
-    cout << "Podaj stan licznika gazu nr: " << numerLicznika << endl;
+    cout << "Podaj stan licznika gazu '" << outNazwa() <<
+    "', nr. " << outNumerLicznika() << ". :";
     cin >> stanMetry;
-    cout << "Podaj date: " << endl;
+    cout << "Podaj date:";
     cin >> s;
     odczyt.podajOdczyt(przeliczJednostki(stanMetry), s);
-    cout << "Zapisano" << endl << endl;
+    cout << "Zapisano" << endl;
 
 }

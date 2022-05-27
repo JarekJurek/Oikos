@@ -7,11 +7,14 @@
 
 #include "CLicznik.h"
 
-class CLicznikGazu :public CLicznik{
+class CLicznikGazu : public CLicznik {
     float przelicznik;
+
 public:
-    CLicznikGazu(string = "unsigned", long long = -1, float = 10.972);
+    CLicznikGazu(float = 10.972);
+
     float przeliczJednostki(float);
+
     void podajStanLicznika() override;
 
 };

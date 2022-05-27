@@ -7,10 +7,8 @@
 
 #include "CLicznik.h"
 
-class CLicznikWody :public CLicznik{
+class CLicznikWody : public CLicznik {
 public:
-    CLicznikWody(string = "unsigned", long long = -1,
-                 string = "99.99.1999", float = -1.0);
     void podajStanLicznika() override;
 };
 

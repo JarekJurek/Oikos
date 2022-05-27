@@ -11,14 +11,21 @@
 using namespace std;
 
 class CLicznik {
-public:
     string nazwa;
-    long long numerLicznika;
+    string numerLicznika;
 
+public:
     COdczyt odczyt;
+
+    string outNazwa();
+
+    string outNumerLicznika();
+
+    CLicznik(string = "void", string = "-1");
 
     virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
     void wprowadzDaneLicznika();
+
     void wyswietlDaneLicznika();
 
 };

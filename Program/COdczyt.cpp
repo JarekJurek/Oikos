@@ -4,7 +4,7 @@
 
 #include "COdczyt.h"
 
-COdczyt::COdczyt(float x , string d) {
+COdczyt::COdczyt(float x, string d) {
     stan = x;
     data = d;
 }

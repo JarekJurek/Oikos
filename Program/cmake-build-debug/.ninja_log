@@ -14,3 +14,16 @@
 6	1442	6753596356323423	CMakeFiles/Program.dir/CLicznikWody.cpp.obj	e837f3b6d7730d69
 31	1444	6753596356323423	CMakeFiles/Program.dir/CLicznikPradu.cpp.obj	f116aae6b5b76880
 1444	1825	6753596360044378	Program.exe	d22b13978bc53f0e
+8	4470	6753755183439060	CMakeFiles/Program.dir/main.cpp.obj	ec1743a3d13e5408
+243	4486	6753755183688394	CMakeFiles/Program.dir/COdczyt.cpp.obj	387ee55dfbe5ffbe
+226	4492	6753755184047446	CMakeFiles/Program.dir/CLicznik.cpp.obj	d75b5960d2a81e99
+220	4495	6753755184117238	CMakeFiles/Program.dir/CLicznikGazu.cpp.obj	b567c11338d1278a
+23	1498	6753755440957531	CMakeFiles/Program.dir/main.cpp.obj	ec1743a3d13e5408
+45	1737	6753758027841473	CMakeFiles/Program.dir/CLicznikWody.cpp.obj	e837f3b6d7730d69
+7	1780	6753758028360805	CMakeFiles/Program.dir/CLicznikPradu.cpp.obj	f116aae6b5b76880
+1780	2372	6753758034141018	Program.exe	d22b13978bc53f0e
+60	2181	6753762418813566	CMakeFiles/Program.dir/CLicznikPradu.cpp.obj	f116aae6b5b76880
+6	2210	6753762419115928	CMakeFiles/Program.dir/main.cpp.obj	ec1743a3d13e5408
+55	2234	6753762419418395	CMakeFiles/Program.dir/CLicznik.cpp.obj	d75b5960d2a81e99
+50	2452	6753762421938302	CMakeFiles/Program.dir/CLicznikGazu.cpp.obj	b567c11338d1278a
+2453	2818	6753762425384996	Program.exe	d22b13978bc53f0e

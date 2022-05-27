@@ -14,8 +14,11 @@ class COdczyt {
     string data;
 public:
     COdczyt(float = -1, string = "void");
+
     void podajOdczyt(float, string);
+
     float outStan();
+
     string outData();
 
 };
