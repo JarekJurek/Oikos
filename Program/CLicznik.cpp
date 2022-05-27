@@ -31,5 +31,3 @@ string CLicznik::outNazwa() {
 string CLicznik::outNumerLicznika() {
     return numerLicznika;
 }
-
-

@@ -13,9 +13,11 @@ class CAdres {
     string numerDomu;
     int numerMieszkania;
     string kodPocztowy;
+    string miasto;
 public:
-    CAdres(string = "void", string = "void", int = -1, string = "void");
-    void wprowadzDane();
+    CAdres(string = "void", string = "void", int = -1, string = "void", string = "void");
+    void wprowadzAdresM();
+    void wyswietlAdresM();
 };
 
 

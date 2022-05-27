@@ -24,6 +24,7 @@ public:
     CLicznik(string = "void", string = "-1");
 
     virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
+
     void wprowadzDaneLicznika();
 
     void wyswietlDaneLicznika();
