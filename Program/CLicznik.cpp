@@ -7,17 +7,14 @@
 void CLicznik::wyswietlDaneLicznika(){
     cout << "Nazwa: " << nazwa << endl;
     cout << "Numer licznika: " << numerLicznika << endl;
-    cout << "Data: " << data << endl;
-    cout << "Stan licznika: " << stanLicznika << endl << endl;
+    cout << "Data ostatniego odczytu: " << odczyt.outData() << endl;
+    cout << "Stan licznika: " << odczyt.outStan() << endl << endl;
 }
 
 void CLicznik::wprowadzDaneLicznika() {
-    cout << "Podaj nazwe: ";
+    cout << "Podaj nazwe:";
     cin >> nazwa;
-    cout << "Podaj numer licznika: ";
+    cout << "Podaj numer licznika:";
     cin >> numerLicznika;
-    cout << "Podaj data: ";
-    cin >> data;
-    cout << "Podaj stan licznika: ";
-    cin >> stanLicznika;
+    cout << endl;
 }

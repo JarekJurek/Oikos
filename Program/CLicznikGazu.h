@@ -8,13 +8,10 @@
 #include "CLicznik.h"
 
 class CLicznikGazu :public CLicznik{
-    float stanMetry;
     float przelicznik;
 public:
-    CLicznikGazu(string = "unsigned", long long = -1,
-                 string = "data", float = -1.0, float = -1,
-                 float = 10.972);
-    void przeliczJednostki();
+    CLicznikGazu(string = "unsigned", long long = -1, float = 10.972);
+    float przeliczJednostki(float);
     void podajStanLicznika() override;
 
 };

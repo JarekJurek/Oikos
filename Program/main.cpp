@@ -6,10 +6,12 @@
 using namespace std;
 
 int main() {
-//    CLicznikGazu G1;
-//    G1.wprowadzDaneLicznika();
-//    G1.wyswietlDaneLicznika();
-//
+    CLicznikGazu G1;
+    G1.wprowadzDaneLicznika();
+    G1.wyswietlDaneLicznika();
+    G1.podajStanLicznika();
+    G1.wyswietlDaneLicznika();
+
 //    CLicznikPradu P1;
 //    P1.wprowadzDaneLicznika();
 //    P1.wyswietlDaneLicznika();
