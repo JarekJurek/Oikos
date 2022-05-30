@@ -7,7 +7,9 @@
 
 #include <iostream>
 #include "CAdres.h"
-#include "CLicznik.h"
+#include "CLicznikPradu.h"
+#include "CLicznikWody.h"
+#include "CLicznikGazu.h"
 #include "CTaryfa.h"
 
 using namespace std;
@@ -19,11 +21,19 @@ class CMieszkanie {
 public:
     CAdres adres;
     CTaryfa taryfa;
-    CMieszkanie(string = "void", float = -1, float = -1);
-    void wprowadzDaneM();
-    void wyswietlDaneM();
-};
+    CLicznikPradu lprad;
+    CLicznikGazu lgaz;
+    CLicznikWody lwodaCiepla;
+    CLicznikWody lwodaZimna;
 
+    CMieszkanie(string = "void", float = -1, float = -1);
+
+    void wprowadzDaneM();
+
+    void wyswietlDaneM();
+
+    float outCzynsz();
+};
 
 
 #endif //PROGRAM_CMIESZKANIE_H

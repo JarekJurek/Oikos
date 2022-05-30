@@ -19,6 +19,7 @@ void CMieszkanie::wprowadzDaneM() {
     cin >> czynsz;
     adres.wprowadzAdresM();
     taryfa.wprowadzTaryfy();
+    lprad.wprowadzDaneLicznika()
     cout << endl;
 }
 
@@ -29,6 +30,10 @@ void CMieszkanie::wyswietlDaneM() {
     adres.wyswietlAdresM();
     taryfa.wyswietlTaryfy();
     cout << endl;
+}
+
+float CMieszkanie::outCzynsz() {
+    return czynsz;
 }
 
 

@@ -34,3 +34,25 @@ void CTaryfa::wyswietlTaryfy() {
     cout << "taryfa Najem: " << taryfaNajem << endl;
     cout << endl;
 }
+
+float CTaryfa::outTaryfaWodaCiepla() {
+    return taryfaWodaCiepla;
+}
+
+float CTaryfa::outTaryfaWodaZimna() {
+    return taryfaWodaZimna;
+}
+
+float CTaryfa::outTaryfaGaz() {
+    return taryfaGaz;
+}
+
+float CTaryfa::outTaryfaPrad() {
+    return taryfaPrad;
+}
+
+float CTaryfa::outTaryfaNajem() {
+    return taryfaNajem;
+}
+
+

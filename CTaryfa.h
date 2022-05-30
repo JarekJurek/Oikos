@@ -21,6 +21,16 @@ public:
     void wprowadzTaryfy();
 
     void wyswietlTaryfy();
+
+    float outTaryfaWodaCiepla();
+
+    float outTaryfaWodaZimna();
+
+    float outTaryfaGaz();
+
+    float outTaryfaPrad();
+
+    float outTaryfaNajem();
 };
 
 

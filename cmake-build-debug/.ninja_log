@@ -1,15 +1,13 @@
 # ninja log v5
 10	3830	6756176717153580	CMakeFiles/Program.dir/main.cpp.obj	68336320de172bf4
 61	4937	6756106732241954	CMakeFiles/Program.dir/CAdres.cpp.obj	cee68912691d8dee
-4	379	6756107269901632	Program.exe	d22b13978bc53f0e
+5	486	6756177168329246	Program.exe	a928346a51c6cbd9
 51	4971	6756106732441860	CMakeFiles/Program.dir/CLicznikGazu.cpp.obj	acc7f2956ba80e3
 56	5022	6756106733536582	CMakeFiles/Program.dir/CLicznikPradu.cpp.obj	b066335f6da1291b
 46	4954	6756106732441860	CMakeFiles/Program.dir/CLicznik.cpp.obj	f22b8a6b678cb811
 66	4994	6756106733325640	CMakeFiles/Program.dir/CLicznikWody.cpp.obj	cceb5664ee073e5f
 47	3838	6756176717173512	CMakeFiles/Program.dir/CMieszkanie.cpp.obj	b6d9a92aa5b5c400
 4954	6723	6756106750910987	CMakeFiles/Program.dir/COdczyt.cpp.obj	967472469809f52c
-10	840	6756177161659488	build.ninja	c04ce91f521dea3b
+2	1274	6756183011725004	build.ninja	c04ce91f521dea3b
 53	3811	6756176716648617	CMakeFiles/Program.dir/CTaryfa.cpp.obj	bcf06a0ba852bfc
 66	3843	6756176717304632	CMakeFiles/Program.dir/AAAAtest.cpp.obj	8d481c38dce1d7e
-2	1274	6756177161659488	build.ninja	c04ce91f521dea3b
-5	486	6756177168329246	Program.exe	a928346a51c6cbd9
