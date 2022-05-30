@@ -4,31 +4,39 @@
 
 #include "CMieszkanie.h"
 
-CMieszkanie::CMieszkanie(string s, float x, float y) {
-    nazwa = s;
+CMieszkanie::CMieszkanie(float x, float y) {
     wartosc = x;
     czynsz = y;
 }
 
 void CMieszkanie::wprowadzDaneM() {
-    cout << "Nazwa mieszkania:";
-    cin >> nazwa;
+    cout << "Dodawanie mieszkania" << endl;
+    adres.wprowadzAdresM();
     cout << "Wartosc:";
     cin >> wartosc;
     cout << "Czynsz:";
     cin >> czynsz;
-    adres.wprowadzAdresM();
     taryfa.wprowadzTaryfy();
-    lprad.wprowadzDaneLicznika()
+    lprad.wprowadzDaneLicznika();
+    lprad.podajStanLicznika();
+//    lgaz.wprowadzDaneLicznika();
+//    lgaz.podajStanLicznika();
+//    lwodaZimna.wprowadzDaneLicznika();
+//    lwodaZimna.podajStanLicznika();
+//    lwodaCiepla.wprowadzDaneLicznika();
+//    lwodaCiepla.podajStanLicznika();
     cout << endl;
 }
 
 void CMieszkanie::wyswietlDaneM() {
-    cout << "Nazwa: " << nazwa << endl;
     cout << "Wartosc: " << wartosc << endl;
     cout << "Czynsz: " << czynsz << endl;
     adres.wyswietlAdresM();
     taryfa.wyswietlTaryfy();
+    lprad.wyswietlDaneLicznika();
+//    lgaz.wyswietlDaneLicznika();
+//    lwodaZimna.wyswietlDaneLicznika();
+//    lwodaCiepla.wyswietlDaneLicznika();
     cout << endl;
 }
 

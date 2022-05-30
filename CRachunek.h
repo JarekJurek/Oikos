@@ -18,14 +18,15 @@ class CRachunek {
     float oplataGaz;
     float oplataPrad;
     float oplataNajem;
-public:
     CMieszkanie *m;
-    CTaryfa *t = NULL;
-    COdczyt *o = NULL;
+    CTaryfa *t = nullptr;
+    COdczyt *o = nullptr;
+
+public:
 
     CRachunek(float = -1, float = -1, float = -1, float = -1, float = -1);
 
-    void obliczOplaty(CMieszkanie *m, CTaryfa *t, COdczyt *o);
+    void obliczOplaty(CMieszkanie *m);
 
     float sumaRachunku();
 

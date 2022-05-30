@@ -16,8 +16,7 @@ float CLicznikGazu::przeliczJednostki(float x) {
 void CLicznikGazu::podajStanLicznika() {
     string s;
     float stanMetry;
-    cout << "Podaj stan licznika gazu '" << outNazwa() <<
-    "', nr. " << outNumerLicznika() << ". :";
+    cout << "Podaj stan licznika gazu nr " << outNumerLicznika() << ".:";
     cin >> stanMetry;
     cout << "Podaj date:";
     cin >> s;

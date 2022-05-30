@@ -7,8 +7,7 @@
 void CLicznikWody::podajStanLicznika() {
     string s;
     float x;
-    cout << "Podaj stan licznika wody '" << outNazwa() <<
-         "', nr. " << outNumerLicznika() << ". :";
+    cout << "Podaj stan licznika wody nr " << outNumerLicznika() << ".:";
     cin >> x;
     cout << "Podaj date:";
     cin >> s;

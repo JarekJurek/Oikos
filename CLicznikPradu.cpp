@@ -7,8 +7,7 @@
 void CLicznikPradu::podajStanLicznika() {
     string s;
     float x;
-    cout << "Podaj stan licznika pradu '" << outNazwa() <<
-         "', nr. " << outNumerLicznika() << ". :";
+    cout << "Podaj stan licznika pradu nr " << outNumerLicznika() << ".:";
     cin >> x;
     cout << "Podaj date:";
     cin >> s;

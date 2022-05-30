@@ -12,7 +12,7 @@ CRachunek::CRachunek(float a, float b, float c, float d, float e) {
     oplataNajem = e;
 }
 
-void CRachunek::obliczOplaty(CMieszkanie *m, CTaryfa *t, COdczyt *o) {
+void CRachunek::obliczOplaty(CMieszkanie *m) {
     t = &m->taryfa;
 
     o = &m->lwodaCiepla.odczyt;  // odczyt z licznika wody
@@ -27,7 +27,8 @@ void CRachunek::obliczOplaty(CMieszkanie *m, CTaryfa *t, COdczyt *o) {
     o = &m->lprad.odczyt;  // odczyt z licznika prądu
     oplataPrad = t->outTaryfaPrad() * o->outStan();
 
-    oplataNajem = t->outTaryfaNajem() * m->outCzynsz();
+    oplataNajem = t->outTaryfaNajem();
+
 }
 
 float CRachunek::sumaRachunku() {
@@ -35,11 +36,11 @@ float CRachunek::sumaRachunku() {
 }
 
 void CRachunek::wyswietlRachunek() {
-    cout << "Opłata woda ciepla: " << oplataGaz << endl;
-    cout << "Opłata woda zimna: " << oplataGaz << endl;
-    cout << "Opłata prad: " << oplataGaz << endl;
-    cout << "Opłata gaz: " << oplataGaz << endl;
-    cout << "Opłata najem: " << oplataGaz << endl;
-    cout << "Do zapłaty razem: " << sumaRachunku() << endl;
+    cout << "Oplata woda ciepla: " << oplataWodaCiepla << endl;
+    cout << "Oplata woda zimna: " << oplataWodaZimna << endl;
+    cout << "Oplata prad: " << oplataPrad << endl;
+    cout << "Oplata gaz: " << oplataGaz << endl;
+    cout << "Oplata najem: " << oplataNajem << endl;
+    cout << "Do zaplaty razem: " << sumaRachunku() << endl;
 
 }

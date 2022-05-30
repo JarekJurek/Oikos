@@ -1,8 +1,7 @@
 #include <iostream>
-#include "CLicznikGazu.h"
-#include "CLicznikPradu.h"
-#include "CLicznikWody.h"
+
 #include "CMieszkanie.h"
+#include "CRachunek.h"
 
 using namespace std;
 
@@ -15,10 +14,10 @@ int main() {
 //    G1.wyswietlDaneLicznika();
 
     CMieszkanie m1;
-//    CMieszkanie m2;
     m1.wprowadzDaneM();
-//    m2.wprowadzDaneM();
     m1.wyswietlDaneM();
-//    m2.wyswietlDaneM();
+    CRachunek styczen;
+    styczen.obliczOplaty(&m1);
+    styczen.wyswietlRachunek();
 
 }

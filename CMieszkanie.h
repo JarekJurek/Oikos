@@ -15,7 +15,6 @@
 using namespace std;
 
 class CMieszkanie {
-    string nazwa;
     float wartosc;
     float czynsz;
 public:
@@ -26,7 +25,7 @@ public:
     CLicznikWody lwodaCiepla;
     CLicznikWody lwodaZimna;
 
-    CMieszkanie(string = "void", float = -1, float = -1);
+    CMieszkanie(float = -1, float = -1);
 
     void wprowadzDaneM();
 
