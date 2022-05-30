@@ -15,11 +15,10 @@ int main() {
 //    G1.wyswietlDaneLicznika();
 
     CMieszkanie m1;
-    CMieszkanie m2;
+//    CMieszkanie m2;
     m1.wprowadzDaneM();
-    m2.wprowadzDaneM();
+//    m2.wprowadzDaneM();
     m1.wyswietlDaneM();
-    m2.wyswietlDaneM();
+//    m2.wyswietlDaneM();
 
-    return 0;
 }

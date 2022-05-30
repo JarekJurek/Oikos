@@ -8,6 +8,7 @@
 #include <iostream>
 #include "CAdres.h"
 #include "CLicznik.h"
+#include "CTaryfa.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ class CMieszkanie {
     float czynsz;
 public:
     CAdres adres;
+    CTaryfa taryfa;
     CMieszkanie(string = "void", float = -1, float = -1);
     void wprowadzDaneM();
     void wyswietlDaneM();
