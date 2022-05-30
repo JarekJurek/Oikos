@@ -1,0 +1,3 @@
+C:/Users/grzeg/Documents/Studia/Semestr 6/PJC/Oikos/cmake-build-debug/CMakeFiles/Program.dir
+C:/Users/grzeg/Documents/Studia/Semestr 6/PJC/Oikos/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/grzeg/Documents/Studia/Semestr 6/PJC/Oikos/cmake-build-debug/CMakeFiles/rebuild_cache.dir

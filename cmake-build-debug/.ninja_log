@@ -1,0 +1,12 @@
+# ninja log v5
+61	4937	6756106732241954	CMakeFiles/Program.dir/CAdres.cpp.obj	cee68912691d8dee
+9	4978	6756106732641761	CMakeFiles/Program.dir/main.cpp.obj	68336320de172bf4
+51	4971	6756106732441860	CMakeFiles/Program.dir/CLicznikGazu.cpp.obj	acc7f2956ba80e3
+56	5022	6756106733536582	CMakeFiles/Program.dir/CLicznikPradu.cpp.obj	b066335f6da1291b
+2947	3363	6753802813119288	Program.exe	d22b13978bc53f0e
+66	4994	6756106733325640	CMakeFiles/Program.dir/CLicznikWody.cpp.obj	cceb5664ee073e5f
+46	4954	6756106732441860	CMakeFiles/Program.dir/CLicznik.cpp.obj	f22b8a6b678cb811
+4939	6811	6756106751810511	CMakeFiles/Program.dir/CMieszkanie.cpp.obj	b6d9a92aa5b5c400
+4954	6723	6756106750910987	CMakeFiles/Program.dir/COdczyt.cpp.obj	967472469809f52c
+10	840	6756107264604458	build.ninja	c04ce91f521dea3b
+4	379	6756107269901632	Program.exe	d22b13978bc53f0e
