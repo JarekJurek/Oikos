@@ -23,3 +23,7 @@ void CLicznik::wprowadzDaneLicznika() {
 string CLicznik::outNumerLicznika() {
     return numerLicznika;
 }
+
+void CLicznik::wczytajDaneLicznika(string x) {
+    numerLicznika = x;
+}

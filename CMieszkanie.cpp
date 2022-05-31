@@ -4,7 +4,7 @@
 
 #include "CMieszkanie.h"
 
-CMieszkanie::CMieszkanie(float x, float y) {
+CMieszkanie::CMieszkanie(double x, double y) {
     wartosc = x;
     czynsz = y;
 }
@@ -40,8 +40,88 @@ void CMieszkanie::wyswietlDaneM() {
     cout << endl;
 }
 
-float CMieszkanie::outCzynsz() {
+double CMieszkanie::outCzynsz() {
     return czynsz;
 }
 
+double CMieszkanie::outWartosc() {
+    return wartosc;
+}
 
+void CMieszkanie::zapiszMieszkanie(string path) {
+    ofstream plik(path);
+
+    if (!plik.good()) {
+        cout << "Problem z folderem mieszkaniowym" << endl;
+        return;
+    }
+
+    plik << to_string(wartosc) << endl;
+    plik << to_string(czynsz) << endl;
+
+    // adres
+    plik << adres.outUlica() << endl;
+    plik << adres.outNumerDomu() << endl;
+    plik << to_string(adres.outNumerMieszkania()) << endl;
+    plik << adres.outKodPocztowy() << endl;
+    plik << adres.outMiasto() << endl;
+
+    // taryfa
+    plik << to_string(taryfa.outTaryfaWodaCiepla()) << endl;
+    plik << to_string(taryfa.outTaryfaWodaZimna()) << endl;
+    plik << to_string(taryfa.outTaryfaGaz()) << endl;
+    plik << to_string(taryfa.outTaryfaPrad()) << endl;
+    plik << to_string(taryfa.outTaryfaNajem()) << endl;
+
+    // licznik pradu
+    plik << lprad.outNumerLicznika() << endl;
+    plik << lgaz.outNumerLicznika() << endl;
+    plik << lwodaCiepla.outNumerLicznika() << endl;
+    plik << lwodaZimna.outNumerLicznika() << endl;
+
+    plik.close();
+    return;
+}
+
+
+void CMieszkanie::wczytajMieszkanie(string path) {
+    ifstream plik(path);
+
+    if (!plik.good()) {
+        cout << "Problem z folderem mieszkaniowym" << endl;
+        return;
+    }
+
+    string line;
+    getline(plik, line);
+    wartosc = stod(line);
+
+    getline(plik, line);
+    czynsz = stod(line);
+
+    string listaDane[5];
+    int i;
+    for (i = 0; i < 5; i++) {
+        getline(plik, listaDane[i]);
+    }
+    adres.wczytajAdresM(listaDane[0], listaDane[1], stoi(listaDane[2]),
+                        listaDane[3], listaDane[4]);
+
+    for (i = 0; i < 5; i++) {
+        getline(plik, listaDane[i]);
+    }
+    taryfa.wczytajTaryfy(stof(listaDane[0]), stof(listaDane[1]), stof(listaDane[2]),
+                         stof(listaDane[3]), stof(listaDane[4]));
+
+    getline(plik, line);
+    lprad.wczytajDaneLicznika(line);
+    getline(plik, line);
+    lgaz.wczytajDaneLicznika(line);
+    getline(plik, line);
+    lwodaCiepla.wczytajDaneLicznika(line);
+    getline(plik, line);
+    lwodaZimna.wczytajDaneLicznika(line);
+
+    plik.close();
+    return;
+}

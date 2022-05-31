@@ -12,11 +12,8 @@ using namespace std;
 
 class CLicznik {
     string numerLicznika;
-
 public:
     COdczyt odczyt;
-
-    string outNumerLicznika();
 
     CLicznik(string = "-1");
 
@@ -24,8 +21,11 @@ public:
 
     void wprowadzDaneLicznika();
 
+    void wczytajDaneLicznika(string);
+
     void wyswietlDaneLicznika();
 
+    string outNumerLicznika();
 };
 
 

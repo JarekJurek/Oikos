@@ -18,6 +18,8 @@ class CTaryfa {
 public:
     CTaryfa(float = -1, float = -1, float = -1, float = -1, float = -1);
 
+    void wczytajTaryfy(float, float, float, float, float);
+
     void wprowadzTaryfy();
 
     void wyswietlTaryfy();

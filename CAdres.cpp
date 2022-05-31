@@ -34,3 +34,33 @@ void CAdres::wyswietlAdresM() {
     cout << "Miasto: " << miasto << endl;
     cout << endl;
 }
+
+void CAdres::wczytajAdresM(string q, string w, int x, string e, string r) {
+    ulica = q;
+    numerDomu = w;
+    numerMieszkania = x;
+    kodPocztowy = e;
+    miasto = r;
+}
+
+string CAdres::outUlica() {
+    return ulica;
+}
+
+string CAdres::outNumerDomu() {
+    return numerDomu;
+}
+
+int CAdres::outNumerMieszkania() {
+    return numerMieszkania;
+}
+
+string CAdres::outKodPocztowy() {
+    return kodPocztowy;
+}
+
+string CAdres::outMiasto() {
+    return miasto;
+}
+
+

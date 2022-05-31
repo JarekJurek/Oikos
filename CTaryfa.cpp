@@ -12,6 +12,14 @@ CTaryfa::CTaryfa(float x, float y, float z, float a, float b) {
     taryfaNajem = b;
 }
 
+void CTaryfa::wczytajTaryfy(float x, float y, float z, float a, float b) {
+    taryfaWodaCiepla = x;
+    taryfaWodaZimna = y;
+    taryfaGaz = z;
+    taryfaPrad = a;
+    taryfaNajem = b;
+}
+
 void CTaryfa::wprowadzTaryfy() {
     cout << "Taryfa woda ciepla:";
     cin >> taryfaWodaCiepla;

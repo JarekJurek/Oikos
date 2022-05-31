@@ -6,17 +6,19 @@
 #define PROGRAM_CMIESZKANIE_H
 
 #include <iostream>
+#include <fstream>
 #include "CAdres.h"
 #include "CLicznikPradu.h"
 #include "CLicznikWody.h"
 #include "CLicznikGazu.h"
 #include "CTaryfa.h"
 
+
 using namespace std;
 
 class CMieszkanie {
-    float wartosc;
-    float czynsz;
+    double wartosc;
+    double czynsz;
 public:
     CAdres adres;
     CTaryfa taryfa;
@@ -25,13 +27,19 @@ public:
     CLicznikWody lwodaCiepla;
     CLicznikWody lwodaZimna;
 
-    CMieszkanie(float = -1, float = -1);
+    CMieszkanie(double = -1, double = -1);
 
     void wprowadzDaneM();
 
     void wyswietlDaneM();
 
-    float outCzynsz();
+    void zapiszMieszkanie(string);
+
+    void wczytajMieszkanie(string);
+
+    double outCzynsz();
+
+    double outWartosc();
 };
 
 
