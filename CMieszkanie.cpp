@@ -83,7 +83,6 @@ void CMieszkanie::zapiszMieszkanie(string path) {
     return;
 }
 
-
 void CMieszkanie::wczytajMieszkanie(string path) {
     ifstream plik(path);
 

@@ -12,10 +12,10 @@ using namespace std;
 
 class CLicznik {
     string numerLicznika;
-public:
-    COdczyt odczyt;
 
-    CLicznik(string = "-1");
+    COdczyt m_odczyt; // to nie w public
+public:
+    CLicznik(string x = "-1");
 
     virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
 
@@ -26,6 +26,8 @@ public:
     void wyswietlDaneLicznika();
 
     string outNumerLicznika();
+
+    COdczyt* odczyt() { return &m_odczyt; }
 };
 
 

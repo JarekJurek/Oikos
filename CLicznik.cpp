@@ -4,8 +4,7 @@
 
 #include "CLicznik.h"
 
-CLicznik::CLicznik(string x) {
-    numerLicznika = x;
+CLicznik::CLicznik(string x) : numerLicznika(x) {
 }
 
 void CLicznik::wyswietlDaneLicznika() {

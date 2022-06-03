@@ -13,6 +13,8 @@
 #include "CLicznikGazu.h"
 #include "CTaryfa.h"
 
+#include <deque>
+
 
 using namespace std;
 
@@ -22,12 +24,13 @@ class CMieszkanie {
 public:
     CAdres adres;
     CTaryfa taryfa;
-    CLicznikPradu lprad;
+    CLicznikPradu lprad;  // tego ma nie być
     CLicznikGazu lgaz;
     CLicznikWody lwodaCiepla;
-    CLicznikWody lwodaZimna;
+    CLicznikWody lwodaZimna;  // dotąd
+    std::deque<CLicznik*> liczniki;  // ???
 
-    CMieszkanie(double = -1, double = -1);
+    CMieszkanie(double x = -1, double y = -1);
 
     void wprowadzDaneM();
 

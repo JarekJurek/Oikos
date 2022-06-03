@@ -115,6 +115,12 @@ build CMakeFiles/Program.dir/CZapis.cpp.obj: CXX_COMPILER__Program_Debug C$:/Use
   OBJECT_DIR = CMakeFiles\Program.dir
   OBJECT_FILE_DIR = CMakeFiles\Program.dir
 
+build CMakeFiles/Program.dir/CListaMiekszan.cpp.obj: CXX_COMPILER__Program_Debug C$:/Users/grzeg/Documents/Studia/Semestr$ 6/PJC/Oikos/CListaMiekszan.cpp || cmake_object_order_depends_target_Program
+  DEP_FILE = CMakeFiles\Program.dir\CListaMiekszan.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\Program.dir
+  OBJECT_FILE_DIR = CMakeFiles\Program.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Program
@@ -123,7 +129,7 @@ build CMakeFiles/Program.dir/CZapis.cpp.obj: CXX_COMPILER__Program_Debug C$:/Use
 #############################################
 # Link the executable Program.exe
 
-build Program.exe: CXX_EXECUTABLE_LINKER__Program_Debug CMakeFiles/Program.dir/main.cpp.obj CMakeFiles/Program.dir/CLicznik.cpp.obj CMakeFiles/Program.dir/CLicznikGazu.cpp.obj CMakeFiles/Program.dir/CLicznikPradu.cpp.obj CMakeFiles/Program.dir/CLicznikWody.cpp.obj CMakeFiles/Program.dir/CAdres.cpp.obj CMakeFiles/Program.dir/CMieszkanie.cpp.obj CMakeFiles/Program.dir/COdczyt.cpp.obj CMakeFiles/Program.dir/CTaryfa.cpp.obj CMakeFiles/Program.dir/CRachunek.cpp.obj CMakeFiles/Program.dir/CZapis.cpp.obj
+build Program.exe: CXX_EXECUTABLE_LINKER__Program_Debug CMakeFiles/Program.dir/main.cpp.obj CMakeFiles/Program.dir/CLicznik.cpp.obj CMakeFiles/Program.dir/CLicznikGazu.cpp.obj CMakeFiles/Program.dir/CLicznikPradu.cpp.obj CMakeFiles/Program.dir/CLicznikWody.cpp.obj CMakeFiles/Program.dir/CAdres.cpp.obj CMakeFiles/Program.dir/CMieszkanie.cpp.obj CMakeFiles/Program.dir/COdczyt.cpp.obj CMakeFiles/Program.dir/CTaryfa.cpp.obj CMakeFiles/Program.dir/CRachunek.cpp.obj CMakeFiles/Program.dir/CZapis.cpp.obj CMakeFiles/Program.dir/CListaMiekszan.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Program.dir
