@@ -66,7 +66,9 @@
 				15,
 				17,
 				19,
-				21
+				21,
+				23,
+				25
 			]
 		}
 	],
@@ -114,7 +116,9 @@
 				15,
 				17,
 				19,
-				21
+				21,
+				23,
+				25
 			]
 		},
 		{
@@ -131,7 +135,9 @@
 				16,
 				18,
 				20,
-				22
+				22,
+				24,
+				26
 			]
 		}
 	],
@@ -245,23 +251,45 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "CZapis.cpp",
+			"path" : "CListaMieszkan.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "CZapis.h",
+			"path" : "CListaMieszkan.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "CListaMiekszan.cpp",
+			"path" : "CInterfejs.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "CListaMiekszan.h",
+			"path" : "CInterfejs.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "CSerializer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "CSerializer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "CDeserializer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "CDeserializer.h",
 			"sourceGroupIndex" : 1
 		}
 	],

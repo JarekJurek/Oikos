@@ -4,7 +4,7 @@
 
 #include "CTaryfa.h"
 
-CTaryfa::CTaryfa(float x, float y, float z, float a, float b) {
+CTaryfa::CTaryfa(double x, double y, double z, double a, double b) {
     taryfaWodaCiepla = x;
     taryfaWodaZimna = y;
     taryfaGaz = z;
@@ -12,7 +12,7 @@ CTaryfa::CTaryfa(float x, float y, float z, float a, float b) {
     taryfaNajem = b;
 }
 
-void CTaryfa::wczytajTaryfy(float x, float y, float z, float a, float b) {
+void CTaryfa::wprowadzTaryfy(double x, double y, double z, double a, double b) {
     taryfaWodaCiepla = x;
     taryfaWodaZimna = y;
     taryfaGaz = z;
@@ -20,46 +20,23 @@ void CTaryfa::wczytajTaryfy(float x, float y, float z, float a, float b) {
     taryfaNajem = b;
 }
 
-void CTaryfa::wprowadzTaryfy() {
-    cout << "Taryfa woda ciepla:";
-    cin >> taryfaWodaCiepla;
-    cout << "taryfa Woda Zimna:";
-    cin >> taryfaWodaZimna;
-    cout << "taryfa Gaz:";
-    cin >> taryfaGaz;
-    cout << "taryfa Prad:";
-    cin >> taryfaPrad;
-    cout << "taryfa Najem:";
-    cin >> taryfaNajem;
-    cout << endl;
-}
-
-void CTaryfa::wyswietlTaryfy() {
-    cout << "Taryfa woda ciepla: " << taryfaWodaCiepla << endl;
-    cout << "taryfa Woda Zimna: " << taryfaWodaZimna << endl;
-    cout << "taryfa Gaz: " << taryfaGaz << endl;
-    cout << "taryfa Prad: " << taryfaPrad << endl;
-    cout << "taryfa Najem: " << taryfaNajem << endl;
-    cout << endl;
-}
-
-float CTaryfa::outTaryfaWodaCiepla() {
+double CTaryfa::outTaryfaWodaCiepla() {
     return taryfaWodaCiepla;
 }
 
-float CTaryfa::outTaryfaWodaZimna() {
+double CTaryfa::outTaryfaWodaZimna() {
     return taryfaWodaZimna;
 }
 
-float CTaryfa::outTaryfaGaz() {
+double CTaryfa::outTaryfaGaz() {
     return taryfaGaz;
 }
 
-float CTaryfa::outTaryfaPrad() {
+double CTaryfa::outTaryfaPrad() {
     return taryfaPrad;
 }
 
-float CTaryfa::outTaryfaNajem() {
+double CTaryfa::outTaryfaNajem() {
     return taryfaNajem;
 }
 

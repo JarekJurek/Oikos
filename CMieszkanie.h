@@ -7,14 +7,13 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
+
 #include "CAdres.h"
+#include "CTaryfa.h"
 #include "CLicznikPradu.h"
 #include "CLicznikWody.h"
 #include "CLicznikGazu.h"
-#include "CTaryfa.h"
-
-#include <deque>
-
 
 using namespace std;
 
@@ -28,18 +27,12 @@ public:
     CLicznikGazu lgaz;
     CLicznikWody lwodaCiepla;
     CLicznikWody lwodaZimna;  // dotąd
-    COdczyt odczyt;
-//    std::deque<CLicznik*> liczniki;  // ???
+//    COdczyt odczyt;
+//  vector<CLicznik*> liczniki;  // ???
 
     CMieszkanie(double x = -1, double y = -1);
 
-    void wprowadzDaneM();
-
-    void wyswietlDaneM();
-
-    void zapiszMieszkanie(string);
-
-    void wczytajMieszkanie(string);
+    void wprowadzDaneM(double x, double y);
 
     double outCzynsz();
 
