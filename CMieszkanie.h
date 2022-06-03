@@ -33,7 +33,7 @@ public:
 
     CMieszkanie(double x = -1, double y = -1);
 
-    void wprowadzDaneM();
+    void wprowadzDaneM(double x, double y);
 
     void wyswietlDaneM();
 

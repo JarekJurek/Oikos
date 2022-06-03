@@ -18,11 +18,9 @@ class CAdres {
 public:
     CAdres(string = "void", string = "void", int = -1, string = "void", string = "void");
 
-    void wprowadzAdresM();
+    void wprowadzAdres(string q, string w, int x, string e, string r);
 
     void wyswietlAdresM();
-
-    void wczytajAdresM(string, string, int, string, string);
 
     string outUlica();
 

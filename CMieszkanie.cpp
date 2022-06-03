@@ -9,23 +9,19 @@ CMieszkanie::CMieszkanie(double x, double y) {
     czynsz = y;
 }
 
-void CMieszkanie::wprowadzDaneM() {
-    cout << "Dodawanie mieszkania" << endl;
-    adres.wprowadzAdresM();
-    cout << "Wartosc:";
-    cin >> wartosc;
-    cout << "Czynsz:";
-    cin >> czynsz;
-    taryfa.wprowadzTaryfy();
-    lprad.wprowadzDaneLicznika();
-    lprad.podajStanLicznika();
+void CMieszkanie::wprowadzDaneM(double x, double y) {
+    wartosc = x;
+    czynsz = y;
+
+//    lprad.wprowadzDaneLicznika();
+//    lprad.podajStanLicznika();
 //    lgaz.wprowadzDaneLicznika();
 //    lgaz.podajStanLicznika();
 //    lwodaZimna.wprowadzDaneLicznika();
 //    lwodaZimna.podajStanLicznika();
 //    lwodaCiepla.wprowadzDaneLicznika();
 //    lwodaCiepla.podajStanLicznika();
-    cout << endl;
+
 }
 
 void CMieszkanie::wyswietlDaneM() {
@@ -103,13 +99,13 @@ void CMieszkanie::wczytajMieszkanie(string path) {
     for (i = 0; i < 5; i++) {
         getline(plik, listaDane[i]);
     }
-    adres.wczytajAdresM(listaDane[0], listaDane[1], stoi(listaDane[2]),
+    adres.wprowadzAdres(listaDane[0], listaDane[1], stoi(listaDane[2]),
                         listaDane[3], listaDane[4]);
 
     for (i = 0; i < 5; i++) {
         getline(plik, listaDane[i]);
     }
-    taryfa.wczytajTaryfy(stof(listaDane[0]), stof(listaDane[1]), stof(listaDane[2]),
+    taryfa.wprowadzTaryfy(stof(listaDane[0]), stof(listaDane[1]), stof(listaDane[2]),
                          stof(listaDane[3]), stof(listaDane[4]));
 
     getline(plik, line);

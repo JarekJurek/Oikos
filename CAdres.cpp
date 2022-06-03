@@ -12,18 +12,12 @@ CAdres::CAdres(string q, string w, int x, string e, string r) {
     miasto = r;
 }
 
-void CAdres::wprowadzAdresM() {
-    cout << "Ulica:";
-    cin >> ulica;
-    cout << "Numer domu:";
-    cin >> numerDomu;
-    cout << "Numer mieszkania:";
-    cin >> numerMieszkania;
-    cout << "Kod pocztowy:";
-    cin >> kodPocztowy;
-    cout << "Miasto:";
-    cin >> miasto;
-    cout << endl;
+void CAdres::wprowadzAdres(string q, string w, int x, string e, string r) {
+    ulica = q;
+    numerDomu = w;
+    numerMieszkania = x;
+    kodPocztowy = e;
+    miasto = r;
 }
 
 void CAdres::wyswietlAdresM() {
@@ -35,13 +29,7 @@ void CAdres::wyswietlAdresM() {
     cout << endl;
 }
 
-void CAdres::wczytajAdresM(string q, string w, int x, string e, string r) {
-    ulica = q;
-    numerDomu = w;
-    numerMieszkania = x;
-    kodPocztowy = e;
-    miasto = r;
-}
+
 
 string CAdres::outUlica() {
     return ulica;

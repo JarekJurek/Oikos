@@ -1,12 +1,9 @@
-#include <iostream>
+#include "CListaMieszkan.h"
 
-#include "CMieszkanie.h"
-#include "CRachunek.h"
-#include "CZapis.h"
-
-using namespace std;
 
 int main() {
+    CListaMieszkan l;
+    l.utworzNoweMieszkanie();
 //    CLicznikPradu G1;
 //    G1.wyswietlDaneLicznika();
 //    G1.wprowadzDaneLicznika();
@@ -14,11 +11,12 @@ int main() {
 //    G1.podajStanLicznika();
 //    G1.wyswietlDaneLicznika();
 
-    CMieszkanie m1;
+//    CMieszkanie m1;
+
 //    m1.wprowadzDaneM();
 //    m1.zapiszMieszkanie("C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\mieszkanie1.txt");
-    m1.wczytajMieszkanie("C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\mieszkanie1.txt");
-    m1.wyswietlDaneM();
+//    m1.wczytajMieszkanie("C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\mieszkanie1.txt");
+//    m1.wyswietlDaneM();
 
 //    m1.wyswietlDaneM(/);
 //    CRachunek styczen;
