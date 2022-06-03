@@ -21,9 +21,7 @@ class CRachunek {
     CMieszkanie *m;
     CTaryfa *t = nullptr;
     COdczyt *o = nullptr;
-
 public:
-
     CRachunek(float = -1, float = -1, float = -1, float = -1, float = -1);
 
     void obliczOplaty(CMieszkanie *m);

@@ -16,11 +16,9 @@ class CAdres {
     string kodPocztowy;
     string miasto;
 public:
-    CAdres(string = "void", string = "void", int = -1, string = "void", string = "void");
+    CAdres(string q = "void", string w = "void", int x = -1, string e = "void", string r = "void");
 
     void wprowadzAdres(string q, string w, int x, string e, string r);
-
-    void wyswietlAdresM();
 
     string outUlica();
 

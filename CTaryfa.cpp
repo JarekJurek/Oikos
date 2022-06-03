@@ -20,15 +20,6 @@ void CTaryfa::wprowadzTaryfy(double x, double y, double z, double a, double b) {
     taryfaNajem = b;
 }
 
-void CTaryfa::wyswietlTaryfy() {
-    cout << "Taryfa woda ciepla: " << taryfaWodaCiepla << endl;
-    cout << "taryfa Woda Zimna: " << taryfaWodaZimna << endl;
-    cout << "taryfa Gaz: " << taryfaGaz << endl;
-    cout << "taryfa Prad: " << taryfaPrad << endl;
-    cout << "taryfa Najem: " << taryfaNajem << endl;
-    cout << endl;
-}
-
 double CTaryfa::outTaryfaWodaCiepla() {
     return taryfaWodaCiepla;
 }

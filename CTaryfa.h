@@ -20,8 +20,6 @@ public:
 
     void wprowadzTaryfy(double x, double y, double z, double a, double b);
 
-    void wyswietlTaryfy();
-
     double outTaryfaWodaCiepla();
 
     double outTaryfaWodaZimna();

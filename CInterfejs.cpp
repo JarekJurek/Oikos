@@ -5,7 +5,7 @@
 #include "CInterfejs.h"
 
 void CInterfejs::wprowadzanieDanychM(CMieszkanie *m) {
-    cout << "Dodawanie mieszkania" << endl;
+    cout << "*** Dodawanie mieszkania ***" << endl;
 
     // dodawanie danych adresu
     string q, w, r, t;
@@ -22,7 +22,7 @@ void CInterfejs::wprowadzanieDanychM(CMieszkanie *m) {
     cin >> t;
     m->adres.wprowadzAdres(q, w, e, r, t);
 
-    // dodawanie danych wartość i czynsz
+    // dodawanie danych: wartość i czynsz
     double mx, my;
     cout << "Wartosc:";
     cin >> mx;
@@ -40,9 +40,34 @@ void CInterfejs::wprowadzanieDanychM(CMieszkanie *m) {
     cin >> tz;
     cout << "Taryfa prad:";
     cin >> ta;
-    cout << "Taryfa najem:";
+    cout << "Oplata najem:";
     cin >> tb;
-    cout << endl;
     m->taryfa.wprowadzTaryfy(tx, ty, tz, ta, tb);
+
+    cout << endl;
+
+}
+
+void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
+    cout << "*** Dane mieszkania ***" << endl;
+
+    // wyświetlanie danych adresu
+    cout << "Ulica: " << m->adres.outUlica() << endl;
+    cout << "Numer domu: " << m->adres.outNumerDomu() << endl;
+    cout << "Numer mieszkania: " << m->adres.outNumerMieszkania() << endl;
+    cout << "Kod pocztowy: " << m->adres.outKodPocztowy() << endl;
+    cout << "Miasto: " << m->adres.outMiasto() << endl;
+
+    // wyświetlanie danych: wartość i czynsz
+    cout << "Wartosc: " << m->outWartosc() << endl;
+    cout << "Czynsz: " << m->outCzynsz() << endl;
+
+    // wyświetlanie danych taryfy
+    cout << "Taryfa woda ciepla: " << m->taryfa.outTaryfaWodaCiepla() << endl;
+    cout << "Taryfa woda zimna: " << m->taryfa.outTaryfaWodaZimna() << endl;
+    cout << "Taryfa gaz: " << m->taryfa.outTaryfaGaz() << endl;
+    cout << "Taryfa prad: " << m->taryfa.outTaryfaPrad() << endl;
+    cout << "Oplata najem: " << m->taryfa.outTaryfaNajem() << endl;
+    cout << endl;
 
 }

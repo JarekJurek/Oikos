@@ -4,6 +4,7 @@
 
 #ifndef PROGRAM_CINTERFEJS_H
 #define PROGRAM_CINTERFEJS_H
+
 #include <iostream>
 
 #include "CMieszkanie.h"
@@ -13,6 +14,9 @@ using namespace std;
 class CInterfejs {
 public:
     void wprowadzanieDanychM(CMieszkanie *m);
+
+    void wyswietlanieDanychM(CMieszkanie *m);
+
 };
 
 
