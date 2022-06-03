@@ -28,7 +28,8 @@ public:
     CLicznikGazu lgaz;
     CLicznikWody lwodaCiepla;
     CLicznikWody lwodaZimna;  // dotąd
-    std::deque<CLicznik*> liczniki;  // ???
+    COdczyt odczyt;
+//    std::deque<CLicznik*> liczniki;  // ???
 
     CMieszkanie(double x = -1, double y = -1);
 

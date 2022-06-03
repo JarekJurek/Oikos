@@ -13,9 +13,10 @@ using namespace std;
 class CLicznik {
     string numerLicznika;
 
-    COdczyt m_odczyt; // to nie w public
 public:
     CLicznik(string x = "-1");
+
+    COdczyt odczyt; // to nie w public i nazwa raczej modczyt - member
 
     virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
 
@@ -27,7 +28,7 @@ public:
 
     string outNumerLicznika();
 
-    COdczyt* odczyt() { return &m_odczyt; }
+//    COdczyt* odczyt() { return &m_odczyt; }
 };
 
 
