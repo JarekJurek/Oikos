@@ -18,8 +18,7 @@ class CListaMieszkan {
 
 public:
 
-    CMieszkanie *
-    utworzNoweMieszkanie();  // Funkcja tworząca nowy obiekt CMieszkanie i dodająca wskaźnik do niego do listy
+    CMieszkanie *utworzNoweMieszkanie();  // Funkcja tworząca nowy obiekt CMieszkanie i dodająca wskaźnik do niego
 
     void usunMieszkanie(int x);
 
