@@ -99,10 +99,10 @@ void CInterfejs::manuLicznik(CMieszkanie *m) {
         switch (choice) {
             case 1:  // Licznik pradu
             {
-                CLicznikPradu *tmp;
-//                tmp = CListaLicznikow::utworzNowyLicznik(m->liczniki);
-                CInterfejs::wprowadzanieDanychM(tmp);
-                CSerializer::zapiszMieszkanie(tmp);
+                CLicznikPradu Lpradu;
+                CLicznik *wskaznik = &Lpradu;
+                wskaznik = m->liczniki.utworzNowyLicznik();  // dafaqu
+
                 cout << "Utworzono mieszkanie" << endl;
                 break;
             }

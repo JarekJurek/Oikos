@@ -18,13 +18,14 @@
 #include "CDeserializer.h"
 
 class CListaLicznikow {
+    vector<CLicznik*> listaL;
 public:
 
-    static CLicznik *utworzNowyLicznik(vector<CLicznik *> listaL);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
+    static CLicznik *utworzNowyLicznik();  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
 
-    void usunLicznik(int x, vector<CLicznik *> listaL);
+    void usunLicznik(int x);
 
-    CLicznik *outWskaznikLicznika(int x, vector<CLicznik *> listaL);
+    CLicznik *outWskaznikLicznika(int x);
 
 };
 

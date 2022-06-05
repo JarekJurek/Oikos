@@ -11,6 +11,7 @@
 
 #include "CAdres.h"
 #include "CTaryfa.h"
+#include "CListaLicznikow.h"
 #include "CLicznikPradu.h"
 #include "CLicznikWody.h"
 #include "CLicznikGazu.h"
@@ -28,7 +29,7 @@ public:
     CLicznikWody lwodaCiepla;
     CLicznikWody lwodaZimna;  // dotąd
 //    COdczyt odczyt;
-    vector<CLicznik*> liczniki;
+    CListaLicznikow liczniki;
 
     CMieszkanie(double x = -1, double y = -1);
 
