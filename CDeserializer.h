@@ -14,7 +14,7 @@ using namespace std;
 
 class CDeserializer {
 public:
-    void wczytajMieszkanie(CMieszkanie *m);
+    static void wczytajMieszkanie(CMieszkanie *m);
 };
 
 
