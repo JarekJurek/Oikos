@@ -6,8 +6,10 @@
 #define PROGRAM_CINTERFEJS_H
 
 #include <iostream>
+#include <unistd.h>
 
 #include "CMieszkanie.h"
+#include "CListaMieszkan.h"
 
 using namespace std;
 
@@ -17,6 +19,7 @@ public:
 
     void wyswietlanieDanychM(CMieszkanie *m);
 
+    void mainManu(CListaMieszkan *l);
 };
 
 

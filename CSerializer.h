@@ -14,7 +14,7 @@ using namespace std;
 
 class CSerializer {
 public:
-    void zapiszMieszkanie(CMieszkanie *m);
+    static void zapiszMieszkanie(CMieszkanie *m);
 };
 
 
