@@ -10,16 +10,32 @@
 
 #include "CMieszkanie.h"
 #include "CListaMieszkan.h"
+#include "CListaLicznikow.h"
+
+#include "CLicznikPradu.h"
+#include "CLicznikWody.h"
+
 
 using namespace std;
 
 class CInterfejs {
 public:
+    void mainManu(CListaMieszkan *l);
+
+    void manuLicznik(CMieszkanie *m);
+
     void wprowadzanieDanychM(CMieszkanie *m);
 
     void wyswietlanieDanychM(CMieszkanie *m);
 
-    void mainManu(CListaMieszkan *l);
+    void wprowadzanieDanychLpradu(CLicznikPradu *lp);
+
+    void wyswietlanieDanychLpradu(CLicznikPradu *lp);
+
+    void wprowadzanieDanychLwody(CLicznikWody *lw);
+
+    void wyswietlanieDanychLwody(CLicznikWody *lw);
+
 };
 
 

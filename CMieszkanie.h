@@ -28,7 +28,7 @@ public:
     CLicznikWody lwodaCiepla;
     CLicznikWody lwodaZimna;  // dotąd
 //    COdczyt odczyt;
-//  vector<CLicznik*> liczniki;  // ???
+    vector<CLicznik*> liczniki;
 
     CMieszkanie(double x = -1, double y = -1);
 

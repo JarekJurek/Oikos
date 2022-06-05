@@ -4,13 +4,10 @@
 
 #include "CLicznikWody.h"
 
-void CLicznikWody::podajStanLicznika() {
-    string s;
-    float x;
-    cout << "Podaj stan licznika wody nr " << outNumerLicznika() << ".:";
-    cin >> x;
-    cout << "Podaj date:";
-    cin >> s;
-    odczyt.podajOdczyt(x, s);
-    cout << "Zapisano" << endl << endl;
+void CLicznikWody::podajStanLicznika(double x) {
+    stan = x;
+}
+
+double CLicznikWody::outStan() {
+    return stan;
 }

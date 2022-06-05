@@ -10,15 +10,17 @@
 #include <algorithm>
 
 #include "CLicznik.h"
+//#include "CLicznikPradu.h"
+//#include "CLicznikWody.h"
+//#include "CLicznikGazu.h"
+
 #include "CSerializer.h"
 #include "CDeserializer.h"
 
 class CListaLicznikow {
-    vector<CLicznik *> listaL;  // lista w formacie std::vector zawierająca wskaźniki do CMieszkanie
-
 public:
 
-    CLicznik *utworzNowyLicznik(vector<CLicznik *> listaL);  // Funkcja tworząca nowy obiekt CMieszkanie i dodająca wskaźnik do niego
+    static CLicznik *utworzNowyLicznik(vector<CLicznik *> listaL);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
 
     void usunLicznik(int x, vector<CLicznik *> listaL);
 
