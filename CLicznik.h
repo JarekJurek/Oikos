@@ -18,7 +18,7 @@ public:
 
     COdczyt odczyt; // to nie w public i nazwa raczej modczyt - member
 
-    virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
+    virtual void podajStanLicznika();  // czysta klasa wirtualna
 
     void wprowadzDaneLicznika();
 

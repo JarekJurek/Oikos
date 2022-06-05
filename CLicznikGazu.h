@@ -15,7 +15,7 @@ public:
 
     float przeliczJednostki(float);
 
-    void podajStanLicznika() override;
+    virtual void podajStanLicznika();
 
 };
 

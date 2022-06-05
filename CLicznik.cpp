@@ -26,3 +26,5 @@ string CLicznik::outNumerLicznika() {
 void CLicznik::wczytajDaneLicznika(string x) {
     numerLicznika = x;
 }
+
+void CLicznik::podajStanLicznika() {}

@@ -9,7 +9,7 @@
 
 class CLicznikPradu : public CLicznik {
 public:
-    void podajStanLicznika() override;
+    virtual void podajStanLicznika();
 };
 
 
