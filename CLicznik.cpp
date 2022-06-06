@@ -29,3 +29,13 @@
 void CLicznik::podajDaneLicznika() {
 
 }
+
+double CLicznik::outStanLicznika() {
+
+}
+
+string CLicznik::outNumerLicznika() {
+
+}
+
+

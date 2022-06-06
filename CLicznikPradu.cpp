@@ -19,3 +19,11 @@ void CLicznikPradu::podajDaneLicznika(string s, double x) {
     numerLicznika = s;
     stanLicznika = x;
 }
+
+string CLicznikPradu::outNumerLicznika() {
+    return numerLicznika;
+}
+
+double CLicznikPradu::outStanLicznika() {
+    return stanLicznika;
+}

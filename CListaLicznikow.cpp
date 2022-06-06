@@ -16,3 +16,7 @@ void CListaLicznikow::usunLicznik(int x) {
 CLicznik *CListaLicznikow::outWskaznikLicznika(int x) {
     return mListaL[x];
 }
+
+int CListaLicznikow::outLiczbaElementow() {
+    return mListaL.size();
+}

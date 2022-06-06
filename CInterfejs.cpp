@@ -120,7 +120,18 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
                 int p;
                 cout << "Ktore mieszkanie wyswietlic?" << endl;
                 cin >> p;
-                CInterfejs::wyswietlanieDanychM(l->outWskaznikMieszkania(p));
+                CMieszkanie *tmp = l->outWskaznikMieszkania(p);
+                CInterfejs::wyswietlanieDanychM(tmp);
+                if(tmp->liczniki.outLiczbaElementow() != 0) {
+//                    CLicznik *wsk = tmp->liczniki.outWskaznikLicznika(0);
+//                    CInterfejs::wyswietlanieDanychLpradu(wsk);
+                    cout << "YO" << endl;
+                }else{
+                    CLicznikPradu lPradu;
+                    CInterfejs::wprowadzanieDanychLpradu(&lPradu);
+                    CLicznik *tmpL = &lPradu;
+                    tmp->liczniki.dodajNowyLicznik(tmpL);
+                }
                 // tutaj mozliwość edycji licznikow
                 break;
             }
@@ -180,3 +191,20 @@ void CInterfejs::pokazListeM(CListaMieszkan *l) {
     } while (choice != 0);
     return;
 }
+
+void CInterfejs::wprowadzanieDanychLpradu(CLicznikPradu *lp) {
+    string s;
+    double x;
+    cout << "Podaj numer licznika:" << endl;
+    cin >> s;
+    cout << "Podaj stan licznika w kWh:" << endl;
+    cin >> x;
+    lp->podajDaneLicznika(s, x);
+}
+
+void CInterfejs::wyswietlanieDanychLpradu(CLicznikPradu *lp) {
+    cout << "Numer licznika:" << lp->outNumerLicznika() << endl;
+    cout << "Stan licznika: " << lp->outStanLicznika()<< endl;
+}
+
+

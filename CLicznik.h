@@ -17,6 +17,10 @@ public:
 
     virtual void podajDaneLicznika();  // czysta klasa wirtualna
 
+    virtual string outNumerLicznika();
+
+    virtual double outStanLicznika();
+
 
 //    CLicznik(string x = "-1");
 

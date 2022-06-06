@@ -12,6 +12,9 @@ class CLicznikPradu : public CLicznik {
     double stanLicznika;
 public:
     virtual void podajDaneLicznika(string s, double x);
+    virtual string outNumerLicznika();
+    virtual double outStanLicznika();
+
 };
 
 

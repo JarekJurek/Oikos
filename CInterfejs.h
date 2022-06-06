@@ -11,6 +11,7 @@
 
 #include "CMieszkanie.h"
 #include "CListaMieszkan.h"
+#include "CLicznik.h"
 
 using namespace std;
 
@@ -23,6 +24,10 @@ public:
     void mainManu(CListaMieszkan *l);
 
     void pokazListeM(CListaMieszkan *l);
+
+    void wprowadzanieDanychLpradu(CLicznikPradu *lp);
+
+    void wyswietlanieDanychLpradu(CLicznikPradu *lp);
 };
 
 
