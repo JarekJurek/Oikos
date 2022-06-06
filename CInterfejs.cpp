@@ -79,7 +79,8 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
              << "1 - Wczytaj mieszkanie\n"
              << "2 - Utworz nowe mieszkanie\n"
              << "3 - Wyswietl mieszkanie\n"
-             << "4 - Usun mieszkanie\n\n"
+             << "4 - Wyswietl liste mieszkan\n"
+             << "5 - Usun mieszkanie\n\n"
              << "0 - Zamknij program\n\n"
 
              << "Wybierz numer i wcisnij enter: ";
@@ -94,7 +95,6 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
         switch (choice) {
             case 1:  // Wczytaj mieszkanie
             {
-//                system("cls");
                 CMieszkanie *tmp;
                 tmp = l->utworzNoweMieszkanie();
                 CDeserializer::wczytajMieszkanie(tmp);
@@ -103,7 +103,6 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
             }
             case 2:  // Utworz nowe mieszkanie
             {
-//                system("cls");
                 CMieszkanie *tmp;
                 tmp = l->utworzNoweMieszkanie();
                 CInterfejs::wprowadzanieDanychM(tmp);
@@ -115,17 +114,21 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
             case 3  // Wyswietl mieszkanie
                 : {
                 int p;
-//                system("cls");
                 cout << "Ktore mieszkanie wyswietlic?" << endl;
                 cin >> p;
                 CInterfejs::wyswietlanieDanychM(l->outWskaznikMieszkania(p));
                 break;
             }
 
-            case 4  // Usun mieszkanie
+            case 4  // Wyswietl liste mieszkan
+                : {
+                CInterfejs::pokazListeM(l);
+                break;
+            }
+
+            case 5  // Usun mieszkanie
                 : {
                 int p;
-//                system("cls");
                 cout << "Ktore mieszkanie usunac?" << endl;
                 cin >> p;
                 l->usunMieszkanie(p);
@@ -133,19 +136,42 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
             }
 
             case 0: {
-//                system("cls");
                 cout << endl << "Zamykanie programu \n" << endl;
                 break;
             }
 
             default:
-//                system("cls");
                 cout << "Wybrano zly numer. Prosze wybrac ponownie" << endl;
                 sleep(1.5);
                 system("cls");
                 break;
         }
 
+    } while (choice != 0);
+    return;
+}
+
+void CInterfejs::pokazListeM(CListaMieszkan *l) {
+    CMieszkanie *tmp;
+    for(int i = 0; i < l->outLiczbaElementow(); i++){
+        tmp = l->outWskaznikMieszkania(i);
+        cout << "--------------------" << endl;
+        cout << "Mieszknie nr: " << i << endl;
+        CInterfejs::wyswietlanieDanychM(tmp);
+        cout << "--------------------" << endl;
+    }
+    int choice;
+    do {
+        cout << "0 - Wroc\n\n"
+
+             << "Wybierz numer i wcisnij enter: ";
+
+        while (!(cin >> choice)) //wymuszenie podania właściwych znaków
+        {
+            cout << "Podano zly znak. Prosze wybrac numer i wcisnac enter: ";
+            cin.clear(); //kasowanie flagi błędu strumienia
+            cin.sync(); //kasowanie zbędnych znaków z bufora
+        }
     } while (choice != 0);
     return;
 }

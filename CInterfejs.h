@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <unistd.h>
+#include <vector>
 
 #include "CMieszkanie.h"
 #include "CListaMieszkan.h"
@@ -20,6 +21,8 @@ public:
     void wyswietlanieDanychM(CMieszkanie *m);
 
     void mainManu(CListaMieszkan *l);
+
+    void pokazListeM(CListaMieszkan *l);
 };
 
 
