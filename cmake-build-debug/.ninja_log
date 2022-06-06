@@ -1,8 +1,8 @@
 # ninja log v5
-72	3588	6762188959967042	CMakeFiles/Program.dir/CInterfejs.cpp.obj	6002abb36a2c8d29
-6	3361	6762188957688260	CMakeFiles/Program.dir/main.cpp.obj	68336320de172bf4
+95	4137	6762193912387803	CMakeFiles/Program.dir/CInterfejs.cpp.obj	6002abb36a2c8d29
+8	4022	6762193911188450	CMakeFiles/Program.dir/main.cpp.obj	68336320de172bf4
 92	4392	6759862085706132	CMakeFiles/Program.dir/CAdres.cpp.obj	cee68912691d8dee
-3628	4155	6762188965564050	Program.exe	aa173eded292c5d8
+4165	6904	6762193936895752	Program.exe	5dd8ae193c5d5b5f
 127	5866	6762168419486660	CMakeFiles/Program.dir/CLicznikGazu.cpp.obj	acc7f2956ba80e3
 91	5695	6762168417692476	CMakeFiles/Program.dir/CLicznikPradu.cpp.obj	b066335f6da1291b
 132	5768	6762168418092278	CMakeFiles/Program.dir/CLicznik.cpp.obj	f22b8a6b678cb811
@@ -10,19 +10,13 @@
 44	6968	6762168430307779	CMakeFiles/Program.dir/CMieszkanie.cpp.obj	b6d9a92aa5b5c400
 33	3986	6759888141073829	CMakeFiles/Program.dir/CZapis.cpp.obj	95b0260c238f8ff0
 4954	6723	6756106750910987	CMakeFiles/Program.dir/COdczyt.cpp.obj	967472469809f52c
-6	2072	6762190574496253	build.ninja	c04ce91f521dea3b
+6	2072	6762211491294037	build.ninja	c04ce91f521dea3b
 97	4250	6759862084177898	CMakeFiles/Program.dir/CTaryfa.cpp.obj	bcf06a0ba852bfc
 66	3843	6756176717304632	CMakeFiles/Program.dir/AAAAtest.cpp.obj	8d481c38dce1d7e
 5696	11042	6762168471028219	CMakeFiles/Program.dir/CRachunek.cpp.obj	1efab5bd4a4789c5
 3544	11380	6759750747454497	CMakeFiles/Program.dir/CListaMiekszan.cpp.obj	dbbf78481ee8188b
-38	3627	6762188960366813	CMakeFiles/Program.dir/CListaMieszkan.cpp.obj	2a12a5d8baf704de
-57	3032	6762188953890286	CMakeFiles/Program.dir/CSerializer.cpp.obj	4dba529955431028
-5769	11031	6762168470828323	CMakeFiles/Program.dir/CDeserializer.cpp.obj	da31ac8d2bea6f27
-66	2886	6762188952491024	CMakeFiles/Program.dir/CSerializerAbstr.cpp.obj	743d73d5c07b055c
-89	3756	6762193908090141	CMakeFiles/Program.dir/CDeserializerAbstr.cpp.obj	c2d3cfd6b04d6f8e
+71	4164	6762193912687654	CMakeFiles/Program.dir/CListaMieszkan.cpp.obj	2a12a5d8baf704de
 77	3760	6762193907790259	CMakeFiles/Program.dir/CSerializer.cpp.obj	4dba529955431028
 82	3794	6762193908589840	CMakeFiles/Program.dir/CDeserializer.cpp.obj	da31ac8d2bea6f27
-8	4022	6762193911188450	CMakeFiles/Program.dir/main.cpp.obj	68336320de172bf4
-95	4137	6762193912387803	CMakeFiles/Program.dir/CInterfejs.cpp.obj	6002abb36a2c8d29
-71	4164	6762193912687654	CMakeFiles/Program.dir/CListaMieszkan.cpp.obj	2a12a5d8baf704de
-4165	6904	6762193936895752	Program.exe	5dd8ae193c5d5b5f
+66	2886	6762188952491024	CMakeFiles/Program.dir/CSerializerAbstr.cpp.obj	743d73d5c07b055c
+89	3756	6762193908090141	CMakeFiles/Program.dir/CDeserializerAbstr.cpp.obj	c2d3cfd6b04d6f8e
