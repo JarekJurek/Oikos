@@ -7,14 +7,16 @@
 
 #include <iostream>
 #include <fstream>
-#include "CMieszkanie.h"
 #include <string>
+
+#include "CSerializerAbstr.h"
+#include "CMieszkanie.h"
 
 using namespace std;
 
-class CSerializer {
+class CSerializer : public CSerializerAbstr{  // serializer tekstowy
 public:
-    static void zapiszMieszkanie(CMieszkanie *m);
+    virtual void zapiszMieszkanie(CMieszkanie *m);
 };
 
 

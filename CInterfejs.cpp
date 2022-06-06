@@ -97,7 +97,9 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
             {
                 CMieszkanie *tmp;
                 tmp = l->utworzNoweMieszkanie();
-                CDeserializer::wczytajMieszkanie(tmp);
+                CDeserializer dserTxt;
+                CDeserializerAbstr *wskDser = &dserTxt;
+                wskDser->wczytajMieszkanie(tmp);
                 cout << "Wczytano mieszkanie" << endl;
                 break;
             }
@@ -106,7 +108,9 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
                 CMieszkanie *tmp;
                 tmp = l->utworzNoweMieszkanie();
                 CInterfejs::wprowadzanieDanychM(tmp);
-                CSerializer::zapiszMieszkanie(tmp);
+                CSerializer serTxt;
+                CSerializerAbstr *wskSer = &serTxt;
+                wskSer->zapiszMieszkanie(tmp);
                 cout << "Utworzono mieszkanie" << endl;
                 break;
             }
@@ -117,6 +121,7 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
                 cout << "Ktore mieszkanie wyswietlic?" << endl;
                 cin >> p;
                 CInterfejs::wyswietlanieDanychM(l->outWskaznikMieszkania(p));
+                // tutaj mozliwość edycji licznikow
                 break;
             }
 
