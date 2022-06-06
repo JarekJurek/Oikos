@@ -19,6 +19,10 @@ CMieszkanie *CListaMieszkan::outWskaznikMieszkania(int x) {
     return mListaM[x];
 }
 
+int CListaMieszkan::outLiczbaElementow() {
+    return mListaM.size();
+}
+
 
 
 

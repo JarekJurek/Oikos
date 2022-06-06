@@ -24,6 +24,8 @@ public:
 
     CMieszkanie *outWskaznikMieszkania(int x);
 
+    int outLiczbaElementow();
+
 };
 
 
