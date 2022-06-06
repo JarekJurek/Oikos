@@ -8,8 +8,10 @@
 #include "CLicznik.h"
 
 class CLicznikPradu : public CLicznik {
+    string numerLicznika;
+    double stanLicznika;
 public:
-    void podajStanLicznika() override;
+    virtual void podajDaneLicznika(string s, double x);
 };
 
 

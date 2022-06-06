@@ -11,22 +11,24 @@
 using namespace std;
 
 class CLicznik {
-    string numerLicznika;
+//    string numerLicznika;
 
 public:
-    CLicznik(string x = "-1");
 
-    COdczyt odczyt; // to nie w public i nazwa raczej modczyt - member
+    virtual void podajDaneLicznika();  // czysta klasa wirtualna
 
-    virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
 
-    void wprowadzDaneLicznika();
+//    CLicznik(string x = "-1");
 
-    void wczytajDaneLicznika(string);
+//    COdczyt odczyt; // to nie w public i nazwa raczej modczyt - member
 
-    void wyswietlDaneLicznika();
-
-    string outNumerLicznika();
+//    void wprowadzDaneLicznika();
+//
+//    void wczytajDaneLicznika(string);
+//
+//    void wyswietlDaneLicznika();
+//
+//    string outNumerLicznika();
 
 //    COdczyt* odczyt() { return &m_odczyt; }
 };
