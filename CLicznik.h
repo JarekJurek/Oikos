@@ -14,18 +14,21 @@ class CLicznik {
     string numerLicznika;
 
 public:
-    COdczyt odczyt;
+    CLicznik(string x = "-1");
 
-    string outNumerLicznika();
-
-    CLicznik(string = "-1");
+    COdczyt odczyt; // to nie w public i nazwa raczej modczyt - member
 
     virtual void podajStanLicznika() = 0;  // czysta klasa wirtualna
 
     void wprowadzDaneLicznika();
 
+    void wczytajDaneLicznika(string);
+
     void wyswietlDaneLicznika();
 
+    string outNumerLicznika();
+
+//    COdczyt* odczyt() { return &m_odczyt; }
 };
 
 

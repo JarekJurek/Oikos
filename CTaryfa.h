@@ -10,27 +10,25 @@
 using namespace std;
 
 class CTaryfa {
-    float taryfaWodaCiepla;
-    float taryfaWodaZimna;
-    float taryfaGaz;
-    float taryfaPrad;
-    float taryfaNajem;
+    double taryfaWodaCiepla;
+    double taryfaWodaZimna;
+    double taryfaGaz;
+    double taryfaPrad;
+    double taryfaNajem;
 public:
-    CTaryfa(float = -1, float = -1, float = -1, float = -1, float = -1);
+    CTaryfa(double = -1, double = -1, double = -1, double = -1, double = -1);
 
-    void wprowadzTaryfy();
+    void wprowadzTaryfy(double x, double y, double z, double a, double b);
 
-    void wyswietlTaryfy();
+    double outTaryfaWodaCiepla();
 
-    float outTaryfaWodaCiepla();
+    double outTaryfaWodaZimna();
 
-    float outTaryfaWodaZimna();
+    double outTaryfaGaz();
 
-    float outTaryfaGaz();
+    double outTaryfaPrad();
 
-    float outTaryfaPrad();
-
-    float outTaryfaNajem();
+    double outTaryfaNajem();
 };
 
 

@@ -6,6 +6,7 @@
 #define PROGRAM_CADRES_H
 
 #include <iostream>
+
 using namespace std;
 
 class CAdres {
@@ -15,12 +16,21 @@ class CAdres {
     string kodPocztowy;
     string miasto;
 public:
-    CAdres(string = "void", string = "void", int = -1, string = "void", string = "void");
-    void wprowadzAdresM();
-    void wyswietlAdresM();
+    CAdres(string q = "void", string w = "void", int x = -1, string e = "void", string r = "void");
+
+    void wprowadzAdres(string q, string w, int x, string e, string r);
+
+    string outUlica();
+
+    string outNumerDomu();
+
+    int outNumerMieszkania();
+
+    string outKodPocztowy();
+
+    string outMiasto();
+
 };
-
-
 
 
 #endif //PROGRAM_CADRES_H

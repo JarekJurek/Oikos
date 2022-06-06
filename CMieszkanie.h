@@ -6,32 +6,37 @@
 #define PROGRAM_CMIESZKANIE_H
 
 #include <iostream>
+#include <fstream>
+#include <vector>
+
 #include "CAdres.h"
+#include "CTaryfa.h"
 #include "CLicznikPradu.h"
 #include "CLicznikWody.h"
 #include "CLicznikGazu.h"
-#include "CTaryfa.h"
 
 using namespace std;
 
 class CMieszkanie {
-    float wartosc;
-    float czynsz;
+    double wartosc;
+    double czynsz;
 public:
     CAdres adres;
     CTaryfa taryfa;
-    CLicznikPradu lprad;
+    CLicznikPradu lprad;  // tego ma nie być
     CLicznikGazu lgaz;
     CLicznikWody lwodaCiepla;
-    CLicznikWody lwodaZimna;
+    CLicznikWody lwodaZimna;  // dotąd
+//    COdczyt odczyt;
+//  vector<CLicznik*> liczniki;  // ???
 
-    CMieszkanie(float = -1, float = -1);
+    CMieszkanie(double x = -1, double y = -1);
 
-    void wprowadzDaneM();
+    void wprowadzDaneM(double x, double y);
 
-    void wyswietlDaneM();
+    double outCzynsz();
 
-    float outCzynsz();
+    double outWartosc();
 };
 
 
