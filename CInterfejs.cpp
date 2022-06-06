@@ -49,6 +49,7 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
                 cout << "Ktore mieszkanie wyswietlic?" << endl;
                 cin >> p;
                 CInterfejs::wyswietlanieDanychM(l->outWskaznikMieszkania(p));
+                CInterfejs::manuLicznik(l->outWskaznikMieszkania(p));
                 break;
             }
 
@@ -101,9 +102,8 @@ void CInterfejs::manuLicznik(CMieszkanie *m) {
             {
                 CLicznikPradu Lpradu;
                 CLicznik *wskaznik = &Lpradu;
-                wskaznik = m->liczniki.utworzNowyLicznik();  // dafaqu
-
-                cout << "Utworzono mieszkanie" << endl;
+                m->liczniki.dodajNowyLicznik(wskaznik);
+                cout << "Dodano Licznik" << endl;
                 break;
             }
 

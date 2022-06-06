@@ -10,16 +10,16 @@
 using namespace std;
 
 class COdczyt {
-    float stan;
-    string data;
-public:
-    COdczyt(float = -1, string = "void");
-
-    void podajOdczyt(float, string);
-
-    float outStan();
-
-    string outData();
+//    float stan;
+//    string data;
+//public:
+//    COdczyt(float = -1, string = "void");
+//
+//    void podajOdczyt(float, string);
+//
+//    float outStan();
+//
+//    string outData();
 
 };
 

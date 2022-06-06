@@ -4,17 +4,16 @@
 
 #include "CListaLicznikow.h"
 
-CLicznik *CListaLicznikow::utworzNowyLicznik(vector<CLicznik *> listaL) {
-    CLicznik *l = new CLicznik;
+CLicznik *CListaLicznikow::dodajNowyLicznik(CLicznik *l) {
     listaL.push_back(l);
     return l;
 }
 
-void CListaLicznikow::usunLicznik(int x, vector<CLicznik *> listaL) {
+void CListaLicznikow::usunLicznik(int x) {
     listaL.erase(remove(listaL.begin(), listaL.end(), listaL[x]), listaL.end());
-    cout << "Usunieto mieszkanie" << endl;  // debug do usuniecia
+    cout << "Usunieto licznik" << endl;  // debug do usuniecia
 }
 
-CLicznik *CListaLicznikow::outWskaznikLicznika(int x, vector<CLicznik *> listaL) {
+CLicznik *CListaLicznikow::outWskaznikLicznika(int x) {
     return listaL[x];
 }

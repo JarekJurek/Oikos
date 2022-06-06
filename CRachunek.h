@@ -13,22 +13,22 @@
 using namespace std;
 
 class CRachunek {
-    float oplataWodaCiepla;
-    float oplataWodaZimna;
-    float oplataGaz;
-    float oplataPrad;
-    float oplataNajem;
-    CMieszkanie *m;
-    CTaryfa *t = nullptr;
-    COdczyt *o = nullptr;
-public:
-    CRachunek(float = -1, float = -1, float = -1, float = -1, float = -1);
-
-    void obliczOplaty(CMieszkanie *m);
-
-    float sumaRachunku();
-
-    void wyswietlRachunek();
+//    float oplataWodaCiepla;
+//    float oplataWodaZimna;
+//    float oplataGaz;
+//    float oplataPrad;
+//    float oplataNajem;
+//    CMieszkanie *m;
+//    CTaryfa *t = nullptr;
+//    COdczyt *o = nullptr;
+//public:
+//    CRachunek(float = -1, float = -1, float = -1, float = -1, float = -1);
+//
+//    void obliczOplaty(CMieszkanie *m);
+//
+//    float sumaRachunku();
+//
+//    void wyswietlRachunek();
 };
 
 

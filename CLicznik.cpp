@@ -11,7 +11,9 @@ void CLicznik::wporwadzDane(string s){
     numerLicznika = s;
 }
 
-void CLicznik::podajStanLicznika() {}
+void CLicznik::podajStanLicznika() {
+
+}
 
 string CLicznik::outNumerLicznika() {
     return numerLicznika;
@@ -35,8 +37,3 @@ string CLicznik::outNumerLicznika() {
 //    numerLicznika = x;
 //}
 
-
-
-
-
-,

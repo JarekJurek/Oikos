@@ -3,24 +3,24 @@
 //
 
 #include "COdczyt.h"
-
-COdczyt::COdczyt(float x, string d) {
-    stan = x;
-    data = d;
-}
-
-void COdczyt::podajOdczyt(float x, string d) {
-    stan = x;
-    data = d;
-}
-
-float COdczyt::outStan() {
-    return stan;
-}
-
-string COdczyt::outData() {
-    return data;
-}
+//
+//COdczyt::COdczyt(float x, string d) {
+//    stan = x;
+//    data = d;
+//}
+//
+//void COdczyt::podajOdczyt(float x, string d) {
+//    stan = x;
+//    data = d;
+//}
+//
+//float COdczyt::outStan() {
+//    return stan;
+//}
+//
+//string COdczyt::outData() {
+//    return data;
+//}
 
 
 

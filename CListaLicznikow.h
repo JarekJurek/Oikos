@@ -21,7 +21,7 @@ class CListaLicznikow {
     vector<CLicznik*> listaL;
 public:
 
-    static CLicznik *utworzNowyLicznik();  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
+    void *dodajNowyLicznik(CLicznik *l);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
 
     void usunLicznik(int x);
 

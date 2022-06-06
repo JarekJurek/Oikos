@@ -8,14 +8,14 @@
 #include "CLicznik.h"
 
 class CLicznikGazu : public CLicznik {
-    float przelicznik;
-
-public:
-    CLicznikGazu(float = 10.972);
-
-    float przeliczJednostki(float);
-
-    virtual void podajStanLicznika();
+//    float przelicznik;
+//
+//public:
+//    CLicznikGazu(float = 10.972);
+//
+//    float przeliczJednostki(float);
+//
+//    virtual void podajStanLicznika();
 
 };
 

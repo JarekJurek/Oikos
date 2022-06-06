@@ -10,7 +10,7 @@
 33	3986	6759888141073829	CMakeFiles/Program.dir/CZapis.cpp.obj	95b0260c238f8ff0
 112	8228	6761564232750072	CMakeFiles/Program.dir/CMieszkanie.cpp.obj	b6d9a92aa5b5c400
 4954	6723	6756106750910987	CMakeFiles/Program.dir/COdczyt.cpp.obj	967472469809f52c
-3	4696	6761619122108149	build.ninja	c04ce91f521dea3b
+3	4696	6762214509945423	build.ninja	c04ce91f521dea3b
 97	4250	6759862084177898	CMakeFiles/Program.dir/CTaryfa.cpp.obj	bcf06a0ba852bfc
 66	3843	6756176717304632	CMakeFiles/Program.dir/AAAAtest.cpp.obj	8d481c38dce1d7e
 7926	12504	6761564278158904	CMakeFiles/Program.dir/CRachunek.cpp.obj	1efab5bd4a4789c5
@@ -19,3 +19,6 @@
 8374	12774	6761564280958031	CMakeFiles/Program.dir/CSerializer.cpp.obj	4dba529955431028
 8229	12867	6761564282470294	CMakeFiles/Program.dir/CDeserializer.cpp.obj	da31ac8d2bea6f27
 9614	14443	6761564298437191	CMakeFiles/Program.dir/CListaLicznikow.cpp.obj	1fe3f183902bf362
+50	2900	6762223035487882	CMakeFiles/Program.dir/CLicznikGazu.cpp.obj	acc7f2956ba80e3
+62	2931	6762223035687807	CMakeFiles/Program.dir/CLicznikWody.cpp.obj	cceb5664ee073e5f
+67	3007	6762223036687244	CMakeFiles/Program.dir/CAdres.cpp.obj	cee68912691d8dee
