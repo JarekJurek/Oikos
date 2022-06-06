@@ -7,14 +7,16 @@
 
 #include <iostream>
 #include <fstream>
-#include "CMieszkanie.h"
 #include <string>
+
+#include "CDeserializerAbstr.h"
+#include "CMieszkanie.h"
 
 using namespace std;
 
-class CDeserializer {
+class CDeserializer :public CDeserializerAbstr { // deserializer tekstowy
 public:
-    static void wczytajMieszkanie(CMieszkanie *m);
+    virtual void wczytajMieszkanie(CMieszkanie *m);
 };
 
 
