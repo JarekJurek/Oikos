@@ -9,7 +9,7 @@
 
 class CLicznikWody : public CLicznik {
 public:
-    void podajStanLicznika() override;
+//    void podajStanLicznika() override;
 };
 
 

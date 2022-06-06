@@ -24,9 +24,9 @@ public:
     CAdres adres;
     CTaryfa taryfa;
     CLicznikPradu lprad;  // tego ma nie być
-    CLicznikGazu lgaz;
-    CLicznikWody lwodaCiepla;
-    CLicznikWody lwodaZimna;  // dotąd
+//    CLicznikGazu lgaz;
+//    CLicznikWody lwodaCiepla;
+//    CLicznikWody lwodaZimna;  // dotąd
 //    COdczyt odczyt;
 //  vector<CLicznik*> liczniki;  // ???
 
