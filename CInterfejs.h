@@ -17,17 +17,21 @@ using namespace std;
 
 class CInterfejs {
 public:
-    void wprowadzanieDanychM(CMieszkanie *m);
+    static void wprowadzanieDanychM(CMieszkanie *m);
 
-    void wyswietlanieDanychM(CMieszkanie *m);
+    static void wyswietlanieDanychM(CMieszkanie *m);
 
-    void mainManu(CListaMieszkan *l);
+    static void wprowadzanieDanychL(CLicznik *l);
 
-    void pokazListeM(CListaMieszkan *l);
+    static void wyswietlanieDanychL(CLicznik *l);
 
-    void wprowadzanieDanychLpradu(CLicznikPradu *lp);
+    static void mainManu(CListaMieszkan *l);
 
-    void wyswietlanieDanychLpradu(CLicznikPradu *lp);
+    static void pokazListeM(CListaMieszkan *l);
+
+//    void wprowadzanieDanychLpradu(CLicznikPradu *lp);
+//
+//    void wyswietlanieDanychLpradu(CLicznikPradu *lp);
 };
 
 

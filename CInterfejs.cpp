@@ -72,14 +72,31 @@ void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
 
 }
 
+void CInterfejs::wyswietlanieDanychL(CLicznik *l){
+    cout << "Licznik numer: " << l->outNumerLicznika() << endl;
+    cout << "Stan Licznika: " << l->outStanLicznika() << endl;
+}
+
+void CInterfejs::wprowadzanieDanychL(CLicznik *l) {
+    string p,s;
+    double x;
+    cout << "Podaj nazwe licznika:";
+    cin >> p;
+    cout << "Podaj numer licznika:";
+    cin >> s;
+    cout << "Podaj stan licznika:";
+    cin >> x;
+    l->podajDaneLicznika(p, s, x);
+}
+
 void CInterfejs::mainManu(CListaMieszkan *l) {
     int choice;
     do {
         cout << "Zarzadzanie lokalami\n\n"
              << "1 - Wczytaj mieszkanie\n"
              << "2 - Utworz nowe mieszkanie\n"
-             << "3 - Wyswietl mieszkanie\n"
-             << "4 - Wyswietl liste mieszkan\n"
+//             << "3 - Wyswietl mieszkanie\n"
+             << "3 - Wyswietl liste mieszkan\n"
              << "5 - Usun mieszkanie\n\n"
              << "0 - Zamknij program\n\n"
 
@@ -115,28 +132,28 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
                 break;
             }
 
-            case 3  // Wyswietl mieszkanie
-                : {
-                int p;
-                cout << "Ktore mieszkanie wyswietlic?" << endl;
-                cin >> p;
-                CMieszkanie *tmp = l->outWskaznikMieszkania(p);
-                CInterfejs::wyswietlanieDanychM(tmp);
-                if(tmp->liczniki.outLiczbaElementow() != 0) {
+//            case 3  // Wyswietl mieszkanie
+//                : {
+//                int p;
+//                cout << "Ktore mieszkanie wyswietlic?" << endl;
+//                cin >> p;
+//                CMieszkanie *tmp = l->outWskaznikMieszkania(p);
+//                CInterfejs::wyswietlanieDanychM(tmp);
+//                if(tmp->liczniki.outLiczbaElementow() != 0) {
 //                    CLicznik *wsk = tmp->liczniki.outWskaznikLicznika(0);
 //                    CInterfejs::wyswietlanieDanychLpradu(wsk);
-                    cout << "YO" << endl;
-                }else{
-                    CLicznikPradu lPradu;
-                    CInterfejs::wprowadzanieDanychLpradu(&lPradu);
-                    CLicznik *tmpL = &lPradu;
-                    tmp->liczniki.dodajNowyLicznik(tmpL);
-                }
-                // tutaj mozliwość edycji licznikow
-                break;
-            }
+//                    cout << "YO" << endl;
+//                }else{
+//                    CLicznikPradu lPradu;
+//                    CInterfejs::wprowadzanieDanychLpradu(&lPradu);
+//                    CLicznik *tmpL = &lPradu;
+//                    tmp->liczniki.dodajNowyLicznik(tmpL);
+//                }
+//                // tutaj mozliwość edycji licznikow
+//                break;
+//            }
 
-            case 4  // Wyswietl liste mieszkan
+            case 3  // Wyswietl liste mieszkan
                 : {
                 CInterfejs::pokazListeM(l);
                 break;
@@ -178,8 +195,9 @@ void CInterfejs::pokazListeM(CListaMieszkan *l) {
     }
     int choice;
     do {
-        cout << "0 - Wroc\n\n"
-
+        cout << "1 - Podaj stan licznika\n"
+             << "2 - Dodaj licznik\n\n"
+             << "0 - Wroc\n\n"
              << "Wybierz numer i wcisnij enter: ";
 
         while (!(cin >> choice)) //wymuszenie podania właściwych znaków
@@ -188,23 +206,38 @@ void CInterfejs::pokazListeM(CListaMieszkan *l) {
             cin.clear(); //kasowanie flagi błędu strumienia
             cin.sync(); //kasowanie zbędnych znaków z bufora
         }
+        switch (choice) {
+            case 1:  // Podaj stan licznika
+            {
+                int nrMieszkania;
+                cout << "Wybierz mieszkanie:";
+                cin >> nrMieszkania;
+                CMieszkanie *wskM;
+                wskM = l->outWskaznikMieszkania(nrMieszkania);
+                CLicznik *wskL;
+                for (int i = 0; i < wskM->liczniki.outLiczbaElementow(); i++) {
+                    wskL = wskM->liczniki.outWskaznikLicznika(i);
+                    cout << "--------------------" << endl;
+                    cout << "Licznik nr: " << i << endl;
+                    CInterfejs::wyswietlanieDanychL(wskL);
+                    cout << "--------------------" << endl;
+                }
+                if(wskM->liczniki.outLiczbaElementow() == 0){
+                    cout << "Brak licznikow" << endl;
+                }
+                break;
+            }
+            case 2:  // Dodaj licznik
+            {
+
+                break;
+            }
+
+            case 0: {
+                cout << endl << "Zamykanie programu \n" << endl;
+                break;
+            }
+        }
     } while (choice != 0);
     return;
 }
-
-void CInterfejs::wprowadzanieDanychLpradu(CLicznikPradu *lp) {
-    string s;
-    double x;
-    cout << "Podaj numer licznika:" << endl;
-    cin >> s;
-    cout << "Podaj stan licznika w kWh:" << endl;
-    cin >> x;
-    lp->podajDaneLicznika(s, x);
-}
-
-void CInterfejs::wyswietlanieDanychLpradu(CLicznikPradu *lp) {
-    cout << "Numer licznika:" << lp->outNumerLicznika() << endl;
-    cout << "Stan licznika: " << lp->outStanLicznika()<< endl;
-}
-
-

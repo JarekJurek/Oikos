@@ -6,35 +6,23 @@
 #define PROGRAM_CLICZNIK_H
 
 #include <iostream>
-#include "COdczyt.h"
+#include "CListaOdczytow.h"
 
 using namespace std;
 
 class CLicznik {
-//    string numerLicznika;
+    CListaOdczytow odczyty;
 
 public:
 
-    virtual void podajDaneLicznika();  // czysta klasa wirtualna
+    virtual void podajDaneLicznika(string p, string s, double x);  // czysta klasa wirtualna
 
     virtual string outNumerLicznika();
 
     virtual double outStanLicznika();
 
+    virtual string outNazwaLicznika();
 
-//    CLicznik(string x = "-1");
-
-//    COdczyt odczyt; // to nie w public i nazwa raczej modczyt - member
-
-//    void wprowadzDaneLicznika();
-//
-//    void wczytajDaneLicznika(string);
-//
-//    void wyswietlDaneLicznika();
-//
-//    string outNumerLicznika();
-
-//    COdczyt* odczyt() { return &m_odczyt; }
 };
 
 

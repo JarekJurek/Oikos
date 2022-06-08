@@ -13,6 +13,7 @@
 
 class CListaLicznikow {
     vector<CLicznik *> mListaL;
+
 public:
     void dodajNowyLicznik(CLicznik *l);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
 

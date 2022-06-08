@@ -4,7 +4,8 @@
 
 int main() {
     CListaMieszkan l;
-    CInterfejs start;
-    start.mainManu(&l);
+//    CInterfejs start;
+    CInterfejs::mainManu(&l);
 
 }
+
