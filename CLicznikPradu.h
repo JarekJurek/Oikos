@@ -10,11 +10,10 @@
 class CLicznikPradu : public CLicznik {
     string nazwa;
     string numerLicznika;
-    double stanLicznika;
 public:
-    void podajDaneLicznika(string p, string s, double x) override;
+    CLicznikPradu();
+    void podajDaneLicznika(string n, string p) override;
     string outNumerLicznika() override;
-    double outStanLicznika() override;
     string outNazwaLicznika() override;
 
 };

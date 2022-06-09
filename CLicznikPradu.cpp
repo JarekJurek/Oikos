@@ -4,20 +4,22 @@
 
 #include "CLicznikPradu.h"
 
-void CLicznikPradu::podajDaneLicznika(string p, string s, double x) {
-    nazwa = p;
-    numerLicznika = s;
-    stanLicznika = x;
+CLicznikPradu::CLicznikPradu() {
+    nazwa = "void";
+    numerLicznika = "-1";
+}
+
+void CLicznikPradu::podajDaneLicznika(string n, string p) {
+    nazwa = n;
+    numerLicznika = p;
 }
 
 string CLicznikPradu::outNumerLicznika() {
     return numerLicznika;
 }
 
-double CLicznikPradu::outStanLicznika() {
-    return stanLicznika;
-}
-
 string CLicznikPradu::outNazwaLicznika() {
     return nazwa;
 }
+
+

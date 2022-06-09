@@ -24,11 +24,6 @@ class CMieszkanie {
 public:
     CAdres adres;
     CTaryfa taryfa;
-//    CLicznikPradu lprad;  // tego ma nie być
-//    CLicznikGazu lgaz;
-//    CLicznikWody lwodaCiepla;
-//    CLicznikWody lwodaZimna;  // dotąd
-//    COdczyt odczyt;
     CListaLicznikow liczniki;
 
     CMieszkanie(double x = -1, double y = -1);

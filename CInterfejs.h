@@ -25,13 +25,12 @@ public:
 
     static void wyswietlanieDanychL(CLicznik *l);
 
+    static void wprowadzenieOdczytuL(CLicznik *l);
+
     static void mainManu(CListaMieszkan *l);
 
     static void pokazListeM(CListaMieszkan *l);
 
-//    void wprowadzanieDanychLpradu(CLicznikPradu *lp);
-//
-//    void wyswietlanieDanychLpradu(CLicznikPradu *lp);
 };
 
 

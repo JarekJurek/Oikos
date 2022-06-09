@@ -11,17 +11,14 @@
 using namespace std;
 
 class CLicznik {
+public:
     CListaOdczytow odczyty;
 
-public:
+    virtual void podajDaneLicznika(string n, string p) = 0;  // czysta klasa wirtualna
 
-    virtual void podajDaneLicznika(string p, string s, double x);  // czysta klasa wirtualna
+    virtual string outNumerLicznika() = 0;
 
-    virtual string outNumerLicznika();
-
-    virtual double outStanLicznika();
-
-    virtual string outNazwaLicznika();
+    virtual string outNazwaLicznika() = 0;
 
 };
 

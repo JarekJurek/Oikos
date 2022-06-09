@@ -13,7 +13,7 @@ class COdczyt {
     double stan;
     string data;
 public:
-    COdczyt(double = -1, string = "void");
+    COdczyt();
 
     void podajOdczyt(double, string);
 

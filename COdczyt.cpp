@@ -4,9 +4,9 @@
 
 #include "COdczyt.h"
 
-COdczyt::COdczyt(double x, string d) {
-    stan = x;
-    data = d;
+COdczyt::COdczyt() {
+    stan = -1;
+    data = "void";
 }
 
 void COdczyt::podajOdczyt(double x, string d) {

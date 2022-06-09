@@ -4,7 +4,6 @@
 
 int main() {
     CListaMieszkan l;
-//    CInterfejs start;
     CInterfejs::mainManu(&l);
 
 }
