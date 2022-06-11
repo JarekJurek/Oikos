@@ -9,7 +9,7 @@ void CListaLicznikow::dodajNowyLicznik(CLicznik *l) {
 }
 
 void CListaLicznikow::usunLicznik(int x) {
-    mListaL.erase(remove(mListaL.begin(), mListaL.end(), mListaL[x]), mListaL.end());
+    mListaL.erase(mListaL.begin() + x - 1);
     cout << "Usunieto licznik" << endl;  // debug do usuniecia
 }
 

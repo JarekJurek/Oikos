@@ -15,7 +15,7 @@ class CListaOdczytow {
     deque<COdczyt> mListaO;
 
 public:
-    void dodajNowyOdczyt(const COdczyt &l);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
+    void dodajNowyOdczyt(const COdczyt &l);
 
     void usunOdczyt(int x);
 

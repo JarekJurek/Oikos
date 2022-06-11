@@ -6,7 +6,7 @@
 #define PROGRAM_CLISTAMIESZKAN_H
 
 #include <iostream>
-#include <vector>
+#include <deque>
 #include <algorithm>
 
 #include "CMieszkanie.h"
@@ -14,11 +14,11 @@
 #include "CDeserializer.h"
 
 class CListaMieszkan {
-    vector<CMieszkanie *> mListaM;  // lista w formacie std::vector zawierająca wskaźniki do CMieszkanie
+    deque<CMieszkanie> mListaM;  // lista w formacie std::vector zawierająca wskaźniki do CMieszkanie
 
 public:
 
-    CMieszkanie *utworzNoweMieszkanie();  // Funkcja tworząca nowy obiekt CMieszkanie i dodająca wskaźnik do niego
+    void utworzNoweMieszkanie(const CMieszkanie &m);  // Funkcja tworząca nowy obiekt CMieszkanie i dodająca wskaźnik do niego
 
     void usunMieszkanie(int x);
 

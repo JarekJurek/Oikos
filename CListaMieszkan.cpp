@@ -4,25 +4,20 @@
 
 #include "CListaMieszkan.h"
 
-CMieszkanie *CListaMieszkan::utworzNoweMieszkanie() {
-    CMieszkanie *m = new CMieszkanie;
+void CListaMieszkan::utworzNoweMieszkanie(const CMieszkanie &m) {
     mListaM.push_back(m);
-    return m;
 }
 
 void CListaMieszkan::usunMieszkanie(int x) {
-    mListaM.erase(remove(mListaM.begin(), mListaM.end(), mListaM[x]), mListaM.end());
+    mListaM.erase(mListaM.begin() + x - 1);
     cout << "Usunieto mieszkanie" << endl;  // debug do usuniecia
 }
 
 CMieszkanie *CListaMieszkan::outWskaznikMieszkania(int x) {
-    return mListaM[x];
+    return &mListaM[x];
 }
 
 int CListaMieszkan::outLiczbaElementow() {
     return mListaM.size();
 }
-
-
-
 

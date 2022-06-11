@@ -10,7 +10,7 @@ void CListaOdczytow::dodajNowyOdczyt(const COdczyt &l) {
 
 void CListaOdczytow::usunOdczyt(int x) {
     mListaO.erase(mListaO.begin() + x - 1);
-    cout << "Usunieto licznik" << endl;  // debug do usuniecia
+    cout << "Usunieto odczyt" << endl;  // debug do usuniecia
 }
 
 COdczyt CListaOdczytow::outOdczyt(int x) {

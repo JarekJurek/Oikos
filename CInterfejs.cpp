@@ -142,19 +142,19 @@ void CInterfejs::mainManu() {
 
             case 2:  // Utworz nowe mieszkanie
             {
-                CMieszkanie *tmp;
-                tmp = l->utworzNoweMieszkanie();
-                CInterfejs::wprowadzanieDanychM(tmp);
-                ser->zapiszMieszkanie(tmp);
+                CMieszkanie tmp;
+                CInterfejs::wprowadzanieDanychM(&tmp);
+                l->utworzNoweMieszkanie(tmp);
+                ser->zapiszMieszkanie(&tmp);
                 cout << "Utworzono mieszkanie" << endl;
                 break;
             }
 
             case 3:  // Wczytaj mieszkanie
             {
-                CMieszkanie *tmp;
-                tmp = l->utworzNoweMieszkanie();
-                dser->wczytajMieszkanie(tmp);
+                CMieszkanie tmp;
+                dser->wczytajMieszkanie(&tmp);
+                l->utworzNoweMieszkanie(tmp);
                 cout << "Wczytano mieszkanie" << endl;
                 break;
             }
@@ -295,6 +295,4 @@ void CInterfejs::pokazListeM() {
     } while (choice != 0);
     return;
 }
-
-
 
