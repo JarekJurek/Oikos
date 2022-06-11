@@ -4,13 +4,22 @@
 
 #include "CLicznikPradu.h"
 
-void CLicznikPradu::podajStanLicznika() {
-    string s;
-    float x;
-    cout << "Podaj stan licznika pradu nr " << outNumerLicznika() << ".:";
-    cin >> x;
-    cout << "Podaj date:";
-    cin >> s;
-    odczyt.podajOdczyt(x, s);
-    cout << "Zapisano" << endl << endl;
+CLicznikPradu::CLicznikPradu() {
+    nazwa = "void";
+    numerLicznika = "-1";
 }
+
+void CLicznikPradu::podajDaneLicznika(string n, string p) {
+    nazwa = n;
+    numerLicznika = p;
+}
+
+string CLicznikPradu::outNumerLicznika() {
+    return numerLicznika;
+}
+
+string CLicznikPradu::outNazwaLicznika() {
+    return nazwa;
+}
+
+
