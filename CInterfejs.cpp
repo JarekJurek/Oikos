@@ -42,23 +42,7 @@ void CInterfejs::wprowadzanieDanychM(CMieszkanie *m) {
     cout << "Czynsz do wspolnoty:";
     cin >> my;
     m->wprowadzDaneM(mx, my);
-
-    // dodawanie danych taryfy
-//    double tx, ty, tz, ta, tb;
-//    cout << "Taryfa woda ciepla:";
-//    cin >> tx;
-//    cout << "Taryfa woda zimna:";
-//    cin >> ty;
-//    cout << "Taryfa gaz:";
-//    cin >> tz;
-//    cout << "Taryfa prad:";
-//    cin >> ta;
-//    cout << "Oplata najem:";
-//    cin >> tb;
-//    m->taryfa.wprowadzTaryfy(tx, ty, tz, ta, tb);
-
     cout << endl;
-
 }
 
 void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
@@ -74,14 +58,6 @@ void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
     // wyświetlanie danych: wartość i czynsz
     cout << "Wartosc: " << m->outWartosc() << endl;
     cout << "Czynsz: " << m->outCzynsz() << endl;
-
-    // wyświetlanie danych taryfy
-//    cout << "Taryfa woda ciepla: " << m->taryfa.outTaryfaWodaCiepla() << endl;
-//    cout << "Taryfa woda zimna: " << m->taryfa.outTaryfaWodaZimna() << endl;
-//    cout << "Taryfa gaz: " << m->taryfa.outTaryfaGaz() << endl;
-//    cout << "Taryfa prad: " << m->taryfa.outTaryfaPrad() << endl;
-//    cout << "Oplata najem: " << m->taryfa.outTaryfaNajem() << endl;
-
 }
 
 void CInterfejs::wprowadzanieDanychL(CLicznik *l) {
@@ -165,7 +141,6 @@ void CInterfejs::mainManu() {
                 cout << "Ktore mieszkanie usunac?" << endl;
                 cin >> p;
                 l->usunMieszkanie(p);  // usuniecie z listy
-//                ser->usunMieszkanie(p);  // usuniecie pliku
                 for (int i = 0; i < dser->podajIloscMieszkan(); i++) {  // usuniecie wszystkich mieszkan
                     ser->usunMieszkanie(i);
                 }
