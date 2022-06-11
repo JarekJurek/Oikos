@@ -6,13 +6,13 @@
 #define PROGRAM_CLISTALICZNIKOW_H
 
 #include <iostream>
-#include <vector>
+#include <deque>
 #include <algorithm>
 
 #include "CLicznik.h"
 
 class CListaLicznikow {
-    vector<CLicznik *> mListaL;
+    deque<CLicznik *> mListaL;
 
 public:
     void dodajNowyLicznik(CLicznik *l);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
