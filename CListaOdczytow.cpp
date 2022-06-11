@@ -4,16 +4,16 @@
 
 #include "CListaOdczytow.h"
 
-void CListaOdczytow::dodajNowyOdczyt(COdczyt *l) {
+void CListaOdczytow::dodajNowyOdczyt(const COdczyt &l) {
     mListaO.push_back(l);
 }
 
 void CListaOdczytow::usunOdczyt(int x) {
-    mListaO.erase(remove(mListaO.begin(), mListaO.end(), mListaO[x]), mListaO.end());
+    mListaO.erase(mListaO.begin() + x - 1);
     cout << "Usunieto licznik" << endl;  // debug do usuniecia
 }
 
-COdczyt *CListaOdczytow::outWskaznikOdczyt(int x) {
+COdczyt CListaOdczytow::outOdczyt(int x) {
     return mListaO[x];
 }
 

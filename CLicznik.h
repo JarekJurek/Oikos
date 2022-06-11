@@ -12,9 +12,9 @@ using namespace std;
 
 class CLicznik {
 public:
-    CListaOdczytow odczyty;
+    CListaOdczytow odczyty;  // protected
 
-    virtual void podajDaneLicznika(string n, string p) = 0;  // czysta klasa wirtualna
+    virtual void podajDaneLicznika(string n, string p) = 0;
 
     virtual string outNumerLicznika() = 0;
 

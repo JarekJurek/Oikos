@@ -16,6 +16,8 @@
 using namespace std;
 
 class CInterfejs {
+//    ClistaMieszkan *l;
+//   CSerializer *ser; singleton
 public:
     static void wprowadzanieDanychM(CMieszkanie *m);
 

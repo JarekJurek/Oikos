@@ -6,20 +6,20 @@
 #define PROGRAM_CLISTAODCZYTOW_H
 
 #include <iostream>
-#include <vector>
+#include <deque>
 #include <algorithm>
 
 #include "COdczyt.h"
 
 class CListaOdczytow {
-    vector<COdczyt *> mListaO;
+    deque<COdczyt> mListaO;
 
 public:
-    void dodajNowyOdczyt(COdczyt *l);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
+    void dodajNowyOdczyt(const COdczyt &l);  // Funkcja tworząca nowy obiekt CLicznik i dodająca wskaźnik do niego
 
     void usunOdczyt(int x);
 
-    COdczyt *outWskaznikOdczyt(int x);
+    COdczyt outOdczyt(int x);
 
     int outLiczbaElementow();
 };

@@ -83,9 +83,9 @@ void CInterfejs::wprowadzanieDanychL(CLicznik *l) {
 
 void CInterfejs::wyswietlanieDanychL(CLicznik *l) {
     cout << "Licznik numer: " << l->outNumerLicznika() << endl;
-    COdczyt *tmpO = l->odczyty.outWskaznikOdczyt(l->odczyty.outLiczbaElementow() - 1);
-    cout << "Stan Licznika: " << tmpO->outStan() <<
-         ", z dnia: " << tmpO->outData() << endl;
+    COdczyt tmpO = l->odczyty.outOdczyt(l->odczyty.outLiczbaElementow() - 1);
+    cout << "Stan Licznika: " << tmpO.outStan() <<
+         ", z dnia: " << tmpO.outData() << endl;
 }
 
 void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
@@ -95,8 +95,8 @@ void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
     cin >> x;
     cout << "Podaj date:";
     cin >> d;
-    COdczyt *o = new COdczyt;
-    o->podajOdczyt(x, d);
+    COdczyt o;
+    o.podajOdczyt(x, d);
     l->odczyty.dodajNowyOdczyt(o);
     cout << "Dodano odczyt" << endl;
 }
