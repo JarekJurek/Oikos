@@ -38,15 +38,6 @@ void CDeserializer::wczytajMieszkanie(CMieszkanie *m) {
     m->taryfa.wprowadzTaryfy(stof(listaDane[0]), stof(listaDane[1]), stof(listaDane[2]),
                           stof(listaDane[3]), stof(listaDane[4]));
 
-//    getline(plik, line);
-//    lprad.wczytajDaneLicznika(line);
-//    getline(plik, line);
-//    lgaz.wczytajDaneLicznika(line);
-//    getline(plik, line);
-//    lwodaCiepla.wczytajDaneLicznika(line);
-//    getline(plik, line);
-//    lwodaZimna.wczytajDaneLicznika(line);
-
     plik.close();
     return;
 }

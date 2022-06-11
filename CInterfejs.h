@@ -11,18 +11,31 @@
 
 #include "CMieszkanie.h"
 #include "CListaMieszkan.h"
+#include "CLicznik.h"
 
 using namespace std;
 
 class CInterfejs {
+    CListaMieszkan *l;
+    CSerializerAbstr *ser; // singleton
+    CDeserializerAbstr *dser;
 public:
-    void wprowadzanieDanychM(CMieszkanie *m);
+    CInterfejs();
 
-    void wyswietlanieDanychM(CMieszkanie *m);
+    static void wprowadzanieDanychM(CMieszkanie *m);
 
-    void mainManu(CListaMieszkan *l);
+    static void wyswietlanieDanychM(CMieszkanie *m);
 
-    void pokazListeM(CListaMieszkan *l);
+    static void wprowadzanieDanychL(CLicznik *l);
+
+    static void wyswietlanieDanychL(CLicznik *l);
+
+    static void wprowadzenieOdczytuL(CLicznik *l);
+
+    void mainManu();
+
+    void pokazListeM();
+
 };
 
 

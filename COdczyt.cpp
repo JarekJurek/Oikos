@@ -4,17 +4,17 @@
 
 #include "COdczyt.h"
 
-COdczyt::COdczyt(float x, string d) {
+COdczyt::COdczyt() {
+    stan = -1;
+    data = "void";
+}
+
+void COdczyt::podajOdczyt(double x, string d) {
     stan = x;
     data = d;
 }
 
-void COdczyt::podajOdczyt(float x, string d) {
-    stan = x;
-    data = d;
-}
-
-float COdczyt::outStan() {
+double COdczyt::outStan() {
     return stan;
 }
 

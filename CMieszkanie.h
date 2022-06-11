@@ -12,8 +12,9 @@
 #include "CAdres.h"
 #include "CTaryfa.h"
 #include "CLicznikPradu.h"
-#include "CLicznikWody.h"
-#include "CLicznikGazu.h"
+//#include "CLicznikWody.h"
+//#include "CLicznikGazu.h"
+#include "CListaLicznikow.h"
 
 using namespace std;
 
@@ -23,12 +24,7 @@ class CMieszkanie {
 public:
     CAdres adres;
     CTaryfa taryfa;
-    CLicznikPradu lprad;  // tego ma nie być
-    CLicznikGazu lgaz;
-    CLicznikWody lwodaCiepla;
-    CLicznikWody lwodaZimna;  // dotąd
-//    COdczyt odczyt;
-//  vector<CLicznik*> liczniki;  // ???
+    CListaLicznikow liczniki;
 
     CMieszkanie(double x = -1, double y = -1);
 

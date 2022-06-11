@@ -10,14 +10,14 @@
 using namespace std;
 
 class COdczyt {
-    float stan;
+    double stan;
     string data;
 public:
-    COdczyt(float = -1, string = "void");
+    COdczyt();
 
-    void podajOdczyt(float, string);
+    void podajOdczyt(double, string);
 
-    float outStan();
+    double outStan();
 
     string outData();
 

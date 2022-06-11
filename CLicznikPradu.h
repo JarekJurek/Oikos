@@ -8,8 +8,14 @@
 #include "CLicznik.h"
 
 class CLicznikPradu : public CLicznik {
+    string nazwa;
+    string numerLicznika;
 public:
-    void podajStanLicznika() override;
+    CLicznikPradu();
+    void podajDaneLicznika(string n, string p) override;
+    string outNumerLicznika() override;
+    string outNazwaLicznika() override;
+
 };
 
 
