@@ -16,9 +16,12 @@
 using namespace std;
 
 class CInterfejs {
-//    ClistaMieszkan *l;
-//   CSerializer *ser; singleton
+    CListaMieszkan *l;
+    CSerializerAbstr *ser; // singleton
+    CDeserializerAbstr *dser;
 public:
+    CInterfejs();
+
     static void wprowadzanieDanychM(CMieszkanie *m);
 
     static void wyswietlanieDanychM(CMieszkanie *m);
@@ -29,9 +32,9 @@ public:
 
     static void wprowadzenieOdczytuL(CLicznik *l);
 
-    static void mainManu(CListaMieszkan *l);
+    void mainManu();
 
-    static void pokazListeM(CListaMieszkan *l);
+    void pokazListeM();
 
 };
 

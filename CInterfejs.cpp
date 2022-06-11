@@ -4,6 +4,19 @@
 
 #include "CInterfejs.h"
 
+CInterfejs::CInterfejs() {
+    CListaMieszkan *tmpL = new CListaMieszkan;
+    l = tmpL;
+
+    CSerializer *serTxt = new CSerializer;
+    CSerializerAbstr *wskSer = serTxt;
+    ser = wskSer;
+
+    CDeserializer *dserTxt = new CDeserializer;
+    CDeserializerAbstr *wskDser = dserTxt;
+    dser = wskDser;
+}
+
 void CInterfejs::wprowadzanieDanychM(CMieszkanie *m) {
     cout << "*** Dodawanie mieszkania ***" << endl;
 
@@ -101,7 +114,7 @@ void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
     cout << "Dodano odczyt" << endl;
 }
 
-void CInterfejs::mainManu(CListaMieszkan *l) {
+void CInterfejs::mainManu() {
     int choice;
     do {
         cout << "Zarzadzanie lokalami\n\n"
@@ -123,7 +136,7 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
         switch (choice) {
             case 1  // Wyswietl liste mieszkan
                 : {
-                CInterfejs::pokazListeM(l);
+                CInterfejs::pokazListeM();
                 break;
             }
 
@@ -132,9 +145,7 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
                 CMieszkanie *tmp;
                 tmp = l->utworzNoweMieszkanie();
                 CInterfejs::wprowadzanieDanychM(tmp);
-                CSerializer serTxt;
-                CSerializerAbstr *wskSer = &serTxt;
-                wskSer->zapiszMieszkanie(tmp);
+                ser->zapiszMieszkanie(tmp);
                 cout << "Utworzono mieszkanie" << endl;
                 break;
             }
@@ -143,9 +154,7 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
             {
                 CMieszkanie *tmp;
                 tmp = l->utworzNoweMieszkanie();
-                CDeserializer dserTxt;
-                CDeserializerAbstr *wskDser = &dserTxt;
-                wskDser->wczytajMieszkanie(tmp);
+                dser->wczytajMieszkanie(tmp);
                 cout << "Wczytano mieszkanie" << endl;
                 break;
             }
@@ -175,7 +184,7 @@ void CInterfejs::mainManu(CListaMieszkan *l) {
     return;
 }
 
-void CInterfejs::pokazListeM(CListaMieszkan *l) {
+void CInterfejs::pokazListeM() {
     int nrMieszkania;
     CMieszkanie *tmp;
     for (int i = 0; i < l->outLiczbaElementow(); i++) {
@@ -286,4 +295,6 @@ void CInterfejs::pokazListeM(CListaMieszkan *l) {
     } while (choice != 0);
     return;
 }
+
+
 
