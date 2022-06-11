@@ -4,8 +4,9 @@
 
 #include "CDeserializer.h"
 
-void CDeserializer::wczytajMieszkanie(CMieszkanie *m) {
-    string path = R"(C:\Users\grzeg\Documents\Studia\Semestr 6\PJC\Oikos\mieszkania.txt)";
+void CDeserializer::wczytajMieszkanie(CMieszkanie *m, int nrMieszkania) {
+    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path += "Mieszkanie" + to_string(nrMieszkania) + ".txt";
     ifstream plik(path);
 
     if (!plik.good()) {
@@ -31,13 +32,20 @@ void CDeserializer::wczytajMieszkanie(CMieszkanie *m) {
     y = stod(line);
     m->wprowadzDaneM(x, y);
 
-    // wczytywanie danych taryfy
-//    for (i = 0; i < 5; i++) {
-//        getline(plik, listaDane[i]);
-//    }
-//    m->taryfa.wprowadzTaryfy(stof(listaDane[0]), stof(listaDane[1]), stof(listaDane[2]),
-//                          stof(listaDane[3]), stof(listaDane[4]));
-
     plik.close();
     return;
+}
+
+int CDeserializer::podajIloscMieszkan() {
+    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\iloscMieszkan.txt";
+    ifstream plik(path);
+
+    if (!plik.good()) {
+        cout << "Problem z folderem mieszkaniowym" << endl;
+        return -1;
+    }
+
+    string line;
+    getline(plik, line);
+    return stoi(line);
 }

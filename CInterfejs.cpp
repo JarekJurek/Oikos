@@ -118,7 +118,7 @@ void CInterfejs::mainManu() {
         cout << "Zarzadzanie lokalami\n\n"
              << "1 - Wyswietl liste mieszkan\n"
              << "2 - Utworz nowe mieszkanie\n"
-             << "3 - Wczytaj mieszkanie\n"
+             << "3 - Wczytaj mieszkania\n"
              << "4 - Usun mieszkanie\n\n"
              << "0 - Zamknij program\n\n"
 
@@ -143,17 +143,19 @@ void CInterfejs::mainManu() {
                 CMieszkanie tmp;
                 CInterfejs::wprowadzanieDanychM(&tmp);
                 l->utworzNoweMieszkanie(tmp);
-                ser->zapiszMieszkanie(&tmp);
+                ser->zapiszMieszkanie(&tmp, dser->podajIloscMieszkan());
                 cout << "Utworzono mieszkanie" << endl;
                 break;
             }
 
-            case 3:  // Wczytaj mieszkanie
+            case 3:  // Wczytaj mieszkania
             {
-                CMieszkanie tmp;
-                dser->wczytajMieszkanie(&tmp);
-                l->utworzNoweMieszkanie(tmp);
-                cout << "Wczytano mieszkanie" << endl;
+                for (int i = 0; i < dser->podajIloscMieszkan(); i++) {
+                    CMieszkanie tmp;
+                    dser->wczytajMieszkanie(&tmp, i);  // wpisuje dane z pliku do obiektu mieszkanie
+                    l->utworzNoweMieszkanie(tmp);
+                    cout << "Wczytano mieszkanie" << endl;
+                }
                 break;
             }
 
@@ -162,7 +164,14 @@ void CInterfejs::mainManu() {
                 int p;
                 cout << "Ktore mieszkanie usunac?" << endl;
                 cin >> p;
-                l->usunMieszkanie(p);
+                l->usunMieszkanie(p);  // usuniecie z listy
+//                ser->usunMieszkanie(p);  // usuniecie pliku
+                for (int i = 0; i < dser->podajIloscMieszkan(); i++) {  // usuniecie wszystkich mieszkan
+                    ser->usunMieszkanie(i);
+                }
+                for (int i = 0; i < l->outLiczbaElementow(); i++) {  // zapisanie wszystkich mieszkan
+                    ser->zapiszMieszkanie(l->outWskaznikMieszkania(i), i);
+                }
                 break;
             }
 

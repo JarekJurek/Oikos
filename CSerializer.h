@@ -8,6 +8,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <filesystem>
+
 
 #include "CSerializerAbstr.h"
 #include "CMieszkanie.h"
@@ -16,7 +18,8 @@ using namespace std;
 
 class CSerializer : public CSerializerAbstr{  // serializer tekstowy
 public:
-    virtual void zapiszMieszkanie(CMieszkanie *m);
+    void zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) override;
+    void usunMieszkanie(int nrMieszkania) override;
 };
 
 

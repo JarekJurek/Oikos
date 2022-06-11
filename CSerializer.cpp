@@ -4,8 +4,9 @@
 
 #include "CSerializer.h"
 
-void CSerializer::zapiszMieszkanie(CMieszkanie *m) {
-    string path = R"(C:\Users\grzeg\Documents\Studia\Semestr 6\PJC\Oikos\mieszkania.txt)";
+void CSerializer::zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) {
+    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path += "Mieszkanie" + to_string(nrMieszkania) + ".txt";  // tutaj nrMieszkania to de facto ilosc mieszkan
     ofstream plik(path);
 
     if (!plik.good()) {
@@ -24,19 +25,36 @@ void CSerializer::zapiszMieszkanie(CMieszkanie *m) {
     plik << to_string(m->outWartosc()) << endl;
     plik << to_string(m->outCzynsz()) << endl;
 
-    // zapisywanie danych taryfy
-//    plik << to_string(m->taryfa.outTaryfaWodaCiepla()) << endl;
-//    plik << to_string(m->taryfa.outTaryfaWodaZimna()) << endl;
-//    plik << to_string(m->taryfa.outTaryfaGaz()) << endl;
-//    plik << to_string(m->taryfa.outTaryfaPrad()) << endl;
-//    plik << to_string(m->taryfa.outTaryfaNajem()) << endl;
-
-//    // licznik pradu
-//    plik << m->lprad.outNumerLicznika() << endl;
-//    plik << m->lgaz.outNumerLicznika() << endl;
-//    plik << m->lwodaCiepla.outNumerLicznika() << endl;
-//    plik << m->lwodaZimna.outNumerLicznika() << endl;
-
     plik.close();
+
+    string path2 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\iloscMieszkan.txt";
+    ofstream plik2(path2);
+
+    if (!plik.good()) {
+        cout << "Problem z folderem mieszkaniowym" << endl;
+        return;
+    }
+
+    plik2 << to_string(nrMieszkania + 1);
+    plik2.close();
+
+    return;
+}
+
+void CSerializer::usunMieszkanie(int nrMieszkania) {
+    string fileName = "Mieszkanie" + to_string(nrMieszkania) + ".txt";
+    int status = filesystem::remove(fileName);
+
+    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\iloscMieszkan.txt";
+    ofstream plik(path);
+
+    if (!plik.good()) {
+        cout << "Problem z folderem mieszkaniowym" << endl;
+        return;
+    }
+
+    plik << to_string(nrMieszkania - 1);
+    plik.close();
+
     return;
 }
