@@ -22,15 +22,17 @@ class CInterfejs {
 public:
     CInterfejs();
 
-    static void wprowadzanieDanychM(CMieszkanie *m);
+    void wprowadzanieDanychM(CMieszkanie *m);
 
-    static void wyswietlanieDanychM(CMieszkanie *m);
+    void wyswietlanieDanychM(CMieszkanie *m);
 
-    static void wprowadzanieDanychL(CLicznik *l);
+    void wprowadzanieDanychL(CLicznik *l);
 
-    static void wyswietlanieDanychL(CLicznik *l);
+    void wyswietlanieDanychL(CLicznik *l);
 
-    static void wprowadzenieOdczytuL(CLicznik *l);
+    void wprowadzanieDanychLPradu(CLicznik *l);
+
+    void wprowadzenieOdczytuL(CLicznik *l);
 
     void mainManu();
 

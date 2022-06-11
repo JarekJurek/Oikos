@@ -12,16 +12,6 @@ CMieszkanie::CMieszkanie(double x, double y) {
 void CMieszkanie::wprowadzDaneM(double x, double y) {
     wartosc = x;
     czynsz = y;
-
-//    lprad.wprowadzDaneLicznika();
-//    lprad.podajStanLicznika();
-//    lgaz.wprowadzDaneLicznika();
-//    lgaz.podajStanLicznika();
-//    lwodaZimna.wprowadzDaneLicznika();
-//    lwodaZimna.podajStanLicznika();
-//    lwodaCiepla.wprowadzDaneLicznika();
-//    lwodaCiepla.podajStanLicznika();
-
 }
 
 double CMieszkanie::outCzynsz() {

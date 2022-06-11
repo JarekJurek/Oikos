@@ -44,18 +44,18 @@ void CInterfejs::wprowadzanieDanychM(CMieszkanie *m) {
     m->wprowadzDaneM(mx, my);
 
     // dodawanie danych taryfy
-    double tx, ty, tz, ta, tb;
-    cout << "Taryfa woda ciepla:";
-    cin >> tx;
-    cout << "Taryfa woda zimna:";
-    cin >> ty;
-    cout << "Taryfa gaz:";
-    cin >> tz;
-    cout << "Taryfa prad:";
-    cin >> ta;
-    cout << "Oplata najem:";
-    cin >> tb;
-    m->taryfa.wprowadzTaryfy(tx, ty, tz, ta, tb);
+//    double tx, ty, tz, ta, tb;
+//    cout << "Taryfa woda ciepla:";
+//    cin >> tx;
+//    cout << "Taryfa woda zimna:";
+//    cin >> ty;
+//    cout << "Taryfa gaz:";
+//    cin >> tz;
+//    cout << "Taryfa prad:";
+//    cin >> ta;
+//    cout << "Oplata najem:";
+//    cin >> tb;
+//    m->taryfa.wprowadzTaryfy(tx, ty, tz, ta, tb);
 
     cout << endl;
 
@@ -76,29 +76,27 @@ void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
     cout << "Czynsz: " << m->outCzynsz() << endl;
 
     // wyświetlanie danych taryfy
-    cout << "Taryfa woda ciepla: " << m->taryfa.outTaryfaWodaCiepla() << endl;
-    cout << "Taryfa woda zimna: " << m->taryfa.outTaryfaWodaZimna() << endl;
-    cout << "Taryfa gaz: " << m->taryfa.outTaryfaGaz() << endl;
-    cout << "Taryfa prad: " << m->taryfa.outTaryfaPrad() << endl;
-    cout << "Oplata najem: " << m->taryfa.outTaryfaNajem() << endl;
+//    cout << "Taryfa woda ciepla: " << m->taryfa.outTaryfaWodaCiepla() << endl;
+//    cout << "Taryfa woda zimna: " << m->taryfa.outTaryfaWodaZimna() << endl;
+//    cout << "Taryfa gaz: " << m->taryfa.outTaryfaGaz() << endl;
+//    cout << "Taryfa prad: " << m->taryfa.outTaryfaPrad() << endl;
+//    cout << "Oplata najem: " << m->taryfa.outTaryfaNajem() << endl;
 
 }
 
 void CInterfejs::wprowadzanieDanychL(CLicznik *l) {
-    string n, p;
-    cout << "Podaj nazwe licznika:";
-    cin >> n;
+    string n;
     cout << "Podaj numer licznika:";
-    cin >> p;
-    l->podajDaneLicznika(n, p);
-    CInterfejs::wprowadzenieOdczytuL(l);
+    cin >> n;
+    l->podajDaneLicznika(n);
+    wprowadzenieOdczytuL(l);
 }
 
 void CInterfejs::wyswietlanieDanychL(CLicznik *l) {
     cout << "Licznik numer: " << l->outNumerLicznika() << endl;
-    COdczyt tmpO = l->odczyty.outOdczyt(l->odczyty.outLiczbaElementow() - 1);
-    cout << "Stan Licznika: " << tmpO.outStan() <<
-         ", z dnia: " << tmpO.outData() << endl;
+    COdczyt *tmpO = l->odczyty.outOdczyt(l->odczyty.outLiczbaElementow() - 1);
+    cout << "Stan Licznika " << l->outTyp() << ": " << tmpO->outStan() << l->outJednostka() <<
+         ", z dnia: " << tmpO->outData() << endl;
 }
 
 void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
@@ -198,7 +196,8 @@ void CInterfejs::pokazListeM() {
     do {
         cout << "1 - Pokaz liczniki mieszkania\n"
              << "2 - Podaj stan licznika\n"
-             << "3 - Dodaj nowy licznik\n\n"
+             << "3 - Dodaj nowy licznik\n"
+             << "4 - Podlicz mieszkanie \n\n"
              << "0 - Wroc\n\n"
              << "Wybierz numer i wcisnij enter:";
 
@@ -275,6 +274,9 @@ void CInterfejs::pokazListeM() {
                 if (tmpWybor == 0) {
                     CLicznikPradu *Lp = new CLicznikPradu;
                     l = Lp;
+                    wprowadzanieDanychL(l);
+                    wprowadzanieDanychLPradu(l);
+                    wskM->liczniki.dodajNowyLicznik(l);
                 } else if (tmpWybor == 1) {
 //                    CLicznikWody Lw;
 //                    l = &Lw;
@@ -284,8 +286,41 @@ void CInterfejs::pokazListeM() {
                 } else {
                     cout << "Podano zly numer" << endl;
                 }
-                CInterfejs::wprowadzanieDanychL(l);
-                wskM->liczniki.dodajNowyLicznik(l);
+                break;
+
+            }
+            case 4: {
+                cout << "Wybierz mieszkanie do rozliczenia:";
+                cin >> nrMieszkania;
+                CMieszkanie *wskM;
+                wskM = l->outWskaznikMieszkania(nrMieszkania);
+
+                if (wskM->liczniki.outLiczbaElementow() == 0) {
+                    cout << "Brak licznikow" << endl;
+                    break;
+                }
+                wskM->rachunek.zerujRachunek();
+                CLicznik *wskL;
+                COdczyt *odczytStary;
+                COdczyt *odczytNowy;
+                int iloscMiesiecy;
+                double zuzycie;
+                cout << "Podaj ilosc miesiecy:" << endl;
+                cin >> iloscMiesiecy;
+                for (int i = 0; i < wskM->liczniki.outLiczbaElementow(); i++) {
+                    wskL = wskM->liczniki.outWskaznikLicznika(i);
+                    if (wskL->odczyty.outLiczbaElementow() < 2) {
+                        cout << "Tylko jeden odczyt. Wymagane minimum dwa." << endl;
+                        break;
+                    }
+                    odczytStary = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 2);
+                    odczytNowy = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 1);
+                    zuzycie = odczytNowy->outStan() - odczytStary->outStan();
+                    wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
+                    wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
+                }
+                cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << endl;
+                break;
             }
 
             case 0: {
@@ -294,5 +329,14 @@ void CInterfejs::pokazListeM() {
         }
     } while (choice != 0);
     return;
+}
+
+void CInterfejs::wprowadzanieDanychLPradu(CLicznik *l) {
+    double x, y;
+    cout << "Podaj taryfe miesieczna:";
+    cin >> x;
+    cout << "Podaj taryfe zuzycia:";
+    cin >> y;
+    l->podajTaryfy(x, y);
 }
 

@@ -25,11 +25,11 @@ void CSerializer::zapiszMieszkanie(CMieszkanie *m) {
     plik << to_string(m->outCzynsz()) << endl;
 
     // zapisywanie danych taryfy
-    plik << to_string(m->taryfa.outTaryfaWodaCiepla()) << endl;
-    plik << to_string(m->taryfa.outTaryfaWodaZimna()) << endl;
-    plik << to_string(m->taryfa.outTaryfaGaz()) << endl;
-    plik << to_string(m->taryfa.outTaryfaPrad()) << endl;
-    plik << to_string(m->taryfa.outTaryfaNajem()) << endl;
+//    plik << to_string(m->taryfa.outTaryfaWodaCiepla()) << endl;
+//    plik << to_string(m->taryfa.outTaryfaWodaZimna()) << endl;
+//    plik << to_string(m->taryfa.outTaryfaGaz()) << endl;
+//    plik << to_string(m->taryfa.outTaryfaPrad()) << endl;
+//    plik << to_string(m->taryfa.outTaryfaNajem()) << endl;
 
 //    // licznik pradu
 //    plik << m->lprad.outNumerLicznika() << endl;

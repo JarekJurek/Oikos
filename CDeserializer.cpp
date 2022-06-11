@@ -32,11 +32,11 @@ void CDeserializer::wczytajMieszkanie(CMieszkanie *m) {
     m->wprowadzDaneM(x, y);
 
     // wczytywanie danych taryfy
-    for (i = 0; i < 5; i++) {
-        getline(plik, listaDane[i]);
-    }
-    m->taryfa.wprowadzTaryfy(stof(listaDane[0]), stof(listaDane[1]), stof(listaDane[2]),
-                          stof(listaDane[3]), stof(listaDane[4]));
+//    for (i = 0; i < 5; i++) {
+//        getline(plik, listaDane[i]);
+//    }
+//    m->taryfa.wprowadzTaryfy(stof(listaDane[0]), stof(listaDane[1]), stof(listaDane[2]),
+//                          stof(listaDane[3]), stof(listaDane[4]));
 
     plik.close();
     return;

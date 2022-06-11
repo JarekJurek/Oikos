@@ -12,9 +12,8 @@
 #include "CAdres.h"
 #include "CTaryfa.h"
 #include "CLicznikPradu.h"
-//#include "CLicznikWody.h"
-//#include "CLicznikGazu.h"
 #include "CListaLicznikow.h"
+#include "CRachunek.h"
 
 using namespace std;
 
@@ -23,8 +22,8 @@ class CMieszkanie {
     double czynsz;
 public:
     CAdres adres;
-    CTaryfa taryfa;
     CListaLicznikow liczniki;
+    CRachunek rachunek;
 
     CMieszkanie(double x = -1, double y = -1);
 

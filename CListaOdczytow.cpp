@@ -13,8 +13,8 @@ void CListaOdczytow::usunOdczyt(int x) {
     cout << "Usunieto odczyt" << endl;  // debug do usuniecia
 }
 
-COdczyt CListaOdczytow::outOdczyt(int x) {
-    return mListaO[x];
+COdczyt *CListaOdczytow::outOdczyt(int x) {
+    return &mListaO[x];
 }
 
 int CListaOdczytow::outLiczbaElementow() {
