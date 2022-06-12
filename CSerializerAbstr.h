@@ -11,6 +11,10 @@ class CSerializerAbstr {
 public:
     virtual void zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) = 0;
     virtual void usunMieszkanie(int nrMieszkania) = 0;
+    virtual void zapiszLicznik(CLicznik *l, int nrLicznika, int nrMieszkania) = 0;
+    virtual void usunLicznik(int nrLicznika, int nrMieszkania) = 0;
+    virtual void zapiszOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) = 0;
+    virtual void usunOdczyt(int nrOdczytu, int nrLicznika, int nrMieszkania) = 0;
 };
 
 

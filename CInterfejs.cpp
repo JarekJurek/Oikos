@@ -60,12 +60,12 @@ void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
     cout << "Czynsz: " << m->outCzynsz() << endl;
 }
 
-void CInterfejs::wprowadzanieDanychL(CLicznik *l) {
+void CInterfejs::wprowadzanieDanychL(CLicznik *l, int nrMieszkania) {
     string n;
     cout << "Podaj numer licznika:";
     cin >> n;
     l->podajDaneLicznika(n);
-    wprowadzenieOdczytuL(l);
+    wprowadzenieOdczytuL(l, dser->podajIloscLicznikow(nrMieszkania), nrMieszkania);
 }
 
 void CInterfejs::wyswietlanieDanychL(CLicznik *l) {
@@ -75,7 +75,7 @@ void CInterfejs::wyswietlanieDanychL(CLicznik *l) {
          ", z dnia: " << tmpO->outData() << endl;
 }
 
-void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
+void CInterfejs::wprowadzenieOdczytuL(CLicznik *l, int nrLicznika, int nrMieszkania) {
     string d;
     double x;
     cout << "Podaj stan licznika:";
@@ -85,6 +85,7 @@ void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
     COdczyt o;
     o.podajOdczyt(x, d);
     l->odczyty.dodajNowyOdczyt(o);
+    ser->zapiszOdczyt(&o, dser->podajIloscOdczytow(nrLicznika, nrMieszkania), nrLicznika, nrMieszkania);
     cout << "Dodano odczyt" << endl;
 }
 
@@ -128,9 +129,13 @@ void CInterfejs::mainManu() {
             {
                 for (int i = 0; i < dser->podajIloscMieszkan(); i++) {
                     CMieszkanie tmp;
-                    dser->wczytajMieszkanie(&tmp, i);  // wpisuje dane z pliku do obiektu mieszkanie
+                    dser->wczytajMieszkanie(&tmp, i);
+                    for (int j = 0; j < dser->podajIloscLicznikow(i); j++) {
+                        CLicznik *tmpL;
+                        dser->wczytajLicznik(tmpL, j, i);
+                        tmp.liczniki.dodajNowyLicznik(tmpL);
+                    }
                     l->utworzNoweMieszkanie(tmp);
-                    cout << "Wczytano mieszkanie" << endl;
                 }
                 break;
             }
@@ -167,6 +172,10 @@ void CInterfejs::mainManu() {
 }
 
 void CInterfejs::pokazListeM() {
+    if (l->outLiczbaElementow() == 0) {
+        cout << "Brak mieszkan w programie" << endl;
+        return;
+    }
     int nrMieszkania;
     CMieszkanie *tmp;
     for (int i = 0; i < l->outLiczbaElementow(); i++) {
@@ -238,7 +247,7 @@ void CInterfejs::pokazListeM() {
                 cout << "Wybierz Licznik:";
                 cin >> nrLicznika;
                 wskL = wskM->liczniki.outWskaznikLicznika(nrLicznika);
-                CInterfejs::wprowadzenieOdczytuL(wskL);
+                CInterfejs::wprowadzenieOdczytuL(wskL, nrLicznika, nrMieszkania);
                 break;
             }
 
@@ -258,9 +267,10 @@ void CInterfejs::pokazListeM() {
                 if (tmpWybor == 0) {
                     CLicznikPradu *Lp = new CLicznikPradu;
                     l = Lp;
-                    wprowadzanieDanychL(l);
+                    wprowadzanieDanychL(l, nrMieszkania);
                     wprowadzanieDanychLPradu(l);
                     wskM->liczniki.dodajNowyLicznik(l);
+                    ser->zapiszLicznik(l, dser->podajIloscLicznikow(nrMieszkania), nrMieszkania);
                 } else if (tmpWybor == 1) {
 //                    CLicznikWody Lw;
 //                    l = &Lw;
@@ -269,9 +279,9 @@ void CInterfejs::pokazListeM() {
 //                    l = &Lg;
                 } else {
                     cout << "Podano zly numer" << endl;
+                    break;
                 }
                 break;
-
             }
             case 4: {
                 cout << "Wybierz mieszkanie do rozliczenia:";

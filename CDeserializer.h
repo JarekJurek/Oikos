@@ -20,6 +20,14 @@ public:
 
     int podajIloscMieszkan() override;
 
+    void wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkania) override;
+
+    int podajIloscLicznikow(int nrMieszkania) override;
+
+    void wczytajOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) override;
+
+    int podajIloscOdczytow(int nrLicznika, int nrMieszkania) override;
+
 };
 
 

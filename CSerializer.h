@@ -16,10 +16,19 @@
 
 using namespace std;
 
-class CSerializer : public CSerializerAbstr{  // serializer tekstowy
+class CSerializer : public CSerializerAbstr {  // serializer tekstowy
 public:
     void zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) override;
+
     void usunMieszkanie(int nrMieszkania) override;
+
+    void zapiszLicznik(CLicznik *l, int nrLicznika, int nrMieszkania) override;
+
+    void usunLicznik(int nrLicznika, int nrMieszkania) override;
+
+    void zapiszOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) override;
+
+    void usunOdczyt(int nrOdczytu, int nrLicznika, int nrMieszkania) override;
 };
 
 
