@@ -14,9 +14,20 @@
 
 using namespace std;
 
-class CDeserializer :public CDeserializerAbstr { // deserializer tekstowy
+class CDeserializer : public CDeserializerAbstr { // deserializer tekstowy
 public:
-    virtual void wczytajMieszkanie(CMieszkanie *m);
+    void wczytajMieszkanie(CMieszkanie *m, int nrMieszkania) override;
+
+    int podajIloscMieszkan() override;
+
+    void wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkania) override;
+
+    int podajIloscLicznikow(int nrMieszkania) override;
+
+    void wczytajOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) override;
+
+    int podajIloscOdczytow(int nrLicznika, int nrMieszkania) override;
+
 };
 
 

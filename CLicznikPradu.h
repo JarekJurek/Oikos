@@ -8,13 +8,16 @@
 #include "CLicznik.h"
 
 class CLicznikPradu : public CLicznik {
-    string nazwa;
-    string numerLicznika;
+    double taryfaMiesieczna;
+    double taryfaZuzycia;
 public:
     CLicznikPradu();
-    void podajDaneLicznika(string n, string p) override;
-    string outNumerLicznika() override;
-    string outNazwaLicznika() override;
+
+    void podajTaryfy(double x, double y) override;
+
+    double outTaryfaZuzycia() override;
+
+    double outTaryfaMiesieczna() override;
 
 };
 

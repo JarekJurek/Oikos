@@ -6,12 +6,18 @@
 int main() {
     CInterfejs start;
     start.mainManu();
-
-//    deque <int> test;
-//    for (int i=1; i<=10; i++) test.push_back(i);
-//    for (int i=1; i<=10; i++) cout << test [i];
-//    test.erase(test.begin()+5);
-//    for (int i=0; i<test.size(); i++) cout << test [i];
+//    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+//    path += "Mieszkanie" + to_string(1) + "Licznik" + to_string(1) + "Odczyt" +
+//            to_string(0) + ".txt";
+//    int n = path.length();
+//    char pathArray[n + 1];
+//    strcpy(pathArray, path.c_str());
+//    int status = remove(pathArray);
+//    if(status != 0){
+//        cout << "no" << endl;
+//    }else{
+//        cout << "yes" << endl;
+//    }
 
 }
 

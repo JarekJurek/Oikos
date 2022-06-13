@@ -11,14 +11,30 @@
 using namespace std;
 
 class CLicznik {
+    string numerLicznika;
+    string jednostka;
+    string typ;
+
 public:
     CListaOdczytow odczyty;  // protected
 
-    virtual void podajDaneLicznika(string n, string p) = 0;
+    void podajDaneLicznika(string p);
 
-    virtual string outNumerLicznika() = 0;
+    void zmienJednostke(string s);
 
-    virtual string outNazwaLicznika() = 0;
+    string outJednostka();
+
+    void zmienTyp(string s);
+
+    string outTyp();
+
+    string outNumerLicznika();
+
+    virtual void podajTaryfy(double x, double y) = 0;
+
+    virtual double outTaryfaZuzycia() = 0;
+
+    virtual double outTaryfaMiesieczna() = 0;
 
 };
 

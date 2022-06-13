@@ -9,7 +9,18 @@
 
 class CDeserializerAbstr {
 public:
-    virtual void wczytajMieszkanie(CMieszkanie *m);
+    virtual void wczytajMieszkanie(CMieszkanie *m, int nrMieszkania) = 0;
+
+    virtual int podajIloscMieszkan() = 0;
+
+    virtual void wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkania) = 0;
+
+    virtual int podajIloscLicznikow(int nrMieszkania) = 0;
+
+    virtual void wczytajOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) = 0;
+
+    virtual int podajIloscOdczytow(int nrLicznika, int nrMieszkania) = 0;
+
 };
 
 

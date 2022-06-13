@@ -19,7 +19,7 @@ public:
 
     void usunOdczyt(int x);
 
-    COdczyt outOdczyt(int x);
+    COdczyt *outOdczyt(int x);
 
     int outLiczbaElementow();
 };

@@ -4,23 +4,22 @@
 
 #include "CLicznikGazu.h"
 
-//CLicznikGazu::CLicznikGazu(float x) {
-//    przelicznik = x;
-//}
-//
-//float CLicznikGazu::przeliczJednostki(float x) {
-//    float y = x * przelicznik;
-//    return y;
-//}
-//
-//void CLicznikGazu::podajStanLicznika() {
-//    string s;
-//    float stanMetry;
-//    cout << "Podaj stan licznika gazu nr " << outNumerLicznika() << ".:";
-//    cin >> stanMetry;
-//    cout << "Podaj date:";
-//    cin >> s;
-//    odczyt.podajOdczyt(przeliczJednostki(stanMetry), s);
-//    cout << "Zapisano" << endl;
-//
-//}
+CLicznikGazu::CLicznikGazu() {
+    taryfaMiesieczna = -1;
+    taryfaZuzycia = -1;
+    zmienJednostke("m3");
+    zmienTyp("gazu");  // w dopełniaczu
+}
+
+void CLicznikGazu::podajTaryfy(double x, double y) {
+    taryfaMiesieczna = x;
+    taryfaZuzycia = y;
+}
+
+double CLicznikGazu::outTaryfaZuzycia() {
+    return taryfaZuzycia;
+}
+
+double CLicznikGazu::outTaryfaMiesieczna() {
+    return taryfaMiesieczna;
+}

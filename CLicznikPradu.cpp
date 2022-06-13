@@ -5,21 +5,25 @@
 #include "CLicznikPradu.h"
 
 CLicznikPradu::CLicznikPradu() {
-    nazwa = "void";
-    numerLicznika = "-1";
+    taryfaMiesieczna = -1;
+    taryfaZuzycia = -1;
+    zmienJednostke("kWh");
+    zmienTyp("pradu");  // w dopełniaczu
 }
 
-void CLicznikPradu::podajDaneLicznika(string n, string p) {
-    nazwa = n;
-    numerLicznika = p;
+void CLicznikPradu::podajTaryfy(double x, double y) {
+    taryfaMiesieczna = x;
+    taryfaZuzycia = y;
 }
 
-string CLicznikPradu::outNumerLicznika() {
-    return numerLicznika;
+double CLicznikPradu::outTaryfaZuzycia() {
+    return taryfaZuzycia;
 }
 
-string CLicznikPradu::outNazwaLicznika() {
-    return nazwa;
+double CLicznikPradu::outTaryfaMiesieczna() {
+    return taryfaMiesieczna;
 }
+
+
 
 
