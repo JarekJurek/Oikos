@@ -4,6 +4,4 @@
 
 #include "CSerializerAbstr.h"
 
-void CSerializerAbstr::zapiszMieszkanie(CMieszkanie *m) {
 
-}

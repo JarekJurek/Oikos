@@ -9,7 +9,7 @@ void CListaMieszkan::utworzNoweMieszkanie(const CMieszkanie &m) {
 }
 
 void CListaMieszkan::usunMieszkanie(int x) {
-    mListaM.erase(mListaM.begin() + x - 1);
+    mListaM.erase(mListaM.begin() + x);
     cout << "Usunieto mieszkanie" << endl;  // debug do usuniecia
 }
 

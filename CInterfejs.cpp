@@ -42,23 +42,7 @@ void CInterfejs::wprowadzanieDanychM(CMieszkanie *m) {
     cout << "Czynsz do wspolnoty:";
     cin >> my;
     m->wprowadzDaneM(mx, my);
-
-    // dodawanie danych taryfy
-//    double tx, ty, tz, ta, tb;
-//    cout << "Taryfa woda ciepla:";
-//    cin >> tx;
-//    cout << "Taryfa woda zimna:";
-//    cin >> ty;
-//    cout << "Taryfa gaz:";
-//    cin >> tz;
-//    cout << "Taryfa prad:";
-//    cin >> ta;
-//    cout << "Oplata najem:";
-//    cin >> tb;
-//    m->taryfa.wprowadzTaryfy(tx, ty, tz, ta, tb);
-
     cout << endl;
-
 }
 
 void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
@@ -74,22 +58,13 @@ void CInterfejs::wyswietlanieDanychM(CMieszkanie *m) {
     // wyświetlanie danych: wartość i czynsz
     cout << "Wartosc: " << m->outWartosc() << endl;
     cout << "Czynsz: " << m->outCzynsz() << endl;
-
-    // wyświetlanie danych taryfy
-//    cout << "Taryfa woda ciepla: " << m->taryfa.outTaryfaWodaCiepla() << endl;
-//    cout << "Taryfa woda zimna: " << m->taryfa.outTaryfaWodaZimna() << endl;
-//    cout << "Taryfa gaz: " << m->taryfa.outTaryfaGaz() << endl;
-//    cout << "Taryfa prad: " << m->taryfa.outTaryfaPrad() << endl;
-//    cout << "Oplata najem: " << m->taryfa.outTaryfaNajem() << endl;
-
 }
 
-void CInterfejs::wprowadzanieDanychL(CLicznik *l) {
+void CInterfejs::wprowadzanieDanychL(CLicznik *l, int nrMieszkania) {
     string n;
     cout << "Podaj numer licznika:";
     cin >> n;
     l->podajDaneLicznika(n);
-    wprowadzenieOdczytuL(l);
 }
 
 void CInterfejs::wyswietlanieDanychL(CLicznik *l) {
@@ -99,7 +74,7 @@ void CInterfejs::wyswietlanieDanychL(CLicznik *l) {
          ", z dnia: " << tmpO->outData() << endl;
 }
 
-void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
+void CInterfejs::wprowadzenieOdczytuL(CLicznik *l, int nrLicznika, int nrMieszkania) {
     string d;
     double x;
     cout << "Podaj stan licznika:";
@@ -109,6 +84,7 @@ void CInterfejs::wprowadzenieOdczytuL(CLicznik *l) {
     COdczyt o;
     o.podajOdczyt(x, d);
     l->odczyty.dodajNowyOdczyt(o);
+    ser->zapiszOdczyt(&o, dser->podajIloscOdczytow(nrLicznika, nrMieszkania), nrLicznika, nrMieszkania);
     cout << "Dodano odczyt" << endl;
 }
 
@@ -118,7 +94,7 @@ void CInterfejs::mainManu() {
         cout << "Zarzadzanie lokalami\n\n"
              << "1 - Wyswietl liste mieszkan\n"
              << "2 - Utworz nowe mieszkanie\n"
-             << "3 - Wczytaj mieszkanie\n"
+             << "3 - Wczytaj mieszkania\n"
              << "4 - Usun mieszkanie\n\n"
              << "0 - Zamknij program\n\n"
 
@@ -143,17 +119,28 @@ void CInterfejs::mainManu() {
                 CMieszkanie tmp;
                 CInterfejs::wprowadzanieDanychM(&tmp);
                 l->utworzNoweMieszkanie(tmp);
-                ser->zapiszMieszkanie(&tmp);
+                ser->zapiszMieszkanie(&tmp, dser->podajIloscMieszkan());
                 cout << "Utworzono mieszkanie" << endl;
                 break;
             }
 
-            case 3:  // Wczytaj mieszkanie
+            case 3:  // Wczytaj mieszkania
             {
-                CMieszkanie tmp;
-                dser->wczytajMieszkanie(&tmp);
-                l->utworzNoweMieszkanie(tmp);
-                cout << "Wczytano mieszkanie" << endl;
+                for (int i = 0; i < dser->podajIloscMieszkan(); i++) {
+                    CMieszkanie tmp;
+                    dser->wczytajMieszkanie(&tmp, i);
+                    for (int j = 0; j < dser->podajIloscLicznikow(i); j++) {
+                        CLicznik *tmpL;
+                        dser->wczytajLicznik(tmpL, j, i);
+                        for (int k=0; k<dser->podajIloscOdczytow(j,i); k++){
+                            COdczyt tmpO;
+                            dser->wczytajOdczyt(&tmpO, k, j, i);
+                            tmpL->odczyty.dodajNowyOdczyt(tmpO);
+                        }
+                        tmp.liczniki.dodajNowyLicznik(tmpL);
+                    }
+                    l->utworzNoweMieszkanie(tmp);
+                }
                 break;
             }
 
@@ -162,7 +149,13 @@ void CInterfejs::mainManu() {
                 int p;
                 cout << "Ktore mieszkanie usunac?" << endl;
                 cin >> p;
-                l->usunMieszkanie(p);
+                l->usunMieszkanie(p);  // usuniecie z listy
+                for (int i = 0; i < dser->podajIloscMieszkan(); i++) {  // usuniecie wszystkich mieszkan
+                    ser->usunMieszkanie(i);
+                }
+                for (int i = 0; i < l->outLiczbaElementow(); i++) {  // zapisanie wszystkich mieszkan
+                    ser->zapiszMieszkanie(l->outWskaznikMieszkania(i), i);
+                }
                 break;
             }
 
@@ -183,6 +176,10 @@ void CInterfejs::mainManu() {
 }
 
 void CInterfejs::pokazListeM() {
+    if (l->outLiczbaElementow() == 0) {
+        cout << "Brak mieszkan w programie" << endl;
+        return;
+    }
     int nrMieszkania;
     CMieszkanie *tmp;
     for (int i = 0; i < l->outLiczbaElementow(); i++) {
@@ -254,7 +251,7 @@ void CInterfejs::pokazListeM() {
                 cout << "Wybierz Licznik:";
                 cin >> nrLicznika;
                 wskL = wskM->liczniki.outWskaznikLicznika(nrLicznika);
-                CInterfejs::wprowadzenieOdczytuL(wskL);
+                CInterfejs::wprowadzenieOdczytuL(wskL, nrLicznika, nrMieszkania);
                 break;
             }
 
@@ -274,8 +271,11 @@ void CInterfejs::pokazListeM() {
                 if (tmpWybor == 0) {
                     CLicznikPradu *Lp = new CLicznikPradu;
                     l = Lp;
-                    wprowadzanieDanychL(l);
+                    wprowadzanieDanychL(l, nrMieszkania);
                     wprowadzanieDanychLPradu(l);
+                    int nrLicznika = dser->podajIloscLicznikow(nrMieszkania);
+                    ser->zapiszLicznik(l, nrLicznika, nrMieszkania);
+                    wprowadzenieOdczytuL(l, nrLicznika, nrMieszkania);
                     wskM->liczniki.dodajNowyLicznik(l);
                 } else if (tmpWybor == 1) {
 //                    CLicznikWody Lw;
@@ -285,9 +285,9 @@ void CInterfejs::pokazListeM() {
 //                    l = &Lg;
                 } else {
                     cout << "Podano zly numer" << endl;
+                    break;
                 }
                 break;
-
             }
             case 4: {
                 cout << "Wybierz mieszkanie do rozliczenia:";
@@ -310,7 +310,8 @@ void CInterfejs::pokazListeM() {
                 for (int i = 0; i < wskM->liczniki.outLiczbaElementow(); i++) {
                     wskL = wskM->liczniki.outWskaznikLicznika(i);
                     if (wskL->odczyty.outLiczbaElementow() < 2) {
-                        cout << "Tylko jeden odczyt. Wymagane minimum dwa." << endl;
+                        cout << "Za malo odczytow dla licznika nr: " << wskL->outNumerLicznika()
+                             << ". Wymagane minimum dwa." << endl;
                         break;
                     }
                     odczytStary = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 2);
@@ -319,7 +320,7 @@ void CInterfejs::pokazListeM() {
                     wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
                     wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
                 }
-                cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << endl;
+                cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << "zl" <<endl;
                 break;
             }
 

@@ -26,13 +26,13 @@ public:
 
     void wyswietlanieDanychM(CMieszkanie *m);
 
-    void wprowadzanieDanychL(CLicznik *l);
+    void wprowadzanieDanychL(CLicznik *l, int nrMieszkania);
 
     void wyswietlanieDanychL(CLicznik *l);
 
     void wprowadzanieDanychLPradu(CLicznik *l);
 
-    void wprowadzenieOdczytuL(CLicznik *l);
+    void wprowadzenieOdczytuL(CLicznik *l, int nrLicznika, int nrMieszkania);
 
     void mainManu();
 

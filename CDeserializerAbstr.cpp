@@ -4,6 +4,3 @@
 
 #include "CDeserializerAbstr.h"
 
-void CDeserializerAbstr::wczytajMieszkanie(CMieszkanie *m) {
-
-}
