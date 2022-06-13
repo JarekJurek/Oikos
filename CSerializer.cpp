@@ -30,13 +30,25 @@ void CSerializer::zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) {
     string path2 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\iloscMieszkan.txt";
     ofstream plik2(path2);
 
-    if (!plik.good()) {
-        cout << "Problem z folderem mieszkaniowym iloscMieszkan" << endl;
+    if (!plik2.good()) {
+        cout << "Nie ma folderu iloscMieszkan" << endl;
         return;
     }
 
     plik2 << to_string(nrMieszkania + 1);
     plik2.close();
+
+    string path3 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path3 += "iloscLicznikowMieszkanie" + to_string(nrMieszkania) + ".txt";
+    ofstream plik3(path3);  // tworze nowy folder ilosc licznikow i bedzie on mial wartosc 0
+
+    if (!plik3.good()) {
+        cout << "Problem z folderem licznikowym iloscLicznikowMieszkanie" << endl;
+        return;
+    }
+
+    plik3 << to_string(0);
+    plik3.close();
 
     return;
 }
@@ -89,6 +101,20 @@ void CSerializer::zapiszLicznik(CLicznik *l, int nrLicznika, int nrMieszkania) {
     plik2 << to_string(nrLicznika + 1);
     plik2.close();
 
+    string path3 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path3 += "iloscOdczytowMieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + ".txt";
+    ofstream plik3(path3);
+
+    if (!plik.good()) {
+        cout << "odczyt zapiszodczyt ser" << endl;
+        return;
+    }
+
+    plik3 << to_string(0);
+    plik3.close();
+
+    return;
+
     return;
 }
 
@@ -101,7 +127,7 @@ void CSerializer::usunLicznik(int nrLicznika, int nrMieszkania) {
     ofstream plik(path);
 
     if (!plik.good()) {
-        cout << "Problem z folderem mieszkaniowym iloscMieszkan" << endl;
+        cout << "Nie ma folderu ilosc licznikow" << endl;
         return;
     }
 
@@ -132,7 +158,7 @@ void CSerializer::zapiszOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nr
     ofstream plik2(path2);
 
     if (!plik.good()) {
-        cout << "Problem z folderem odczytowym iloscOdczytow" << endl;
+        cout << "odczyt zapiszodczyt ser" << endl;
         return;
     }
 
@@ -151,7 +177,7 @@ void CSerializer::usunOdczyt(int nrOdczytu, int nrLicznika, int nrMieszkania) {
     ofstream plik(path);
 
     if (!plik.good()) {
-        cout << "Problem z folderem mieszkaniowym iloscMieszkan" << endl;
+        cout << "odczyt usunOdczyt ser" << endl;
         return;
     }
 

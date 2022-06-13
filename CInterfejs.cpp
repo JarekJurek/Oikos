@@ -65,7 +65,6 @@ void CInterfejs::wprowadzanieDanychL(CLicznik *l, int nrMieszkania) {
     cout << "Podaj numer licznika:";
     cin >> n;
     l->podajDaneLicznika(n);
-    wprowadzenieOdczytuL(l, dser->podajIloscLicznikow(nrMieszkania), nrMieszkania);
 }
 
 void CInterfejs::wyswietlanieDanychL(CLicznik *l) {
@@ -133,6 +132,11 @@ void CInterfejs::mainManu() {
                     for (int j = 0; j < dser->podajIloscLicznikow(i); j++) {
                         CLicznik *tmpL;
                         dser->wczytajLicznik(tmpL, j, i);
+                        for (int k=0; k<dser->podajIloscOdczytow(j,i); k++){
+                            COdczyt tmpO;
+                            dser->wczytajOdczyt(&tmpO, k, j, i);
+                            tmpL->odczyty.dodajNowyOdczyt(tmpO);
+                        }
                         tmp.liczniki.dodajNowyLicznik(tmpL);
                     }
                     l->utworzNoweMieszkanie(tmp);
@@ -269,8 +273,10 @@ void CInterfejs::pokazListeM() {
                     l = Lp;
                     wprowadzanieDanychL(l, nrMieszkania);
                     wprowadzanieDanychLPradu(l);
+                    int nrLicznika = dser->podajIloscLicznikow(nrMieszkania);
+                    ser->zapiszLicznik(l, nrLicznika, nrMieszkania);
+                    wprowadzenieOdczytuL(l, nrLicznika, nrMieszkania);
                     wskM->liczniki.dodajNowyLicznik(l);
-                    ser->zapiszLicznik(l, dser->podajIloscLicznikow(nrMieszkania), nrMieszkania);
                 } else if (tmpWybor == 1) {
 //                    CLicznikWody Lw;
 //                    l = &Lw;
@@ -304,7 +310,8 @@ void CInterfejs::pokazListeM() {
                 for (int i = 0; i < wskM->liczniki.outLiczbaElementow(); i++) {
                     wskL = wskM->liczniki.outWskaznikLicznika(i);
                     if (wskL->odczyty.outLiczbaElementow() < 2) {
-                        cout << "Tylko jeden odczyt. Wymagane minimum dwa." << endl;
+                        cout << "Za malo odczytow dla licznika nr: " << wskL->outNumerLicznika()
+                             << ". Wymagane minimum dwa." << endl;
                         break;
                     }
                     odczytStary = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 2);
@@ -313,7 +320,7 @@ void CInterfejs::pokazListeM() {
                     wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
                     wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
                 }
-                cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << endl;
+                cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << "zl" <<endl;
                 break;
             }
 

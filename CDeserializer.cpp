@@ -47,7 +47,7 @@ int CDeserializer::podajIloscMieszkan() {
     ifstream plik(path);
 
     if (!plik.good()) {
-        cout << "Problem z folderem mieszkaniowym" << endl;
+        cout << "Problem z folderem ilosc mieszkan" << endl;
         return -1;
     }
 
@@ -64,7 +64,7 @@ void CDeserializer::wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkani
     ifstream plik(path);
 
     if (!plik.good()) {
-        cout << "Problem z folderem mieszkaniowym" << endl;
+        cout << "Problem z folderem licznikowym" << endl;
         return;
     }
 
@@ -109,12 +109,16 @@ int CDeserializer::podajIloscLicznikow(int nrMieszkania) {
 }
 
 void CDeserializer::wczytajOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) {
+//    if(nrOdczytu == -1){
+//
+//    }
+
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
     path += "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" + to_string(nrOdczytu) + ".txt";
     ifstream plik(path);
 
     if (!plik.good()) {
-        cout << "Problem z folderem mieszkaniowym" << endl;
+        cout << "odczyt wczytajOdczyt dser" << endl;
         return;
     }
 
@@ -137,7 +141,7 @@ int CDeserializer::podajIloscOdczytow(int nrLicznika, int nrMieszkania) {
     ifstream plik(path);
 
     if (!plik.good()) {
-        cout << "Problem z folderem mieszkaniowym" << endl;
+        cout << "odczyt podajIloscOdczytow dser" << endl;
         return -1;
     }
 
