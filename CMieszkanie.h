@@ -10,7 +10,6 @@
 #include <vector>
 
 #include "CAdres.h"
-#include "CTaryfa.h"
 #include "CLicznikPradu.h"
 #include "CLicznikWody.h"
 #include "CLicznikGazu.h"
