@@ -15,9 +15,9 @@ public:
 
     void podajTaryfy(double x, double y) override;
 
-    double outTaryfaZuzycia() override;
+    double outTaryfaZuzycia();
 
-    double outTaryfaMiesieczna() override;
+    double outTaryfaMiesieczna();
 
 };
 

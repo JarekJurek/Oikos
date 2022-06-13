@@ -8,7 +8,7 @@ CLicznikWody::CLicznikWody() {
     taryfaPodgrzanieWody = -1;
     taryfaWodaZimnaIscieki = -1;
     zmienJednostke("m3");
-    zmienTyp("wodyZ");  // w dopełniaczu
+    zmienTyp("wodyC");  // w dopełniaczu
 }
 
 void CLicznikWody::podajTaryfy(double x, double y) {
@@ -16,10 +16,10 @@ void CLicznikWody::podajTaryfy(double x, double y) {
     taryfaWodaZimnaIscieki = y;
 }
 
-//double CLicznikWody::outTaryfaPodgrzanieWody() {
-//    return taryfaPodgrzanieWody;
-//}
+double CLicznikWody::outTaryfaPodgrzanieWody() {
+    return taryfaPodgrzanieWody;
+}
 
-//double CLicznikWody::outTaryfaWodaZimnaIscieki() {
-//    return taryfaWodaZimnaIscieki;
-//}
+double CLicznikWody::outTaryfaWiS() {
+    return taryfaWodaZimnaIscieki;
+}

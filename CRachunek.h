@@ -21,9 +21,9 @@ public:
 
     void oplataMiesieczna(double x, int y);
 
-    void oplataWodaCiepla(double zuzycieWC, double tarydaPodgrzanie);
+    void oplataWodaCiepla(double zuzycie, double tarydaPodgrzanie, double taryfaWiS);
 
-    void oplataWoda(double zuzycieWZ);
+    void oplataWoda(double zuzycie, double taryfaWiS);
 
     double outSumaOplat();
 

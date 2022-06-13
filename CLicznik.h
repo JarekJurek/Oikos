@@ -32,9 +32,9 @@ public:
 
     virtual void podajTaryfy(double x, double y) = 0;
 
-    virtual double outTaryfaZuzycia() = 0;
-
-    virtual double outTaryfaMiesieczna() = 0;
+//    virtual double outTaryfaZuzycia() = 0;
+//
+//    virtual double outTaryfaMiesieczna() = 0;
 
 };
 

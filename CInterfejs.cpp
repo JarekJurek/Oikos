@@ -320,6 +320,7 @@ void CInterfejs::pokazListeM() {
 
                     string typ = wskL->outTyp();
                     if (typ == "pradu") {
+                        CLicznikPradu *wskLP = wskL;
                         wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
                         wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
                     } else if (typ == "wodyZ") {

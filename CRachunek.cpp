@@ -24,10 +24,11 @@ CRachunek::CRachunek() {
     sumaOplat = -1;
 }
 
-void CRachunek::oplataWodaCiepla(double zuzycieWC, double tarydaPodgrzanie) {
+void CRachunek::oplataWodaCiepla(double zuzycie, double tarydaPodgrzanie, double taryfaWiS){
+    sumaOplat = zuzycie * tarydaPodgrzanie + zuzycie * taryfaWiS;
 
 }
 
-void CRachunek::oplataWoda(double p) {
-
+void CRachunek::oplataWoda(double zuzycie, double taryfaWiS) {
+    sumaOplat = zuzycie * taryfaWiS;
 }
