@@ -5,21 +5,21 @@
 #include "CLicznikWody.h"
 
 CLicznikWody::CLicznikWody() {
-    taryfaMiesieczna = -1;
-    taryfaZuzycia = -1;
+    taryfaPodgrzanieWody = -1;
+    taryfaWodaZimnaIscieki = -1;
     zmienJednostke("m3");
-    zmienTyp("wody");  // w dopełniaczu
+    zmienTyp("wodyZ");  // w dopełniaczu
 }
 
 void CLicznikWody::podajTaryfy(double x, double y) {
-    taryfaMiesieczna = x;
-    taryfaZuzycia = y;
+    taryfaPodgrzanieWody = x;
+    taryfaWodaZimnaIscieki = y;
 }
 
-double CLicznikWody::outTaryfaZuzycia() {
-    return taryfaZuzycia;
-}
+//double CLicznikWody::outTaryfaPodgrzanieWody() {
+//    return taryfaPodgrzanieWody;
+//}
 
-double CLicznikWody::outTaryfaMiesieczna() {
-    return taryfaMiesieczna;
-}
+//double CLicznikWody::outTaryfaWodaZimnaIscieki() {
+//    return taryfaWodaZimnaIscieki;
+//}

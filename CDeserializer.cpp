@@ -5,9 +5,6 @@
 #include "CDeserializer.h"
 
 void CDeserializer::wczytajMieszkanie(CMieszkanie *m, int nrMieszkania) {
-//    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\Mieszkania\\";
-//    path += "Mieszkanie" + to_string(nrMieszkania) + "\\Mieszkanie" + to_string(nrMieszkania) +  ".txt";
-
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
     path += "Mieszkanie" + to_string(nrMieszkania) + ".txt";
     ifstream plik(path);
@@ -41,7 +38,6 @@ void CDeserializer::wczytajMieszkanie(CMieszkanie *m, int nrMieszkania) {
 }
 
 int CDeserializer::podajIloscMieszkan() {
-//    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\Mieszkania\\iloscMieszkan.txt";
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\iloscMieszkan.txt";
 
     ifstream plik(path);
@@ -57,8 +53,6 @@ int CDeserializer::podajIloscMieszkan() {
 }
 
 void CDeserializer::wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkania) {
-//    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\Mieszkania\\";
-//    path += "Mieszkanie" + to_string(nrMieszkania) + "\\Liczniki" + "\\Licznik" + to_string(nrLicznika) + ".txt";
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
     path += "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + ".txt";
     ifstream plik(path);
@@ -70,6 +64,7 @@ void CDeserializer::wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkani
 
     string typ;
     getline(plik, typ);
+
     int rozmiarDanych = 3;
     string listaDane[rozmiarDanych];
     int i;
@@ -81,7 +76,7 @@ void CDeserializer::wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkani
         }
         l->podajDaneLicznika(listaDane[0]);
         l->podajTaryfy(stod(listaDane[1]), stod(listaDane[2]));
-    } else if (typ == "wody") {
+    } else if (typ == "wodyZ") {
 //                    CLicznikWody Lw;
 //                    l = &Lw;
     } else if (typ == "gazu") {
@@ -93,7 +88,6 @@ void CDeserializer::wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkani
 }
 
 int CDeserializer::podajIloscLicznikow(int nrMieszkania) {
-//    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\Liczniki\\iloscLicznikow.txt";
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
     path += "iloscLicznikowMieszkanie" + to_string(nrMieszkania) + ".txt";
     ifstream plik(path);
@@ -109,10 +103,6 @@ int CDeserializer::podajIloscLicznikow(int nrMieszkania) {
 }
 
 void CDeserializer::wczytajOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) {
-//    if(nrOdczytu == -1){
-//
-//    }
-
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
     path += "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" + to_string(nrOdczytu) + ".txt";
     ifstream plik(path);

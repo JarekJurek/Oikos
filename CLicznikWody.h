@@ -8,16 +8,16 @@
 #include "CLicznik.h"
 
 class CLicznikWody : public CLicznik {
-    double taryfaMiesieczna;
-    double taryfaZuzycia;
+    double taryfaPodgrzanieWody;
+    double taryfaWodaZimnaIscieki;
 public:
     CLicznikWody();
 
     void podajTaryfy(double x, double y) override;
 
-    double outTaryfaZuzycia() override;
+//    double outTaryfaZuzycia() override;
 
-    double outTaryfaMiesieczna() override;
+//    double outTaryfaMiesieczna() override;
 
 };
 

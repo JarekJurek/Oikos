@@ -317,8 +317,18 @@ void CInterfejs::pokazListeM() {
                     odczytStary = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 2);
                     odczytNowy = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 1);
                     zuzycie = odczytNowy->outStan() - odczytStary->outStan();
-                    wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
-                    wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
+
+                    string typ = wskL->outTyp();
+                    if (typ == "pradu") {
+                        wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
+                        wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
+                    } else if (typ == "wodyZ") {
+//                        wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
+//                        wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
+                    } else if (typ == "wodyC") {
+
+                    }
+
                 }
                 cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << "zl" <<endl;
                 break;

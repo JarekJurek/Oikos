@@ -81,11 +81,18 @@ void CSerializer::zapiszLicznik(CLicznik *l, int nrLicznika, int nrMieszkania) {
         return;
     }
 
-    // zapisywanie danych adresu
     plik << l->outTyp() << endl;
     plik << l->outNumerLicznika() << endl;
-    plik << l->outTaryfaMiesieczna() << endl;
-    plik << l->outTaryfaZuzycia() << endl;
+
+    string typ = l->outTyp();
+    if (typ == "pradu") {
+        plik << l->outTaryfaMiesieczna() << endl;
+        plik << l->outTaryfaZuzycia() << endl;
+    } else if (typ == "wodyZ") {
+
+    } else if (typ == "gazu") {
+
+    }
 
     plik.close();
 
@@ -139,7 +146,8 @@ void CSerializer::usunLicznik(int nrLicznika, int nrMieszkania) {
 
 void CSerializer::zapiszOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) {
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
-    path += "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" + to_string(nrOdczytu) + ".txt";
+    path += "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" +
+            to_string(nrOdczytu) + ".txt";
     ofstream plik(path);
 
     if (!plik.good()) {
@@ -169,7 +177,8 @@ void CSerializer::zapiszOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nr
 }
 
 void CSerializer::usunOdczyt(int nrOdczytu, int nrLicznika, int nrMieszkania) {
-    string fileName = "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" + to_string(nrOdczytu)  + ".txt";
+    string fileName = "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" +
+                      to_string(nrOdczytu) + ".txt";
     int status = filesystem::remove(fileName);
 
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
