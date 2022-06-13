@@ -132,7 +132,7 @@ void CInterfejs::mainManu() {
                     for (int j = 0; j < dser->podajIloscLicznikow(i); j++) {
                         CLicznik *tmpL;
                         dser->wczytajLicznik(tmpL, j, i);
-                        for (int k=0; k<dser->podajIloscOdczytow(j,i); k++){
+                        for (int k = 0; k < dser->podajIloscOdczytow(j, i); k++) {
                             COdczyt tmpO;
                             dser->wczytajOdczyt(&tmpO, k, j, i);
                             tmpL->odczyty.dodajNowyOdczyt(tmpO);
@@ -146,11 +146,20 @@ void CInterfejs::mainManu() {
 
             case 4  // Usun mieszkanie
                 : {
-                int p;
+                int nrMieszkania;
                 cout << "Ktore mieszkanie usunac?" << endl;
-                cin >> p;
-                l->usunMieszkanie(p);  // usuniecie z listy
-                for (int i = 0; i < dser->podajIloscMieszkan(); i++) {  // usuniecie wszystkich mieszkan
+                cin >> nrMieszkania;
+                l->usunMieszkanie(nrMieszkania);  // usuniecie z listy
+                int iloscLicznikow = dser->podajIloscLicznikow(nrMieszkania);
+                for (int i = 0; i < iloscLicznikow; i++) {
+                    int ilsocOdczytow = dser->podajIloscOdczytow(i, nrMieszkania);
+                    for (int j = 0; j < ilsocOdczytow; j++) {
+                        ser->usunOdczyt(j, i, nrMieszkania); // usuniecie wszystkich odczytow
+                    }
+                    ser->usunLicznik(i, nrMieszkania); // usuniecie wszystkich licznikow
+                }
+                int iloscMieszkan = dser->podajIloscMieszkan();
+                for (int i = 0; i < iloscMieszkan; i++) {  // usuniecie wszystkich mieszkan
                     ser->usunMieszkanie(i);
                 }
                 for (int i = 0; i < l->outLiczbaElementow(); i++) {  // zapisanie wszystkich mieszkan
@@ -194,7 +203,8 @@ void CInterfejs::pokazListeM() {
         cout << "1 - Pokaz liczniki mieszkania\n"
              << "2 - Podaj stan licznika\n"
              << "3 - Dodaj nowy licznik\n"
-             << "4 - Podlicz mieszkanie \n\n"
+             << "4 - Usun licznik \n"
+             << "5 - Podlicz mieszkanie \n\n"
              << "0 - Wroc\n\n"
              << "Wybierz numer i wcisnij enter:";
 
@@ -278,18 +288,81 @@ void CInterfejs::pokazListeM() {
                     wprowadzenieOdczytuL(l, nrLicznika, nrMieszkania);
                     wskM->liczniki.dodajNowyLicznik(l);
                 } else if (tmpWybor == 1) {
-//                    CLicznikWody Lw;
-//                    l = &Lw;
+                    CLicznikWody *Lw = new CLicznikWody;
+                    l = Lw;
+                    wprowadzanieDanychL(l, nrMieszkania);
+                    wprowadzanieDanychLWody(l);
+                    int nrLicznika = dser->podajIloscLicznikow(nrMieszkania);
+                    ser->zapiszLicznik(l, nrLicznika, nrMieszkania);
+                    wprowadzenieOdczytuL(l, nrLicznika, nrMieszkania);
+                    wskM->liczniki.dodajNowyLicznik(l);
                 } else if (tmpWybor == 2) {
-//                    CLicznikGazu Lg;
-//                    l = &Lg;
+                    CLicznikGazu *Lg = new CLicznikGazu;
+                    l = Lg;
+                    wprowadzanieDanychL(l, nrMieszkania);
+                    wprowadzanieDanychLGazu(l);
+                    int nrLicznika = dser->podajIloscLicznikow(nrMieszkania);
+                    ser->zapiszLicznik(l, nrLicznika, nrMieszkania);
+                    wprowadzenieOdczytuL(l, nrLicznika, nrMieszkania);
+                    wskM->liczniki.dodajNowyLicznik(l);
                 } else {
                     cout << "Podano zly numer" << endl;
                     break;
                 }
                 break;
             }
-            case 4: {
+
+            case 4:  // Usun licznik
+            {
+                cout << "Wybierz mieszkanie:";
+                cin >> nrMieszkania;
+                CMieszkanie *wskM;
+                wskM = l->outWskaznikMieszkania(nrMieszkania);
+
+                if (wskM->liczniki.outLiczbaElementow() == 0) {
+                    cout << "Brak licznikow" << endl;
+                    break;
+                }
+                CLicznik *wskL;
+                for (int i = 0; i < wskM->liczniki.outLiczbaElementow(); i++) {
+                    wskL = wskM->liczniki.outWskaznikLicznika(i);
+                    cout << "--------------------" << endl;
+                    cout << i << ".:" << endl;
+                    CInterfejs::wyswietlanieDanychL(wskL);
+                    cout << "--------------------" << endl;
+                }
+                int nrLicznika;
+                cout << "Wybierz Licznik do usuniecia:";
+                cin >> nrLicznika;
+                wskL = wskM->liczniki.outWskaznikLicznika(nrLicznika);
+                int iloscLicznikow = wskL->odczyty.outLiczbaElementow();
+                for (int i = 0; i < iloscLicznikow; i++) {  // usuwanie odczytow Licznika
+                    ser->usunOdczyt(i, nrLicznika, nrMieszkania);
+                    wskL->odczyty.usunOdczyt(i);
+                }
+
+                wskM->liczniki.usunLicznik(nrLicznika);
+
+                // aktualizowanie zapisanych licznikow
+                iloscLicznikow = dser->podajIloscLicznikow(nrMieszkania);
+                for (int i = 0; i < iloscLicznikow; i++) {
+                    int ilsocOdczytow = dser->podajIloscOdczytow(i, nrMieszkania);
+                    for (int j = 0; j < ilsocOdczytow; j++) {
+                        ser->usunOdczyt(j, i, nrMieszkania); // usuniecie wszystkich odczytow
+                    }
+                    ser->usunLicznik(i, nrMieszkania); // usuniecie wszystkich licznikow
+                }
+                for (int i = 0; i < wskM->liczniki.outLiczbaElementow(); i++) {  // zapisanie wszystkich licznikow
+                    wskL = wskM->liczniki.outWskaznikLicznika(i);
+                    ser->zapiszLicznik(wskL, i, nrMieszkania);
+                    for (int j = 0; j < wskL->odczyty.outLiczbaElementow(); j++) {
+                        ser->zapiszOdczyt(wskL->odczyty.outOdczyt(j), j, i, nrMieszkania);
+                    }
+                }
+                break;
+            }
+
+            case 5: {
                 cout << "Wybierz mieszkanie do rozliczenia:";
                 cin >> nrMieszkania;
                 CMieszkanie *wskM;
@@ -317,20 +390,10 @@ void CInterfejs::pokazListeM() {
                     odczytStary = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 2);
                     odczytNowy = wskL->odczyty.outOdczyt(wskL->odczyty.outLiczbaElementow() - 1);
                     zuzycie = odczytNowy->outStan() - odczytStary->outStan();
-
-                    string typ = wskL->outTyp();
-                    if (typ == "pradu") {
-                        wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
-                        wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
-                    } else if (typ == "wodyZ") {
-//                        wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
-//                        wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
-                    } else if (typ == "wodyC") {
-
-                    }
-
+                    wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
+                    wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
                 }
-                cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << "zl" <<endl;
+                cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << "zl" << endl;
                 break;
             }
 
@@ -351,3 +414,20 @@ void CInterfejs::wprowadzanieDanychLPradu(CLicznik *l) {
     l->podajTaryfy(x, y);
 }
 
+void CInterfejs::wprowadzanieDanychLWody(CLicznik *l) {
+    double x, y;
+    cout << "Podaj taryfe miesieczna:";
+    cin >> x;
+    cout << "Podaj taryfe zuzycia:";
+    cin >> y;
+    l->podajTaryfy(x, y);
+}
+
+void CInterfejs::wprowadzanieDanychLGazu(CLicznik *l) {
+    double x, y;
+    cout << "Podaj taryfe miesieczna:";
+    cin >> x;
+    cout << "Podaj taryfe zuzycia:";
+    cin >> y;
+    l->podajTaryfy(x, y);
+}

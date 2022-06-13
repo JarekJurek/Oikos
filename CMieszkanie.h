@@ -12,6 +12,8 @@
 #include "CAdres.h"
 #include "CTaryfa.h"
 #include "CLicznikPradu.h"
+#include "CLicznikWody.h"
+#include "CLicznikGazu.h"
 #include "CListaLicznikow.h"
 #include "CRachunek.h"
 

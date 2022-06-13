@@ -32,6 +32,10 @@ public:
 
     void wprowadzanieDanychLPradu(CLicznik *l);
 
+    void wprowadzanieDanychLWody(CLicznik *l);
+
+    void wprowadzanieDanychLGazu(CLicznik *l);
+
     void wprowadzenieOdczytuL(CLicznik *l, int nrLicznika, int nrMieszkania);
 
     void mainManu();

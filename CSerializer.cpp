@@ -4,9 +4,10 @@
 
 #include "CSerializer.h"
 
+
 void CSerializer::zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) {
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
-    path += "Mieszkanie" + to_string(nrMieszkania) + ".txt";  // tutaj nrMieszkania to de facto ilosc mieszkan
+    path += "Mieszkanie" + to_string(nrMieszkania) + ".txt";
     ofstream plik(path);
 
     if (!plik.good()) {
@@ -54,11 +55,22 @@ void CSerializer::zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) {
 }
 
 void CSerializer::usunMieszkanie(int nrMieszkania) {
-    string fileName = "Mieszkanie" + to_string(nrMieszkania) + ".txt";
-    int status = filesystem::remove(fileName);
+    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path += "Mieszkanie" + to_string(nrMieszkania) + ".txt";
+    int n = path.length();
+    char pathArray[n + 1];
+    strcpy(pathArray, path.c_str());
+    int status = remove(pathArray);
 
-    string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\iloscMieszkan.txt";
-    ofstream plik(path);
+    string path2 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path2 += "iloscLicznikowMieszkanie" + to_string(nrMieszkania) + ".txt";
+    int n2 = path2.length();
+    char pathArray2[n2 + 1];
+    strcpy(pathArray2, path2.c_str());
+    int status2 = remove(pathArray2);
+
+    string path3 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\iloscMieszkan.txt";
+    ofstream plik(path3);
 
     if (!plik.good()) {
         cout << "Problem z folderem mieszkaniowym iloscMieszkan" << endl;
@@ -68,7 +80,6 @@ void CSerializer::usunMieszkanie(int nrMieszkania) {
     plik << to_string(nrMieszkania - 1);
     plik.close();
 
-    return;
 }
 
 void CSerializer::zapiszLicznik(CLicznik *l, int nrLicznika, int nrMieszkania) {
@@ -88,10 +99,12 @@ void CSerializer::zapiszLicznik(CLicznik *l, int nrLicznika, int nrMieszkania) {
     if (typ == "pradu") {
         plik << l->outTaryfaMiesieczna() << endl;
         plik << l->outTaryfaZuzycia() << endl;
-    } else if (typ == "wodyZ") {
-
+    } else if (typ == "wody") {
+        plik << l->outTaryfaMiesieczna() << endl;
+        plik << l->outTaryfaZuzycia() << endl;
     } else if (typ == "gazu") {
-
+        plik << l->outTaryfaMiesieczna() << endl;
+        plik << l->outTaryfaZuzycia() << endl;
     }
 
     plik.close();
@@ -120,18 +133,31 @@ void CSerializer::zapiszLicznik(CLicznik *l, int nrLicznika, int nrMieszkania) {
     plik3 << to_string(0);
     plik3.close();
 
-    return;
-
-    return;
 }
 
 void CSerializer::usunLicznik(int nrLicznika, int nrMieszkania) {
-    string fileName = "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + ".txt";
-    int status = filesystem::remove(fileName);
-
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
-    path += "iloscLicznikowMieszkanie" + to_string(nrMieszkania) + ".txt";
-    ofstream plik(path);
+    path += "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + ".txt";
+    int n = path.length();
+    char pathArray[n + 1];
+    strcpy(pathArray, path.c_str());
+    int status = remove(pathArray);
+    if(status != 0){
+        cout << "no" << endl;
+    }else{
+        cout << "yes" << endl;
+    }
+
+    string path2 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path2 += "iloscOdczytowMieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + ".txt";
+    int n2 = path2.length();
+    char pathArray2[n2 + 1];
+    strcpy(pathArray2, path2.c_str());
+    int status2 = remove(pathArray2);
+
+    string path3 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path3 += "iloscLicznikowMieszkanie" + to_string(nrMieszkania) + ".txt";
+    ofstream plik(path3);
 
     if (!plik.good()) {
         cout << "Nie ma folderu ilosc licznikow" << endl;
@@ -141,7 +167,6 @@ void CSerializer::usunLicznik(int nrLicznika, int nrMieszkania) {
     plik << to_string(nrLicznika - 1);
     plik.close();
 
-    return;
 }
 
 void CSerializer::zapiszOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nrMieszkania) {
@@ -177,13 +202,17 @@ void CSerializer::zapiszOdczyt(COdczyt *o, int nrOdczytu, int nrLicznika, int nr
 }
 
 void CSerializer::usunOdczyt(int nrOdczytu, int nrLicznika, int nrMieszkania) {
-    string fileName = "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" +
-                      to_string(nrOdczytu) + ".txt";
-    int status = filesystem::remove(fileName);
-
     string path = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
-    path += "iloscOdczytowMieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + ".txt";
-    ofstream plik(path);
+    path += "Mieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + "Odczyt" +
+            to_string(nrOdczytu) + ".txt";
+    int n = path.length();
+    char pathArray[n + 1];
+    strcpy(pathArray, path.c_str());
+    int status = remove(pathArray);
+
+    string path2 = "C:\\Users\\grzeg\\Documents\\Studia\\Semestr 6\\PJC\\Oikos\\";
+    path2 += "iloscOdczytowMieszkanie" + to_string(nrMieszkania) + "Licznik" + to_string(nrLicznika) + ".txt";
+    ofstream plik(path2);
 
     if (!plik.good()) {
         cout << "odczyt usunOdczyt ser" << endl;
@@ -192,7 +221,5 @@ void CSerializer::usunOdczyt(int nrOdczytu, int nrLicznika, int nrMieszkania) {
 
     plik << to_string(nrOdczytu - 1);
     plik.close();
-
-    return;
 }
 

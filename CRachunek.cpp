@@ -23,11 +23,3 @@ void CRachunek::zerujRachunek() {
 CRachunek::CRachunek() {
     sumaOplat = -1;
 }
-
-void CRachunek::oplataWodaCiepla(double zuzycieWC, double tarydaPodgrzanie) {
-
-}
-
-void CRachunek::oplataWoda(double p) {
-
-}

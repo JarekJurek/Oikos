@@ -76,12 +76,22 @@ void CDeserializer::wczytajLicznik(CLicznik *&l, int nrLicznika, int nrMieszkani
         }
         l->podajDaneLicznika(listaDane[0]);
         l->podajTaryfy(stod(listaDane[1]), stod(listaDane[2]));
-    } else if (typ == "wodyZ") {
-//                    CLicznikWody Lw;
-//                    l = &Lw;
+    } else if (typ == "wody") {
+        CLicznikWody *Lw = new CLicznikWody;
+        l = Lw;
+        for (i = 0; i < rozmiarDanych; i++) {
+            getline(plik, listaDane[i]);
+        }
+        l->podajDaneLicznika(listaDane[0]);
+        l->podajTaryfy(stod(listaDane[1]), stod(listaDane[2]));
     } else if (typ == "gazu") {
-//                    CLicznikGazu Lg;
-//                    l = &Lg;
+        CLicznikGazu *Lg = new CLicznikGazu;
+        l = Lg;
+        for (i = 0; i < rozmiarDanych; i++) {
+            getline(plik, listaDane[i]);
+        }
+        l->podajDaneLicznika(listaDane[0]);
+        l->podajTaryfy(stod(listaDane[1]), stod(listaDane[2]));
     }
     plik.close();
     return;
