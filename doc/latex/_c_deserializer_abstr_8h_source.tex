@@ -1,0 +1,32 @@
+\hypertarget{_c_deserializer_abstr_8h_source}{}\doxysection{C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/\+CDeserializer\+Abstr.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grzeg on 06.06.2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROGRAM\_CDESERIALIZERABSTR\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROGRAM\_CDESERIALIZERABSTR\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}CMieszkanie.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializerAbstr}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} wczytajMieszkanie(\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} *m, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} podajIloscMieszkan() = 0;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} wczytajLicznik(\mbox{\hyperlink{class_c_licznik}{CLicznik}} *\&l, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} podajIloscLicznikow(\textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} wczytajOdczyt(\mbox{\hyperlink{class_c_odczyt}{COdczyt}} *o, \textcolor{keywordtype}{int} nrOdczytu, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} podajIloscOdczytow(\textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROGRAM\_CDESERIALIZERABSTR\_H}}
+
+\end{DoxyCode}

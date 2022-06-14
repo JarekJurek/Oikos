@@ -1,0 +1,164 @@
+\hypertarget{class_c_deserializer}{}\doxysection{CDeserializer Class Reference}
+\label{class_c_deserializer}\index{CDeserializer@{CDeserializer}}
+
+
+Klasa deserializera tekstowego dziedzicząca po abstrakcyjnej klasie \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}.  
+
+
+
+
+{\ttfamily \#include $<$CDeserializer.\+h$>$}
+
+Inheritance diagram for CDeserializer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_deserializer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_deserializer_a4a38ca27b0d856fd4d53ae19d87895d1}{wczytaj\+Mieszkanie}} (\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$m, int nr\+Mieszkania) override
+\item 
+int \mbox{\hyperlink{class_c_deserializer_ae947f2bb05731eb5ae5d8f19268ef590}{podaj\+Ilosc\+Mieszkan}} () override
+\item 
+void \mbox{\hyperlink{class_c_deserializer_adb96d728644742b4307e255863622806}{wczytaj\+Licznik}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$\&l, int nr\+Licznika, int nr\+Mieszkania) override
+\item 
+int \mbox{\hyperlink{class_c_deserializer_a169b474cc311ae08f6f4e6a0729fd76d}{podaj\+Ilosc\+Licznikow}} (int nr\+Mieszkania) override
+\item 
+void \mbox{\hyperlink{class_c_deserializer_a7cdd155a0de1747737109710af6b9f8c}{wczytaj\+Odczyt}} (\mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$o, int nr\+Odczytu, int nr\+Licznika, int nr\+Mieszkania) override
+\item 
+int \mbox{\hyperlink{class_c_deserializer_acb96575543e80106e20b6901b5c07961}{podaj\+Ilosc\+Odczytow}} (int nr\+Licznika, int nr\+Mieszkania) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa deserializera tekstowego dziedzicząca po abstrakcyjnej klasie \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_deserializer_a169b474cc311ae08f6f4e6a0729fd76d}\label{class_c_deserializer_a169b474cc311ae08f6f4e6a0729fd76d}} 
+\index{CDeserializer@{CDeserializer}!podajIloscLicznikow@{podajIloscLicznikow}}
+\index{podajIloscLicznikow@{podajIloscLicznikow}!CDeserializer@{CDeserializer}}
+\doxysubsubsection{\texorpdfstring{podajIloscLicznikow()}{podajIloscLicznikow()}}
+{\footnotesize\ttfamily int CDeserializer\+::podaj\+Ilosc\+Licznikow (\begin{DoxyParamCaption}\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda zwracająca ilosc liczników zapisanych w plikach
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr\+Mieszkania} & jest numerem mieszkania ktorego liczniki liczymy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ilosc licznikow 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_deserializer_ae947f2bb05731eb5ae5d8f19268ef590}\label{class_c_deserializer_ae947f2bb05731eb5ae5d8f19268ef590}} 
+\index{CDeserializer@{CDeserializer}!podajIloscMieszkan@{podajIloscMieszkan}}
+\index{podajIloscMieszkan@{podajIloscMieszkan}!CDeserializer@{CDeserializer}}
+\doxysubsubsection{\texorpdfstring{podajIloscMieszkan()}{podajIloscMieszkan()}}
+{\footnotesize\ttfamily int CDeserializer\+::podaj\+Ilosc\+Mieszkan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda zwracająca ilosc mieszkan zapisanych w plikach
+
+\begin{DoxyReturn}{Returns}
+ilosc mieszkan 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_deserializer_acb96575543e80106e20b6901b5c07961}\label{class_c_deserializer_acb96575543e80106e20b6901b5c07961}} 
+\index{CDeserializer@{CDeserializer}!podajIloscOdczytow@{podajIloscOdczytow}}
+\index{podajIloscOdczytow@{podajIloscOdczytow}!CDeserializer@{CDeserializer}}
+\doxysubsubsection{\texorpdfstring{podajIloscOdczytow()}{podajIloscOdczytow()}}
+{\footnotesize\ttfamily int CDeserializer\+::podaj\+Ilosc\+Odczytow (\begin{DoxyParamCaption}\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda zwracająca ilosc mieszkan odczytow zapisanych w plikach
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr\+Mieszkania} & jest numerem mieszkania ktorego liczniki liczymy \\
+\hline
+{\em nr\+Licznika} & jest numerem licznika ktorego odczyty liczymy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ilosc odczytow 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_deserializer_adb96d728644742b4307e255863622806}\label{class_c_deserializer_adb96d728644742b4307e255863622806}} 
+\index{CDeserializer@{CDeserializer}!wczytajLicznik@{wczytajLicznik}}
+\index{wczytajLicznik@{wczytajLicznik}!CDeserializer@{CDeserializer}}
+\doxysubsubsection{\texorpdfstring{wczytajLicznik()}{wczytajLicznik()}}
+{\footnotesize\ttfamily void CDeserializer\+::wczytaj\+Licznik (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$\&}]{l,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda wczytująca dane z pliku
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem do typu \mbox{\hyperlink{class_c_licznik}{CLicznik}} \\
+\hline
+{\em nr\+Licznika} & jest numerem licznika który chcemy wczytać \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy wczytać \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_deserializer_a4a38ca27b0d856fd4d53ae19d87895d1}\label{class_c_deserializer_a4a38ca27b0d856fd4d53ae19d87895d1}} 
+\index{CDeserializer@{CDeserializer}!wczytajMieszkanie@{wczytajMieszkanie}}
+\index{wczytajMieszkanie@{wczytajMieszkanie}!CDeserializer@{CDeserializer}}
+\doxysubsubsection{\texorpdfstring{wczytajMieszkanie()}{wczytajMieszkanie()}}
+{\footnotesize\ttfamily void CDeserializer\+::wczytaj\+Mieszkanie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$}]{m,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda wczytująca dane z pliku
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & jest wskaźnikiem do typu CMieszknie \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy wczytać \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_deserializer_a7cdd155a0de1747737109710af6b9f8c}\label{class_c_deserializer_a7cdd155a0de1747737109710af6b9f8c}} 
+\index{CDeserializer@{CDeserializer}!wczytajOdczyt@{wczytajOdczyt}}
+\index{wczytajOdczyt@{wczytajOdczyt}!CDeserializer@{CDeserializer}}
+\doxysubsubsection{\texorpdfstring{wczytajOdczyt()}{wczytajOdczyt()}}
+{\footnotesize\ttfamily void CDeserializer\+::wczytaj\+Odczyt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$}]{o,  }\item[{int}]{nr\+Odczytu,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda wczytująca dane z pliku
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & jest wskaźnikiem do typu \mbox{\hyperlink{class_c_odczyt}{COdczyt}} \\
+\hline
+{\em nr\+Licznika} & jest numerem odczytu który chcemy wczytać \\
+\hline
+{\em nr\+Licznika} & jest numerem licznika który chcemy wczytać \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy wczytać \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CDeserializer.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CDeserializer.\+cpp\end{DoxyCompactItemize}

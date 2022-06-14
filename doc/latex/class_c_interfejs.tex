@@ -1,0 +1,132 @@
+\hypertarget{class_c_interfejs}{}\doxysection{CInterfejs Class Reference}
+\label{class_c_interfejs}\index{CInterfejs@{CInterfejs}}
+
+
+{\ttfamily \#include $<$CInterfejs.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_interfejs_a719216cb3dec2611bcff04eafaa6095d}\label{class_c_interfejs_a719216cb3dec2611bcff04eafaa6095d}} 
+{\bfseries CInterfejs} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bez parametrów. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_interfejs_a8d45c353f3e58102d4d0c4d285c04ef5}\label{class_c_interfejs_a8d45c353f3e58102d4d0c4d285c04ef5}} 
+void {\bfseries wprowadzanie\+DanychM} (\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Metoda do wprowadzania danych mieszkania. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_interfejs_a34649ab7c23c4eda56adb75ac5485b54}{wyswietlanie\+DanychM}} (\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$m)
+\item 
+void \mbox{\hyperlink{class_c_interfejs_a6b92130487d4c870207088536cb985b2}{wprowadzanie\+DanychL}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l, int nr\+Mieszkania)
+\item 
+void \mbox{\hyperlink{class_c_interfejs_a70569fceacb2bdbe41d7b2883f29d43d}{wyswietlanie\+DanychL}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l)
+\item 
+void \mbox{\hyperlink{class_c_interfejs_af0ad5d2d59dc42ec808d544f36c4eae9}{wprowadzanie\+Danych\+LPradu}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l)
+\item 
+void \mbox{\hyperlink{class_c_interfejs_a4fc2790a81140be4d20f37346f59770b}{wprowadzanie\+Danych\+LWody}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l)
+\item 
+void \mbox{\hyperlink{class_c_interfejs_a031357b44d3a625397545f6e96fc783f}{wprowadzanie\+Danych\+LGazu}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l)
+\item 
+void \mbox{\hyperlink{class_c_interfejs_af9008cb607c381bb26d8a32d51f9b577}{wprowadzenie\+OdczytuL}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l, int nr\+Licznika, int nr\+Mieszkania)
+\item 
+\mbox{\Hypertarget{class_c_interfejs_abf0621e3063de6cbbaad01578eb390c7}\label{class_c_interfejs_abf0621e3063de6cbbaad01578eb390c7}} 
+void {\bfseries main\+Manu} ()
+\begin{DoxyCompactList}\small\item\em Metoda wyświetlająca menu główne. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_interfejs_aad0f1b7bab8048c60f0e1f93a9e0b929}\label{class_c_interfejs_aad0f1b7bab8048c60f0e1f93a9e0b929}} 
+void {\bfseries pokaz\+ListeM} ()
+\begin{DoxyCompactList}\small\item\em Metoda wyświetlająca liste mieszkań razem z możliwymi opcjami działania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa interfejsu tekstowego
+
+Klasa interfejs zawiera kolejne pola potrzbne do wyświetlania danych\+: \mbox{\hyperlink{class_c_lista_mieszkan}{CLista\+Mieszkan}} @l, \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}} @ser, \mbox{\hyperlink{class_c_deserializer_abstr}{CDeserializer\+Abstr}} @dser 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_interfejs_a6b92130487d4c870207088536cb985b2}\label{class_c_interfejs_a6b92130487d4c870207088536cb985b2}} 
+\index{CInterfejs@{CInterfejs}!wprowadzanieDanychL@{wprowadzanieDanychL}}
+\index{wprowadzanieDanychL@{wprowadzanieDanychL}!CInterfejs@{CInterfejs}}
+\doxysubsubsection{\texorpdfstring{wprowadzanieDanychL()}{wprowadzanieDanychL()}}
+{\footnotesize\ttfamily void CInterfejs\+::wprowadzanie\+DanychL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})}
+
+Metoda do wprowadzania danych licznika 
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem typu Clicznik \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania do którego chcemy dodać licznik \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_interfejs_a031357b44d3a625397545f6e96fc783f}\label{class_c_interfejs_a031357b44d3a625397545f6e96fc783f}} 
+\index{CInterfejs@{CInterfejs}!wprowadzanieDanychLGazu@{wprowadzanieDanychLGazu}}
+\index{wprowadzanieDanychLGazu@{wprowadzanieDanychLGazu}!CInterfejs@{CInterfejs}}
+\doxysubsubsection{\texorpdfstring{wprowadzanieDanychLGazu()}{wprowadzanieDanychLGazu()}}
+{\footnotesize\ttfamily void CInterfejs\+::wprowadzanie\+Danych\+LGazu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+Metoda do wprowadzania danych licznika gazu 
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem typu Clicznik \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_interfejs_af0ad5d2d59dc42ec808d544f36c4eae9}\label{class_c_interfejs_af0ad5d2d59dc42ec808d544f36c4eae9}} 
+\index{CInterfejs@{CInterfejs}!wprowadzanieDanychLPradu@{wprowadzanieDanychLPradu}}
+\index{wprowadzanieDanychLPradu@{wprowadzanieDanychLPradu}!CInterfejs@{CInterfejs}}
+\doxysubsubsection{\texorpdfstring{wprowadzanieDanychLPradu()}{wprowadzanieDanychLPradu()}}
+{\footnotesize\ttfamily void CInterfejs\+::wprowadzanie\+Danych\+LPradu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+Metoda do wprowadzania danych licznika prądu 
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem typu Clicznik \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_interfejs_a4fc2790a81140be4d20f37346f59770b}\label{class_c_interfejs_a4fc2790a81140be4d20f37346f59770b}} 
+\index{CInterfejs@{CInterfejs}!wprowadzanieDanychLWody@{wprowadzanieDanychLWody}}
+\index{wprowadzanieDanychLWody@{wprowadzanieDanychLWody}!CInterfejs@{CInterfejs}}
+\doxysubsubsection{\texorpdfstring{wprowadzanieDanychLWody()}{wprowadzanieDanychLWody()}}
+{\footnotesize\ttfamily void CInterfejs\+::wprowadzanie\+Danych\+LWody (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+Metoda do wprowadzania danych licznika wody 
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem typu Clicznik \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_interfejs_af9008cb607c381bb26d8a32d51f9b577}\label{class_c_interfejs_af9008cb607c381bb26d8a32d51f9b577}} 
+\index{CInterfejs@{CInterfejs}!wprowadzenieOdczytuL@{wprowadzenieOdczytuL}}
+\index{wprowadzenieOdczytuL@{wprowadzenieOdczytuL}!CInterfejs@{CInterfejs}}
+\doxysubsubsection{\texorpdfstring{wprowadzenieOdczytuL()}{wprowadzenieOdczytuL()}}
+{\footnotesize\ttfamily void CInterfejs\+::wprowadzenie\+OdczytuL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})}
+
+Metoda do wprowadzania danych odczytu 
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem typu Clicznik \\
+\hline
+{\em nr\+Licznika} & jest numerem mieszkania do którego cemy dodać odczyt \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania do którego chcemy dodać odczyt \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_interfejs_a70569fceacb2bdbe41d7b2883f29d43d}\label{class_c_interfejs_a70569fceacb2bdbe41d7b2883f29d43d}} 
+\index{CInterfejs@{CInterfejs}!wyswietlanieDanychL@{wyswietlanieDanychL}}
+\index{wyswietlanieDanychL@{wyswietlanieDanychL}!CInterfejs@{CInterfejs}}
+\doxysubsubsection{\texorpdfstring{wyswietlanieDanychL()}{wyswietlanieDanychL()}}
+{\footnotesize\ttfamily void CInterfejs\+::wyswietlanie\+DanychL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+Metoda do wyświetlania danych licznika 
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem typu Clicznik \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_interfejs_a34649ab7c23c4eda56adb75ac5485b54}\label{class_c_interfejs_a34649ab7c23c4eda56adb75ac5485b54}} 
+\index{CInterfejs@{CInterfejs}!wyswietlanieDanychM@{wyswietlanieDanychM}}
+\index{wyswietlanieDanychM@{wyswietlanieDanychM}!CInterfejs@{CInterfejs}}
+\doxysubsubsection{\texorpdfstring{wyswietlanieDanychM()}{wyswietlanieDanychM()}}
+{\footnotesize\ttfamily void CInterfejs\+::wyswietlanie\+DanychM (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+Metoda do wyświetlania danych mieszkania 
+\begin{DoxyParams}{Parameters}
+{\em m} & jest wskaźnikiem typu \mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CInterfejs.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CInterfejs.\+cpp\end{DoxyCompactItemize}

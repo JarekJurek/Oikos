@@ -6,6 +6,7 @@
 #define PROGRAM_CDESERIALIZERABSTR_H
 
 #include "CMieszkanie.h"
+/// Klasa abstrakcyjna deserializera
 
 class CDeserializerAbstr {
 public:

@@ -1,0 +1,103 @@
+\hypertarget{class_c_deserializer_abstr}{}\doxysection{CDeserializer\+Abstr Class Reference}
+\label{class_c_deserializer_abstr}\index{CDeserializerAbstr@{CDeserializerAbstr}}
+
+
+Klasa abstrakcyjna deserializera.  
+
+
+
+
+{\ttfamily \#include $<$CDeserializer\+Abstr.\+h$>$}
+
+Inheritance diagram for CDeserializer\+Abstr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_deserializer_abstr}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_c_deserializer_abstr_af70a76f23fc4316121fb9532179b5f42}{wczytaj\+Mieszkanie}} (\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$m, int nr\+Mieszkania)=0
+\item 
+virtual int \mbox{\hyperlink{class_c_deserializer_abstr_a1b4ff93ca8957c2fb966b5c468a00675}{podaj\+Ilosc\+Mieszkan}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_c_deserializer_abstr_a7768a17261bd76a07a4a5a852a65e4f5}{wczytaj\+Licznik}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$\&l, int nr\+Licznika, int nr\+Mieszkania)=0
+\item 
+virtual int \mbox{\hyperlink{class_c_deserializer_abstr_a800bfc0e20769b5a95e6b2a9f7f93fdf}{podaj\+Ilosc\+Licznikow}} (int nr\+Mieszkania)=0
+\item 
+virtual void \mbox{\hyperlink{class_c_deserializer_abstr_a61ab057e41e52264d22dd0894ba8dcf1}{wczytaj\+Odczyt}} (\mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$o, int nr\+Odczytu, int nr\+Licznika, int nr\+Mieszkania)=0
+\item 
+virtual int \mbox{\hyperlink{class_c_deserializer_abstr_a30c6b61f02855fed767b52ad0694da3e}{podaj\+Ilosc\+Odczytow}} (int nr\+Licznika, int nr\+Mieszkania)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa abstrakcyjna deserializera. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_deserializer_abstr_a800bfc0e20769b5a95e6b2a9f7f93fdf}\label{class_c_deserializer_abstr_a800bfc0e20769b5a95e6b2a9f7f93fdf}} 
+\index{CDeserializerAbstr@{CDeserializerAbstr}!podajIloscLicznikow@{podajIloscLicznikow}}
+\index{podajIloscLicznikow@{podajIloscLicznikow}!CDeserializerAbstr@{CDeserializerAbstr}}
+\doxysubsubsection{\texorpdfstring{podajIloscLicznikow()}{podajIloscLicznikow()}}
+{\footnotesize\ttfamily virtual int CDeserializer\+Abstr\+::podaj\+Ilosc\+Licznikow (\begin{DoxyParamCaption}\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_c_deserializer_a169b474cc311ae08f6f4e6a0729fd76d}{CDeserializer}}.
+
+\mbox{\Hypertarget{class_c_deserializer_abstr_a1b4ff93ca8957c2fb966b5c468a00675}\label{class_c_deserializer_abstr_a1b4ff93ca8957c2fb966b5c468a00675}} 
+\index{CDeserializerAbstr@{CDeserializerAbstr}!podajIloscMieszkan@{podajIloscMieszkan}}
+\index{podajIloscMieszkan@{podajIloscMieszkan}!CDeserializerAbstr@{CDeserializerAbstr}}
+\doxysubsubsection{\texorpdfstring{podajIloscMieszkan()}{podajIloscMieszkan()}}
+{\footnotesize\ttfamily virtual int CDeserializer\+Abstr\+::podaj\+Ilosc\+Mieszkan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_c_deserializer_ae947f2bb05731eb5ae5d8f19268ef590}{CDeserializer}}.
+
+\mbox{\Hypertarget{class_c_deserializer_abstr_a30c6b61f02855fed767b52ad0694da3e}\label{class_c_deserializer_abstr_a30c6b61f02855fed767b52ad0694da3e}} 
+\index{CDeserializerAbstr@{CDeserializerAbstr}!podajIloscOdczytow@{podajIloscOdczytow}}
+\index{podajIloscOdczytow@{podajIloscOdczytow}!CDeserializerAbstr@{CDeserializerAbstr}}
+\doxysubsubsection{\texorpdfstring{podajIloscOdczytow()}{podajIloscOdczytow()}}
+{\footnotesize\ttfamily virtual int CDeserializer\+Abstr\+::podaj\+Ilosc\+Odczytow (\begin{DoxyParamCaption}\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_c_deserializer_acb96575543e80106e20b6901b5c07961}{CDeserializer}}.
+
+\mbox{\Hypertarget{class_c_deserializer_abstr_a7768a17261bd76a07a4a5a852a65e4f5}\label{class_c_deserializer_abstr_a7768a17261bd76a07a4a5a852a65e4f5}} 
+\index{CDeserializerAbstr@{CDeserializerAbstr}!wczytajLicznik@{wczytajLicznik}}
+\index{wczytajLicznik@{wczytajLicznik}!CDeserializerAbstr@{CDeserializerAbstr}}
+\doxysubsubsection{\texorpdfstring{wczytajLicznik()}{wczytajLicznik()}}
+{\footnotesize\ttfamily virtual void CDeserializer\+Abstr\+::wczytaj\+Licznik (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$\&}]{l,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_c_deserializer_adb96d728644742b4307e255863622806}{CDeserializer}}.
+
+\mbox{\Hypertarget{class_c_deserializer_abstr_af70a76f23fc4316121fb9532179b5f42}\label{class_c_deserializer_abstr_af70a76f23fc4316121fb9532179b5f42}} 
+\index{CDeserializerAbstr@{CDeserializerAbstr}!wczytajMieszkanie@{wczytajMieszkanie}}
+\index{wczytajMieszkanie@{wczytajMieszkanie}!CDeserializerAbstr@{CDeserializerAbstr}}
+\doxysubsubsection{\texorpdfstring{wczytajMieszkanie()}{wczytajMieszkanie()}}
+{\footnotesize\ttfamily virtual void CDeserializer\+Abstr\+::wczytaj\+Mieszkanie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$}]{m,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_c_deserializer_a4a38ca27b0d856fd4d53ae19d87895d1}{CDeserializer}}.
+
+\mbox{\Hypertarget{class_c_deserializer_abstr_a61ab057e41e52264d22dd0894ba8dcf1}\label{class_c_deserializer_abstr_a61ab057e41e52264d22dd0894ba8dcf1}} 
+\index{CDeserializerAbstr@{CDeserializerAbstr}!wczytajOdczyt@{wczytajOdczyt}}
+\index{wczytajOdczyt@{wczytajOdczyt}!CDeserializerAbstr@{CDeserializerAbstr}}
+\doxysubsubsection{\texorpdfstring{wczytajOdczyt()}{wczytajOdczyt()}}
+{\footnotesize\ttfamily virtual void CDeserializer\+Abstr\+::wczytaj\+Odczyt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$}]{o,  }\item[{int}]{nr\+Odczytu,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_c_deserializer_a7cdd155a0de1747737109710af6b9f8c}{CDeserializer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CDeserializer\+Abstr.\+h\end{DoxyCompactItemize}

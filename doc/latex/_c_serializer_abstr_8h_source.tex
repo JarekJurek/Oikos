@@ -1,0 +1,25 @@
+\hypertarget{_c_serializer_abstr_8h_source}{}\doxysection{C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/\+CSerializer\+Abstr.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grzeg on 06.06.2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROGRAM\_CSERIALIZERABSTR\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROGRAM\_CSERIALIZERABSTR\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}CMieszkanie.h"{}}}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_serializer_abstr}{CSerializerAbstr}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} zapiszMieszkanie(\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} *m, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} usunMieszkanie(\textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} zapiszLicznik(\mbox{\hyperlink{class_c_licznik}{CLicznik}} *l, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} usunLicznik(\textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{16     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} zapiszOdczyt(\mbox{\hyperlink{class_c_odczyt}{COdczyt}} *o, \textcolor{keywordtype}{int} nrOdczytu, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} usunOdczyt(\textcolor{keywordtype}{int} nrOdczytu, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) = 0;}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROGRAM\_CSERIALIZERABSTR\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,35 @@
+\hypertarget{_c_serializer_8h_source}{}\doxysection{C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/\+CSerializer.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grzeg on 03.06.2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROGRAM\_CSERIALIZER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROGRAM\_CSERIALIZER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <cstdio>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}CSerializerAbstr.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}CMieszkanie.h"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_serializer}{CSerializer}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_c_serializer_abstr}{CSerializerAbstr}} \{}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_serializer_af87290b3e827b114408e7fa11a1210e9}{zapiszMieszkanie}}(\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} *m, \textcolor{keywordtype}{int} nrMieszkania) \textcolor{keyword}{override};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_serializer_aaf34c365e70661a395831566cfe6bb89}{usunMieszkanie}}(\textcolor{keywordtype}{int} nrMieszkania) \textcolor{keyword}{override};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_serializer_a9486c767807914dfa308aa276942a184}{zapiszLicznik}}(\mbox{\hyperlink{class_c_licznik}{CLicznik}} *l, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) \textcolor{keyword}{override};}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_serializer_a1d2527879cd0eec00654fb501a164354}{usunLicznik}}(\textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) \textcolor{keyword}{override};}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_serializer_ab703c9acb650ad17e56b7c66de04d4a6}{zapiszOdczyt}}(\mbox{\hyperlink{class_c_odczyt}{COdczyt}} *o, \textcolor{keywordtype}{int} nrOdczytu, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) \textcolor{keyword}{override};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_serializer_ad36322416426a8cb0aa62b86e37565e9}{usunOdczyt}}(\textcolor{keywordtype}{int} nrOdczytu, \textcolor{keywordtype}{int} nrLicznika, \textcolor{keywordtype}{int} nrMieszkania) \textcolor{keyword}{override};}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROGRAM\_CSERIALIZER\_H}}
+
+\end{DoxyCode}

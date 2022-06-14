@@ -1,0 +1,169 @@
+\hypertarget{class_c_licznik}{}\doxysection{CLicznik Class Reference}
+\label{class_c_licznik}\index{CLicznik@{CLicznik}}
+
+
+{\ttfamily \#include $<$CLicznik.\+h$>$}
+
+Inheritance diagram for CLicznik\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_licznik}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_licznik_a54294fa33c45e5f81780aac9ad8e0faf}{podaj\+Dane\+Licznika}} (string p)
+\item 
+void \mbox{\hyperlink{class_c_licznik_a1e975848eabb27124a4404b822e86e8d}{zmien\+Jednostke}} (string s)
+\item 
+string \mbox{\hyperlink{class_c_licznik_a8ce993e6d33c171b95436e9e125290f9}{out\+Jednostka}} ()
+\item 
+void \mbox{\hyperlink{class_c_licznik_a1b505b9deab7295e1e449c865a1a554e}{zmien\+Typ}} (string s)
+\item 
+string \mbox{\hyperlink{class_c_licznik_a651c9db96db89fd53037306e71946e5a}{out\+Typ}} ()
+\item 
+string \mbox{\hyperlink{class_c_licznik_a3470cbe6247b363373d48e8851181513}{out\+Numer\+Licznika}} ()
+\item 
+virtual void \mbox{\hyperlink{class_c_licznik_a2ea67fb6f10e0a7be8b1c6d4738394a8}{podaj\+Taryfy}} (double x, double y)=0
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna służąca do podania danych taryfy. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_licznik_a1cf6c87682cc0d0c664866da8cdc96cb}{out\+Taryfa\+Zuzycia}} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna służąca do zwrócenia danych taryfy. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_c_licznik_ac7b6f7b7e0f595c2c54cfc9949f1f69e}{out\+Taryfa\+Miesieczna}} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda wirtualna służąca do zwrócenia danych taryfy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_licznik_a49eb5b702c97058c1b12566975ee3f3b}\label{class_c_licznik_a49eb5b702c97058c1b12566975ee3f3b}} 
+\mbox{\hyperlink{class_c_lista_odczytow}{CLista\+Odczytow}} {\bfseries odczyty}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa bazowa licznik
+
+Klasa licznik zawiera podstawowe dane uniwersalne dla każdego licznika\+: string numer licznika, string jednostka, string typ oraz \mbox{\hyperlink{class_c_lista_odczytow}{CLista\+Odczytow}} odczyty. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_licznik_a8ce993e6d33c171b95436e9e125290f9}\label{class_c_licznik_a8ce993e6d33c171b95436e9e125290f9}} 
+\index{CLicznik@{CLicznik}!outJednostka@{outJednostka}}
+\index{outJednostka@{outJednostka}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{outJednostka()}{outJednostka()}}
+{\footnotesize\ttfamily string CLicznik\+::out\+Jednostka (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca wprowadzenie numeru licznika
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Nowy numer licznika \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_licznik_a3470cbe6247b363373d48e8851181513}\label{class_c_licznik_a3470cbe6247b363373d48e8851181513}} 
+\index{CLicznik@{CLicznik}!outNumerLicznika@{outNumerLicznika}}
+\index{outNumerLicznika@{outNumerLicznika}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{outNumerLicznika()}{outNumerLicznika()}}
+{\footnotesize\ttfamily string CLicznik\+::out\+Numer\+Licznika (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda zwracająca numer licznika
+
+\begin{DoxyReturn}{Returns}
+@numer\+Licznika 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_licznik_ac7b6f7b7e0f595c2c54cfc9949f1f69e}\label{class_c_licznik_ac7b6f7b7e0f595c2c54cfc9949f1f69e}} 
+\index{CLicznik@{CLicznik}!outTaryfaMiesieczna@{outTaryfaMiesieczna}}
+\index{outTaryfaMiesieczna@{outTaryfaMiesieczna}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{outTaryfaMiesieczna()}{outTaryfaMiesieczna()}}
+{\footnotesize\ttfamily virtual double CLicznik\+::out\+Taryfa\+Miesieczna (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Metoda wirtualna służąca do zwrócenia danych taryfy. 
+
+
+
+Implemented in \mbox{\hyperlink{class_c_licznik_gazu_a7f280c4a199029062722e4fe28e90b83}{CLicznik\+Gazu}}, \mbox{\hyperlink{class_c_licznik_pradu_a111f0148c050e46afe1cbe3aa9c578e8}{CLicznik\+Pradu}}, and \mbox{\hyperlink{class_c_licznik_wody_ac8f59b05b0ed1e20687c72eb22818dd9}{CLicznik\+Wody}}.
+
+\mbox{\Hypertarget{class_c_licznik_a1cf6c87682cc0d0c664866da8cdc96cb}\label{class_c_licznik_a1cf6c87682cc0d0c664866da8cdc96cb}} 
+\index{CLicznik@{CLicznik}!outTaryfaZuzycia@{outTaryfaZuzycia}}
+\index{outTaryfaZuzycia@{outTaryfaZuzycia}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{outTaryfaZuzycia()}{outTaryfaZuzycia()}}
+{\footnotesize\ttfamily virtual double CLicznik\+::out\+Taryfa\+Zuzycia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Metoda wirtualna służąca do zwrócenia danych taryfy. 
+
+
+
+Implemented in \mbox{\hyperlink{class_c_licznik_gazu_a6fe0060db36df95e17e240448ef64142}{CLicznik\+Gazu}}, \mbox{\hyperlink{class_c_licznik_pradu_aca7582e1a650687c8d129bf4128f7039}{CLicznik\+Pradu}}, and \mbox{\hyperlink{class_c_licznik_wody_af2433aaa1bfd1b5d46a018803ef2f200}{CLicznik\+Wody}}.
+
+\mbox{\Hypertarget{class_c_licznik_a651c9db96db89fd53037306e71946e5a}\label{class_c_licznik_a651c9db96db89fd53037306e71946e5a}} 
+\index{CLicznik@{CLicznik}!outTyp@{outTyp}}
+\index{outTyp@{outTyp}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{outTyp()}{outTyp()}}
+{\footnotesize\ttfamily string CLicznik\+::out\+Typ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda zwracająca pole typ
+
+\begin{DoxyReturn}{Returns}
+@typ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_licznik_a54294fa33c45e5f81780aac9ad8e0faf}\label{class_c_licznik_a54294fa33c45e5f81780aac9ad8e0faf}} 
+\index{CLicznik@{CLicznik}!podajDaneLicznika@{podajDaneLicznika}}
+\index{podajDaneLicznika@{podajDaneLicznika}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{podajDaneLicznika()}{podajDaneLicznika()}}
+{\footnotesize\ttfamily void CLicznik\+::podaj\+Dane\+Licznika (\begin{DoxyParamCaption}\item[{string}]{p }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca wprowadzenie numeru licznika
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Nowy numer licznika \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_licznik_a2ea67fb6f10e0a7be8b1c6d4738394a8}\label{class_c_licznik_a2ea67fb6f10e0a7be8b1c6d4738394a8}} 
+\index{CLicznik@{CLicznik}!podajTaryfy@{podajTaryfy}}
+\index{podajTaryfy@{podajTaryfy}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{podajTaryfy()}{podajTaryfy()}}
+{\footnotesize\ttfamily virtual void CLicznik\+::podaj\+Taryfy (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Metoda wirtualna służąca do podania danych taryfy. 
+
+
+
+Implemented in \mbox{\hyperlink{class_c_licznik_gazu_a6d81fb101310d0e2eac7a3ab5b1e6914}{CLicznik\+Gazu}}, \mbox{\hyperlink{class_c_licznik_pradu_a0c09f8f94e5f4ffb48441cbc44855ebd}{CLicznik\+Pradu}}, and \mbox{\hyperlink{class_c_licznik_wody_ae670738e116af9eaa4ef6e569b02867b}{CLicznik\+Wody}}.
+
+\mbox{\Hypertarget{class_c_licznik_a1e975848eabb27124a4404b822e86e8d}\label{class_c_licznik_a1e975848eabb27124a4404b822e86e8d}} 
+\index{CLicznik@{CLicznik}!zmienJednostke@{zmienJednostke}}
+\index{zmienJednostke@{zmienJednostke}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{zmienJednostke()}{zmienJednostke()}}
+{\footnotesize\ttfamily void CLicznik\+::zmien\+Jednostke (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca wprowadzenie jednostki
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Nowa jednostka \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_licznik_a1b505b9deab7295e1e449c865a1a554e}\label{class_c_licznik_a1b505b9deab7295e1e449c865a1a554e}} 
+\index{CLicznik@{CLicznik}!zmienTyp@{zmienTyp}}
+\index{zmienTyp@{zmienTyp}!CLicznik@{CLicznik}}
+\doxysubsubsection{\texorpdfstring{zmienTyp()}{zmienTyp()}}
+{\footnotesize\ttfamily void CLicznik\+::zmien\+Typ (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca wprowadzenie numeru licznika
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Nowy numer licznika \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLicznik.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLicznik.\+cpp\end{DoxyCompactItemize}

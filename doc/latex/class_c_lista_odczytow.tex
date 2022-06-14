@@ -1,0 +1,68 @@
+\hypertarget{class_c_lista_odczytow}{}\doxysection{CLista\+Odczytow Class Reference}
+\label{class_c_lista_odczytow}\index{CListaOdczytow@{CListaOdczytow}}
+
+
+{\ttfamily \#include $<$CLista\+Odczytow.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_lista_odczytow_aedab37751a795a3d2db2cd014f96bcc9}{dodaj\+Nowy\+Odczyt}} (const \mbox{\hyperlink{class_c_odczyt}{COdczyt}} \&l)
+\item 
+void \mbox{\hyperlink{class_c_lista_odczytow_a705cb2ef8369fd4433276fe7600709ec}{usun\+Odczyt}} (int x)
+\item 
+\mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$ \mbox{\hyperlink{class_c_lista_odczytow_af75251278766c2629cf7f7d2ed4a3aad}{out\+Odczyt}} (int x)
+\item 
+\mbox{\Hypertarget{class_c_lista_odczytow_ac0f0aadef68b7cfe39f2065df9949d3e}\label{class_c_lista_odczytow_ac0f0aadef68b7cfe39f2065df9949d3e}} 
+int {\bfseries out\+Liczba\+Elementow} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca ile elementów jest w liście. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa określająca kontener deque odczytów
+
+Klasa obsługuje kontener/liste z odczytami i zawiera pole\+: deque$<$\+COdczyt$>$ m\+ListaO będący właściwą listą 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_lista_odczytow_aedab37751a795a3d2db2cd014f96bcc9}\label{class_c_lista_odczytow_aedab37751a795a3d2db2cd014f96bcc9}} 
+\index{CListaOdczytow@{CListaOdczytow}!dodajNowyOdczyt@{dodajNowyOdczyt}}
+\index{dodajNowyOdczyt@{dodajNowyOdczyt}!CListaOdczytow@{CListaOdczytow}}
+\doxysubsubsection{\texorpdfstring{dodajNowyOdczyt()}{dodajNowyOdczyt()}}
+{\footnotesize\ttfamily void CLista\+Odczytow\+::dodaj\+Nowy\+Odczyt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_odczyt}{COdczyt}} \&}]{l }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca dodanie nowego odczytu do listy 
+\begin{DoxyParams}{Parameters}
+{\em l} & dodawany do listy nowy odczyt \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_lista_odczytow_af75251278766c2629cf7f7d2ed4a3aad}\label{class_c_lista_odczytow_af75251278766c2629cf7f7d2ed4a3aad}} 
+\index{CListaOdczytow@{CListaOdczytow}!outOdczyt@{outOdczyt}}
+\index{outOdczyt@{outOdczyt}!CListaOdczytow@{CListaOdczytow}}
+\doxysubsubsection{\texorpdfstring{outOdczyt()}{outOdczyt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$ CLista\+Odczytow\+::out\+Odczyt (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+Metoda zwracająca wskaźnik odczytu 
+\begin{DoxyParams}{Parameters}
+{\em x} & numer odczytu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$\+COdczyt 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lista_odczytow_a705cb2ef8369fd4433276fe7600709ec}\label{class_c_lista_odczytow_a705cb2ef8369fd4433276fe7600709ec}} 
+\index{CListaOdczytow@{CListaOdczytow}!usunOdczyt@{usunOdczyt}}
+\index{usunOdczyt@{usunOdczyt}!CListaOdczytow@{CListaOdczytow}}
+\doxysubsubsection{\texorpdfstring{usunOdczyt()}{usunOdczyt()}}
+{\footnotesize\ttfamily void CLista\+Odczytow\+::usun\+Odczyt (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca usunięcie odczytu z listy 
+\begin{DoxyParams}{Parameters}
+{\em x} & numer usuwanego odczytu \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLista\+Odczytow.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLista\+Odczytow.\+cpp\end{DoxyCompactItemize}

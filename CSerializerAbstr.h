@@ -6,7 +6,7 @@
 #define PROGRAM_CSERIALIZERABSTR_H
 
 #include "CMieszkanie.h"
-
+/// Klasa abstrakcyjna serializera
 class CSerializerAbstr {
 public:
     virtual void zapiszMieszkanie(CMieszkanie *m, int nrMieszkania) = 0;

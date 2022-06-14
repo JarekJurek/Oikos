@@ -1,0 +1,161 @@
+\hypertarget{class_c_serializer}{}\doxysection{CSerializer Class Reference}
+\label{class_c_serializer}\index{CSerializer@{CSerializer}}
+
+
+{\ttfamily \#include $<$CSerializer.\+h$>$}
+
+Inheritance diagram for CSerializer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_serializer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_serializer_af87290b3e827b114408e7fa11a1210e9}{zapisz\+Mieszkanie}} (\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$m, int nr\+Mieszkania) override
+\item 
+void \mbox{\hyperlink{class_c_serializer_aaf34c365e70661a395831566cfe6bb89}{usun\+Mieszkanie}} (int nr\+Mieszkania) override
+\item 
+void \mbox{\hyperlink{class_c_serializer_a9486c767807914dfa308aa276942a184}{zapisz\+Licznik}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l, int nr\+Licznika, int nr\+Mieszkania) override
+\item 
+void \mbox{\hyperlink{class_c_serializer_a1d2527879cd0eec00654fb501a164354}{usun\+Licznik}} (int nr\+Licznika, int nr\+Mieszkania) override
+\item 
+void \mbox{\hyperlink{class_c_serializer_ab703c9acb650ad17e56b7c66de04d4a6}{zapisz\+Odczyt}} (\mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$o, int nr\+Odczytu, int nr\+Licznika, int nr\+Mieszkania) override
+\item 
+void \mbox{\hyperlink{class_c_serializer_ad36322416426a8cb0aa62b86e37565e9}{usun\+Odczyt}} (int nr\+Odczytu, int nr\+Licznika, int nr\+Mieszkania) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kalsa serializera tekstowego
+
+Klasa dziedziczy publicznie po abstrakcyjnej klasie \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_serializer_a1d2527879cd0eec00654fb501a164354}\label{class_c_serializer_a1d2527879cd0eec00654fb501a164354}} 
+\index{CSerializer@{CSerializer}!usunLicznik@{usunLicznik}}
+\index{usunLicznik@{usunLicznik}!CSerializer@{CSerializer}}
+\doxysubsubsection{\texorpdfstring{usunLicznik()}{usunLicznik()}}
+{\footnotesize\ttfamily void CSerializer\+::usun\+Licznik (\begin{DoxyParamCaption}\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda usuwająca licznik z plików
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr\+Licznika} & jest numerem licznika który chcemy usunąć \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy usunąć \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_serializer_aaf34c365e70661a395831566cfe6bb89}\label{class_c_serializer_aaf34c365e70661a395831566cfe6bb89}} 
+\index{CSerializer@{CSerializer}!usunMieszkanie@{usunMieszkanie}}
+\index{usunMieszkanie@{usunMieszkanie}!CSerializer@{CSerializer}}
+\doxysubsubsection{\texorpdfstring{usunMieszkanie()}{usunMieszkanie()}}
+{\footnotesize\ttfamily void CSerializer\+::usun\+Mieszkanie (\begin{DoxyParamCaption}\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda usuwająca mieszkanie z plików
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy usunąć \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_serializer_ad36322416426a8cb0aa62b86e37565e9}\label{class_c_serializer_ad36322416426a8cb0aa62b86e37565e9}} 
+\index{CSerializer@{CSerializer}!usunOdczyt@{usunOdczyt}}
+\index{usunOdczyt@{usunOdczyt}!CSerializer@{CSerializer}}
+\doxysubsubsection{\texorpdfstring{usunOdczyt()}{usunOdczyt()}}
+{\footnotesize\ttfamily void CSerializer\+::usun\+Odczyt (\begin{DoxyParamCaption}\item[{int}]{nr\+Odczytu,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda usuwająca odczyt z plików
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr\+Odczytu} & jest numerem odczytu który chcemy usunąć \\
+\hline
+{\em nr\+Licznika} & jest numerem licznika który chcemy usunąć \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy usunąć \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_serializer_a9486c767807914dfa308aa276942a184}\label{class_c_serializer_a9486c767807914dfa308aa276942a184}} 
+\index{CSerializer@{CSerializer}!zapiszLicznik@{zapiszLicznik}}
+\index{zapiszLicznik@{zapiszLicznik}!CSerializer@{CSerializer}}
+\doxysubsubsection{\texorpdfstring{zapiszLicznik()}{zapiszLicznik()}}
+{\footnotesize\ttfamily void CSerializer\+::zapisz\+Licznik (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda zapisująca dane z pliku
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & jest wskaźnikiem do typu \mbox{\hyperlink{class_c_licznik}{CLicznik}} \\
+\hline
+{\em nr\+Licznika} & jest numerem licznika który chcemy zapisać \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy zapisać \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_serializer_af87290b3e827b114408e7fa11a1210e9}\label{class_c_serializer_af87290b3e827b114408e7fa11a1210e9}} 
+\index{CSerializer@{CSerializer}!zapiszMieszkanie@{zapiszMieszkanie}}
+\index{zapiszMieszkanie@{zapiszMieszkanie}!CSerializer@{CSerializer}}
+\doxysubsubsection{\texorpdfstring{zapiszMieszkanie()}{zapiszMieszkanie()}}
+{\footnotesize\ttfamily void CSerializer\+::zapisz\+Mieszkanie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$}]{m,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda zapisująca dane do pliku
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & jest wskaźnikiem do typu CMieszknie \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy zapisać \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}}.
+
+\mbox{\Hypertarget{class_c_serializer_ab703c9acb650ad17e56b7c66de04d4a6}\label{class_c_serializer_ab703c9acb650ad17e56b7c66de04d4a6}} 
+\index{CSerializer@{CSerializer}!zapiszOdczyt@{zapiszOdczyt}}
+\index{zapiszOdczyt@{zapiszOdczyt}!CSerializer@{CSerializer}}
+\doxysubsubsection{\texorpdfstring{zapiszOdczyt()}{zapiszOdczyt()}}
+{\footnotesize\ttfamily void CSerializer\+::zapisz\+Odczyt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_odczyt}{COdczyt}} $\ast$}]{o,  }\item[{int}]{nr\+Odczytu,  }\item[{int}]{nr\+Licznika,  }\item[{int}]{nr\+Mieszkania }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda zapisująca dane z pliku
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & jest wskaźnikiem do typu \mbox{\hyperlink{class_c_odczyt}{COdczyt}} \\
+\hline
+{\em nr\+Odczytu} & jest numerem odczytu który chcemy zapisać \\
+\hline
+{\em nr\+Licznika} & jest numerem licznika który chcemy zapisać \\
+\hline
+{\em nr\+Mieszkania} & jest numerem mieszkania które chcemy zapisać \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_c_serializer_abstr}{CSerializer\+Abstr}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CSerializer.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CSerializer.\+cpp\end{DoxyCompactItemize}

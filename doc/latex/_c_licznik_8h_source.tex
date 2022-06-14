@@ -1,0 +1,38 @@
+\hypertarget{_c_licznik_8h_source}{}\doxysection{C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/\+CLicznik.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by grzeg on 23.05.2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROGRAM\_CLICZNIK\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROGRAM\_CLICZNIK\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}CListaOdczytow.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_c_licznik}{CLicznik}} \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{string} numerLicznika;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{string} jednostka;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{string} typ;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_c_lista_odczytow}{CListaOdczytow}} odczyty;  \textcolor{comment}{// protected}}
+\DoxyCodeLine{27 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_licznik_a54294fa33c45e5f81780aac9ad8e0faf}{podajDaneLicznika}}(\textcolor{keywordtype}{string} p);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_licznik_a1e975848eabb27124a4404b822e86e8d}{zmienJednostke}}(\textcolor{keywordtype}{string} s);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_c_licznik_a8ce993e6d33c171b95436e9e125290f9}{outJednostka}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_licznik_a1b505b9deab7295e1e449c865a1a554e}{zmienTyp}}(\textcolor{keywordtype}{string} s);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_c_licznik_a651c9db96db89fd53037306e71946e5a}{outTyp}}();}
+\DoxyCodeLine{47     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_c_licznik_a3470cbe6247b363373d48e8851181513}{outNumerLicznika}}();}
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_licznik_a2ea67fb6f10e0a7be8b1c6d4738394a8}{podajTaryfy}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y) = 0;}
+\DoxyCodeLine{51     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c_licznik_a1cf6c87682cc0d0c664866da8cdc96cb}{outTaryfaZuzycia}}() = 0;}
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c_licznik_ac7b6f7b7e0f595c2c54cfc9949f1f69e}{outTaryfaMiesieczna}}() = 0;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROGRAM\_CLICZNIK\_H}}
+
+\end{DoxyCode}

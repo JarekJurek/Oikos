@@ -17,7 +17,10 @@
 #include "CRachunek.h"
 
 using namespace std;
-
+/// Klasa określająca mieszkanie
+///
+/// Klasa CMieszkanie zawiera podstawowe dane mieszkania:
+/// wartość, czynsz, a także obiekty CAdres adres, CListaLiczników liczniki, CRachunek rachunek
 class CMieszkanie {
     double wartosc;
     double czynsz;
@@ -25,13 +28,23 @@ public:
     CAdres adres;
     CListaLicznikow liczniki;
     CRachunek rachunek;
-
+/// Konstruktor z polami domyślnymi
+///
+/// @param x wartrość domyślna wartości mieszkania
+/// @param y wartość domyślna czynszu
     CMieszkanie(double x = -1, double y = -1);
-
+/// Metoda umożliwiająca zmianę pól obiektów
+///
+/// @param x wartrość domyślna wartości mieszkania
+/// @param y wartość domyślna czynszu
     void wprowadzDaneM(double x, double y);
-
+/// Metoda zwracająca wartość czynszu
+///
+/// @return czynsz
     double outCzynsz();
-
+/// Metoda zwracająca wartość mieszkania
+///
+/// @return wartość
     double outWartosc();
 };
 

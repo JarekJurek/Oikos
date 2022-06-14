@@ -1,0 +1,68 @@
+\hypertarget{class_c_lista_mieszkan}{}\doxysection{CLista\+Mieszkan Class Reference}
+\label{class_c_lista_mieszkan}\index{CListaMieszkan@{CListaMieszkan}}
+
+
+{\ttfamily \#include $<$CLista\+Mieszkan.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_lista_mieszkan_aa61f122dc9b57cdc24613b775aa1ad21}{utworz\+Nowe\+Mieszkanie}} (const \mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} \&m)
+\item 
+void \mbox{\hyperlink{class_c_lista_mieszkan_aec40f05ba0015bbab3c14d44328782d1}{usun\+Mieszkanie}} (int x)
+\item 
+\mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$ \mbox{\hyperlink{class_c_lista_mieszkan_af1324e655ac9e358b114542bff81e65b}{out\+Wskaznik\+Mieszkania}} (int x)
+\item 
+\mbox{\Hypertarget{class_c_lista_mieszkan_ab2df777b0b18b4ead695ba6a1f6f0c30}\label{class_c_lista_mieszkan_ab2df777b0b18b4ead695ba6a1f6f0c30}} 
+int {\bfseries out\+Liczba\+Elementow} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca ile elementów jest w liście. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa określająca kontener deque mieszkań
+
+Klasa obsługuje kontener/liste z mieszkaniami i zawiera pole\+: deque$<$\+CMieszkanie$>$ m\+ListaL będący właściwą listą 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_lista_mieszkan_af1324e655ac9e358b114542bff81e65b}\label{class_c_lista_mieszkan_af1324e655ac9e358b114542bff81e65b}} 
+\index{CListaMieszkan@{CListaMieszkan}!outWskaznikMieszkania@{outWskaznikMieszkania}}
+\index{outWskaznikMieszkania@{outWskaznikMieszkania}!CListaMieszkan@{CListaMieszkan}}
+\doxysubsubsection{\texorpdfstring{outWskaznikMieszkania()}{outWskaznikMieszkania()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} $\ast$ CLista\+Mieszkan\+::out\+Wskaznik\+Mieszkania (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+Metoda zwracająca wskaźnik mieszkania 
+\begin{DoxyParams}{Parameters}
+{\em x} & numer mieszkania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$\+CMieszkanie 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lista_mieszkan_aec40f05ba0015bbab3c14d44328782d1}\label{class_c_lista_mieszkan_aec40f05ba0015bbab3c14d44328782d1}} 
+\index{CListaMieszkan@{CListaMieszkan}!usunMieszkanie@{usunMieszkanie}}
+\index{usunMieszkanie@{usunMieszkanie}!CListaMieszkan@{CListaMieszkan}}
+\doxysubsubsection{\texorpdfstring{usunMieszkanie()}{usunMieszkanie()}}
+{\footnotesize\ttfamily void CLista\+Mieszkan\+::usun\+Mieszkanie (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca usunięcie mieszkania z listy 
+\begin{DoxyParams}{Parameters}
+{\em x} & numer usuwanego mieszkania \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_lista_mieszkan_aa61f122dc9b57cdc24613b775aa1ad21}\label{class_c_lista_mieszkan_aa61f122dc9b57cdc24613b775aa1ad21}} 
+\index{CListaMieszkan@{CListaMieszkan}!utworzNoweMieszkanie@{utworzNoweMieszkanie}}
+\index{utworzNoweMieszkanie@{utworzNoweMieszkanie}!CListaMieszkan@{CListaMieszkan}}
+\doxysubsubsection{\texorpdfstring{utworzNoweMieszkanie()}{utworzNoweMieszkanie()}}
+{\footnotesize\ttfamily void CLista\+Mieszkan\+::utworz\+Nowe\+Mieszkanie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_mieszkanie}{CMieszkanie}} \&}]{m }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca dodanie nowego mieszkania do listy 
+\begin{DoxyParams}{Parameters}
+{\em m} & dodawane do listy nowe mieszkanie \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLista\+Mieszkan.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLista\+Mieszkan.\+cpp\end{DoxyCompactItemize}

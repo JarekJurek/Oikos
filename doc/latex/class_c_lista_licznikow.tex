@@ -1,0 +1,68 @@
+\hypertarget{class_c_lista_licznikow}{}\doxysection{CLista\+Licznikow Class Reference}
+\label{class_c_lista_licznikow}\index{CListaLicznikow@{CListaLicznikow}}
+
+
+{\ttfamily \#include $<$CLista\+Licznikow.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_c_lista_licznikow_a0cd6774880a55c791ef5edc789080370}{dodaj\+Nowy\+Licznik}} (\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$l)
+\item 
+void \mbox{\hyperlink{class_c_lista_licznikow_a4da8cc5fc4908e8cc5db56b29ae1c458}{usun\+Licznik}} (int x)
+\item 
+\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$ \mbox{\hyperlink{class_c_lista_licznikow_a53127d56ac7e5636754489657a5a7c98}{out\+Wskaznik\+Licznika}} (int x)
+\item 
+\mbox{\Hypertarget{class_c_lista_licznikow_aa0139738078e6735f40a2d8120e491b8}\label{class_c_lista_licznikow_aa0139738078e6735f40a2d8120e491b8}} 
+int {\bfseries out\+Liczba\+Elementow} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracająca ile elementów jest w liście. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa określająca kontener deque liczników
+
+Klasa obsługuje kontener/liste z licznikami i zawiera pole\+: deque$<$\+CLicznik $\ast$$>$ m\+ListaL będący właściwą listą 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_lista_licznikow_a0cd6774880a55c791ef5edc789080370}\label{class_c_lista_licznikow_a0cd6774880a55c791ef5edc789080370}} 
+\index{CListaLicznikow@{CListaLicznikow}!dodajNowyLicznik@{dodajNowyLicznik}}
+\index{dodajNowyLicznik@{dodajNowyLicznik}!CListaLicznikow@{CListaLicznikow}}
+\doxysubsubsection{\texorpdfstring{dodajNowyLicznik()}{dodajNowyLicznik()}}
+{\footnotesize\ttfamily void CLista\+Licznikow\+::dodaj\+Nowy\+Licznik (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$}]{l }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca dodanie nowego licznika do listy 
+\begin{DoxyParams}{Parameters}
+{\em l} & dodawany do listy nowy licznk \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_lista_licznikow_a53127d56ac7e5636754489657a5a7c98}\label{class_c_lista_licznikow_a53127d56ac7e5636754489657a5a7c98}} 
+\index{CListaLicznikow@{CListaLicznikow}!outWskaznikLicznika@{outWskaznikLicznika}}
+\index{outWskaznikLicznika@{outWskaznikLicznika}!CListaLicznikow@{CListaLicznikow}}
+\doxysubsubsection{\texorpdfstring{outWskaznikLicznika()}{outWskaznikLicznika()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_licznik}{CLicznik}} $\ast$ CLista\+Licznikow\+::out\+Wskaznik\+Licznika (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+Metoda zwracająca wskaźnik licznika 
+\begin{DoxyParams}{Parameters}
+{\em x} & numer licznika \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$\+CLicznik 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lista_licznikow_a4da8cc5fc4908e8cc5db56b29ae1c458}\label{class_c_lista_licznikow_a4da8cc5fc4908e8cc5db56b29ae1c458}} 
+\index{CListaLicznikow@{CListaLicznikow}!usunLicznik@{usunLicznik}}
+\index{usunLicznik@{usunLicznik}!CListaLicznikow@{CListaLicznikow}}
+\doxysubsubsection{\texorpdfstring{usunLicznik()}{usunLicznik()}}
+{\footnotesize\ttfamily void CLista\+Licznikow\+::usun\+Licznik (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca usunięcie licznika z listy 
+\begin{DoxyParams}{Parameters}
+{\em x} & numer usuwanego licznika \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLista\+Licznikow.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CLista\+Licznikow.\+cpp\end{DoxyCompactItemize}

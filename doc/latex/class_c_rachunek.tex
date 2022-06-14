@@ -1,0 +1,76 @@
+\hypertarget{class_c_rachunek}{}\doxysection{CRachunek Class Reference}
+\label{class_c_rachunek}\index{CRachunek@{CRachunek}}
+
+
+{\ttfamily \#include $<$CRachunek.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_rachunek_aa091e41e84b731cb835da1919141e52d}\label{class_c_rachunek_aa091e41e84b731cb835da1919141e52d}} 
+{\bfseries CRachunek} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor bez parametrów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_rachunek_a12634ddf3ca11beda6af5ff89d0149ef}{oplata\+Zuzycia}} (double x, double y)
+\item 
+void \mbox{\hyperlink{class_c_rachunek_a7e4c1f948522ec3c0f907023fe6ebcb1}{oplata\+Miesieczna}} (double x, int y)
+\item 
+double \mbox{\hyperlink{class_c_rachunek_a4292bda04fea0bbca15c2d85a6fb82e1}{out\+Suma\+Oplat}} ()
+\item 
+\mbox{\Hypertarget{class_c_rachunek_af2e8d6afbccecd7a1f26e285674c7fe7}\label{class_c_rachunek_af2e8d6afbccecd7a1f26e285674c7fe7}} 
+void {\bfseries zeruj\+Rachunek} ()
+\begin{DoxyCompactList}\small\item\em Metoda zerująca pole suma\+Oplat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa określająca rachunek
+
+Klasa \mbox{\hyperlink{class_c_odczyt}{COdczyt}} zawiera podstawowe dane rachunku i umożliwia ich edycję\+: sumę opłat 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_rachunek_a7e4c1f948522ec3c0f907023fe6ebcb1}\label{class_c_rachunek_a7e4c1f948522ec3c0f907023fe6ebcb1}} 
+\index{CRachunek@{CRachunek}!oplataMiesieczna@{oplataMiesieczna}}
+\index{oplataMiesieczna@{oplataMiesieczna}!CRachunek@{CRachunek}}
+\doxysubsubsection{\texorpdfstring{oplataMiesieczna()}{oplataMiesieczna()}}
+{\footnotesize\ttfamily void CRachunek\+::oplata\+Miesieczna (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca podliczenie rachunku z miesiąca
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & wartość stanu licznika \\
+\hline
+{\em y} & ilość miesięcy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_rachunek_a12634ddf3ca11beda6af5ff89d0149ef}\label{class_c_rachunek_a12634ddf3ca11beda6af5ff89d0149ef}} 
+\index{CRachunek@{CRachunek}!oplataZuzycia@{oplataZuzycia}}
+\index{oplataZuzycia@{oplataZuzycia}!CRachunek@{CRachunek}}
+\doxysubsubsection{\texorpdfstring{oplataZuzycia()}{oplataZuzycia()}}
+{\footnotesize\ttfamily void CRachunek\+::oplata\+Zuzycia (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+Metoda umożliwiająca podliczenie rachunku z zużycia
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & wartość stanu licznika \\
+\hline
+{\em y} & wartość taryfy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_rachunek_a4292bda04fea0bbca15c2d85a6fb82e1}\label{class_c_rachunek_a4292bda04fea0bbca15c2d85a6fb82e1}} 
+\index{CRachunek@{CRachunek}!outSumaOplat@{outSumaOplat}}
+\index{outSumaOplat@{outSumaOplat}!CRachunek@{CRachunek}}
+\doxysubsubsection{\texorpdfstring{outSumaOplat()}{outSumaOplat()}}
+{\footnotesize\ttfamily double CRachunek\+::out\+Suma\+Oplat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Metoda zwracająca pole suma opłat
+
+\begin{DoxyReturn}{Returns}
+suma\+Oplat 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CRachunek.\+h\item 
+C\+:/\+Users/grzeg/\+Documents/\+Studia/\+Semestr 6/\+PJC/\+Oikos/CRachunek.\+cpp\end{DoxyCompactItemize}
