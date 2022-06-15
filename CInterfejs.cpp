@@ -392,6 +392,10 @@ void CInterfejs::pokazListeM() {
                     zuzycie = odczytNowy->outStan() - odczytStary->outStan();
                     wskM->rachunek.oplataZuzycia(zuzycie, wskL->outTaryfaZuzycia());
                     wskM->rachunek.oplataMiesieczna(wskL->outTaryfaMiesieczna(), iloscMiesiecy);
+
+                    cout << "Licznik " << wskL->outTyp() << " nr: " << wskL->outNumerLicznika()
+                    << ". Zuzycie: " << zuzycie << wskL->outJednostka() << endl;
+
                 }
                 cout << "Razem do zaplaty: " << wskM->rachunek.outSumaOplat() << "zl" << endl;
                 break;

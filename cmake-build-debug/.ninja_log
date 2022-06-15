@@ -40,3 +40,8 @@
 9944	14050	6769371584581487	CMakeFiles/Program.dir/CDeserializer.cpp.obj	da31ac8d2bea6f27
 13195	16067	6769371604776197	CMakeFiles/Program.dir/CListaOdczytow.cpp.obj	4d39233b861bb865
 16068	17299	6769371616963844	Program.exe	3dd130ada72f18f3
+25	5742	6769771985903829	CMakeFiles/Program.dir/main.cpp.obj	68336320de172bf4
+5743	7925	6769772005957015	Program.exe	3dd130ada72f18f3
+76	3113	6769776357896895	CMakeFiles/Program.dir/CListaOdczytow.cpp.obj	4d39233b861bb865
+24	3254	6769776359096305	CMakeFiles/Program.dir/CInterfejs.cpp.obj	6002abb36a2c8d29
+3255	3746	6769776364147791	Program.exe	3dd130ada72f18f3
